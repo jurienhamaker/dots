@@ -10,13 +10,11 @@ $transparency_enabled: false;
         $background: mix(mix($background, $primary, 94%), #000000, 50%);
         $surface: mix($surface, $primaryContainer, 98%);
         $surfaceVariant: mix($surfaceVariant, #000000, 75%);
-        // $secondaryContainer: mix($secondaryContainer, $primaryContainer, 90%);
     }
 
     @if $darkmode ==false {
-        $background: mix($background, $primary, 85%);
-        $surface: mix($surface, $primary, 90%);
-        $surfaceVariant: mix($surfaceVariant, #ffffff, 50%);
+        $primaryContainer: mix($primaryContainer, white, 90%);
+        $surface: mix($surface, $primaryContainer, 98%);
     }
 }
 
@@ -118,6 +116,8 @@ $hovercolor: mix($t_surface, $t_onSurface, 50%);
 $activecolor: mix($t_surface, $t_onSurface, 30%);
 $subtext: mix($onBackground, $background, 70%);
 $actiontext: mix($onBackground, $background, 85%);
+$black: black;
+$white: white;
 
 // Terminal colors
 $termbg: mix($t_surfaceVariant, $t_onSurfaceVariant, 80%);
@@ -130,3 +130,139 @@ $term4: $onPrimaryContainer;
 $term5: $onSecondaryContainer;
 $term6: $primary;
 $term7: $onSurfaceVariant;
+
+/// Color mappings for more chaotic, dynamic colors like the average rice ///
+// General
+$layer0: $t_background;
+$onLayer0: $onBackground;
+$layer0Hover: mix($layer0, $onLayer0, 85%);
+$layer0Active: mix($layer0, $onLayer0, 70%);
+$onLayer0Inactive: mix($onLayer0, $layer0, 70%);
+$layer1: $surface;
+$onLayer1: $onSurface;
+$onLayer1Inactive: mix($onLayer1, $layer1, 45%);
+$onLayer1: $onSurfaceVariant;
+$layer1Hover: mix($layer1, $onLayer1, 85%);
+$layer1Active: mix($layer1, $onLayer1, 70%);
+$layer2: $surfaceVariant;
+$onLayer2: $onSurfaceVariant;
+$layer2Hover: mix($layer2, $onLayer2, 90%);
+$layer2Active: mix($layer2, $onLayer2, 80%);
+// Elements
+$windowtitleOnLayer0Inactive: $onLayer0Inactive;
+$windowtitleOnLayer0: $onLayer0;
+$barspacerightOnLayer0: $onLayer0;
+$timeOnLayer1: $onLayer1;
+$dateOnLayer1: $onLayer1;
+$ramOnLayer1: $onLayer1;
+$ramLayer2: $secondaryContainer;
+$ramOnLayer2: $onSecondaryContainer;
+$swapOnLayer1: $onLayer1;
+$swapLayer2: $secondaryContainer;
+$swapOnLayer2: $onSecondaryContainer;
+$cpuOnLayer1: $onLayer1;
+$cpuLayer2: $secondaryContainer;
+$cpuOnLayer2: $onSecondaryContainer;
+$musicOnLayer1: $onLayer1;
+$musicLayer2: $secondaryContainer;
+$musicOnLayer2: $onSecondaryContainer;
+$utilsLayer2: $layer2;
+$utilsOnLayer2: $onLayer2;
+$battOnLayer1: $onLayer1;
+$battLayer2: $secondaryContainer;
+$battOnLayer2: $onSecondaryContainer;
+$workspaceOnLayer1Inactive: $onLayer1Inactive;
+$workspaceLayer3: $secondaryContainer;
+$workspaceOnLayer3: $onSecondaryContainer;
+$workspaceOnLayer2: $onSurfaceVariant;
+$trayOnLayer0: $onLayer0;
+$cheatsheetTitle: $onSecondaryContainer;
+$cheatsheetColors: (
+    $onSecondaryContainer,
+    $onSecondaryContainer,
+    $onSecondaryContainer,
+    $onSecondaryContainer,
+    $onSecondaryContainer,
+    $onSecondaryContainer,
+    $onSecondaryContainer,
+    $onSecondaryContainer
+);
+$sessionColors: (
+    $onLayer1,
+    $onLayer1,
+    $onLayer1,
+    $onLayer1,
+    $onLayer1,
+    $onLayer1,
+    $onLayer1
+);
+$brightnessOnLayer0: $onLayer0;
+$volumeOnLayer0: $onLayer0;
+
+///////////////////// test theme: amarena (kind of) /////////////////////////
+// $layer0: #0e1116;
+// $onLayer0: #FFFFFF;
+// $layer0Hover: mix($layer0, $onLayer0, 85%);
+// $layer0Active: mix($layer0, $onLayer0, 70%);
+// $layer1: #171c22;
+// $onLayer1Inactive: mix($onLayer1, $layer1, 45%);
+// $onLayer1: $onSurfaceVariant;
+// $layer1Hover: mix($layer1, $onLayer1, 85%);
+// $layer1Active: mix($layer1, $onLayer1, 70%);
+// $layer2: #252c35;
+// $onLayer2: $onSurfaceVariant;
+// $layer2Hover: mix($layer2, $onLayer2, 90%);
+// $layer2Active: mix($layer2, $onLayer2, 80%);
+// $layer3: #1C232A;
+// // Bar
+// $windowtitleOnLayer0Inactive: #70afa4;
+// $windowtitleOnLayer0: #7FE3D1;
+// $barspacerightOnLayer0: #7FE3D1;
+// $timeOnLayer1: #cc7691;
+// $dateOnLayer1: #cc7691;
+// $ramOnLayer1: #6DC0D5;
+// $ramLayer2: $layer2;
+// $ramOnLayer2: #6DC0D5;
+// $swapOnLayer1: #CC83C7;
+// $swapLayer2: $layer2;
+// $swapOnLayer2: #CC83C7;
+// $cpuOnLayer1: #FA6295;
+// $cpuLayer2: $layer2;
+// $cpuOnLayer2: #FA6295;
+// $musicOnLayer1: #94CF95;
+// $musicLayer2: $layer2;
+// $musicOnLayer2: #94CF95;
+// $utilsLayer2: $layer2;
+// $utilsOnLayer2: #CC83C7;
+// $battOnLayer1: #94CF95;
+// $battLayer2: $layer2;
+// $battOnLayer2: #94CF95;
+// $workspaceOnLayer1Inactive: $onLayer1Inactive;
+// $workspaceLayer3: #33554f;
+// $workspaceOnLayer3: #7FE3D1;
+// $workspaceOnLayer2: #7FE3D1;
+// $trayOnLayer0: #6DC0D5;
+// // Cheatsheet
+// $cheatsheetTitle: #6DC0D4;
+// $cheatsheetColors: (
+//     #F692B2,
+//     #6EC1D6,
+//     #CD84C8,
+//     #7FE4D2,
+//     #94CF95,
+//     #CD84C8,
+//     #FB6396,
+//     #6EC1D6
+// );
+// $sessionColors: (
+//     #F692B2,
+//     #6EC1D6,
+//     #CD84C8,
+//     #7FE4D2,
+//     #94CF95,
+//     #CD84C8,
+//     #FB6396
+// );
+// // Osd
+// $brightnessOnLayer0: #F692B2;
+// $volumeOnLayer0: #94CF95;

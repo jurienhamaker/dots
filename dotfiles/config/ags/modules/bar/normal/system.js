@@ -39,10 +39,10 @@ const BatBatteryProgress = () => {
 const BarClock = () =>
   Widget.Box({
     vpack: "center",
-    className: "spacing-h-4 txt-onSurfaceVariant bar-clock-box",
+    className: "spacing-h-4 bar-clock-box",
     children: [
       Widget.Label({
-        className: "bar-clock",
+        className: "bar-time",
         label: GLib.DateTime.new_now_local().format(userOptions.time.format),
         setup: (self) =>
           self.poll(userOptions.time.interval, (label) => {
@@ -52,11 +52,11 @@ const BarClock = () =>
           }),
       }),
       Widget.Label({
-        className: "txt-norm",
+        className: "txt-norm txt-onLayer1",
         label: "•",
       }),
       Widget.Label({
-        className: "txt-smallie",
+        className: "txt-smallie bar-date",
         label: GLib.DateTime.new_now_local().format(
           userOptions.time.dateFormatLong,
         ),
@@ -82,7 +82,7 @@ const UtilButton = ({ name, icon, onClicked }) =>
 const Utilities = () =>
   Box({
     hpack: "center",
-    className: "spacing-h-4 txt-onSurfaceVariant",
+    className: "spacing-h-4",
     children: [
       UtilButton({
         name: "Screen snip",
@@ -105,7 +105,7 @@ const Utilities = () =>
 
 const BarBattery = () =>
   Box({
-    className: "spacing-h-4 txt-onSurfaceVariant",
+    className: "spacing-h-4 bar-batt-txt",
     children: [
       Revealer({
         transitionDuration: userOptions.animations.durationSmall,
@@ -118,7 +118,7 @@ const BarBattery = () =>
           }),
       }),
       Label({
-        className: "txt-smallie txt-onSurfaceVariant",
+        className: "txt-smallie",
         setup: (self) =>
           self.hook(Battery, (label) => {
             label.label = `${Battery.percent}%`;
@@ -129,7 +129,7 @@ const BarBattery = () =>
           vpack: "center",
           className: "bar-batt",
           homogeneous: true,
-          children: [MaterialIcon("settings_heart", "small")],
+          children: [MaterialIcon("battery_full", "small")],
           setup: (self) =>
             self.hook(Battery, (box) => {
               box.toggleClassName(
