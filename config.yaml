@@ -20,7 +20,7 @@ dotfiles:
   d_fastfetch:
     src: config/fastfetch
     dst: ~/.config/fastfetch
-    chmod: "744"
+    chmod: '744'
   d_fish:
     src: config/fish
     dst: ~/.config/fish
@@ -33,34 +33,42 @@ dotfiles:
   d_gtk-3.0:
     src: config/gtk-3.0
     dst: ~/.config/gtk-3.0
-    chmod: "700"
+    chmod: '700'
   d_gtk-4.0:
     src: config/gtk-4.0
     dst: ~/.config/gtk-4.0
   d_spicetify:
     src: config/spicetify
     dst: ~/.config/spicetify
-    chmod: "700"
+    chmod: '700'
   f_fuzzel-emoji:
     src: local/bin/fuzzel-emoji
     dst: ~/.local/bin/fuzzel-emoji
-    chmod: "755"
+    chmod: '755'
   f_rubyshot:
     src: local/bin/rubyshot
     dst: ~/.local/bin/rubyshot
-    chmod: "755"
+    chmod: '755'
+  f_wallpaper.png:
+    src: Pictures/wallpaper.png
+    dst: ~/Pictures/wallpaper.png
+  f_fetch_logo.png:
+    src: Pictures/fetch_logo.png
+    dst: ~/Pictures/fetch_logo.png
 profiles:
   jurien-work:
     dotfiles:
-      - d_hypr
-      - d_ags
-      - d_nvim
-      - d_fastfetch
-      - d_fish
-      - d_kitty
-      - d_qt5ct
-      - d_gtk-3.0
-      - d_gtk-4.0
-      - d_spicetify
-      - f_fuzzel-emoji
-      - f_rubyshot
+    - d_hypr
+    - d_ags
+    - d_nvim
+    - d_fastfetch
+    - d_fish
+    - d_kitty
+    - d_qt5ct
+    - d_gtk-3.0
+    - d_gtk-4.0
+    - d_spicetify
+    - f_fuzzel-emoji
+    - f_rubyshot
+    - f_wallpaper.png
+    - f_fetch_logo.png
