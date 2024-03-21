@@ -55,6 +55,12 @@ dotfiles:
   f_fetch_logo.png:
     src: Pictures/fetch_logo.png
     dst: ~/Pictures/fetch_logo.png
+  d_fuzzel:
+    src: config/fuzzel
+    dst: ~/.config/fuzzel
+  f_starship.toml:
+    src: config/starship.toml
+    dst: ~/.config/starship.toml
 profiles:
   jurien-work:
     dotfiles:
@@ -71,4 +77,12 @@ profiles:
     - f_fuzzel-emoji
     - f_rubyshot
     - f_wallpaper.png
+    - f_fetch_logo.png
+    - d_fuzzel
+    - f_starship.toml
+  jurien-wsl:
+    dotfiles:
+    - d_nvim
+    - d_fastfetch
+    - d_fish
     - f_fetch_logo.png

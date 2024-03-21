@@ -4,3 +4,4 @@ end
 
 n
 zoxide init --cmd cd fish | source
+starship init fish | source
