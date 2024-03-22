@@ -93,5 +93,4 @@ profiles:
       - d_nvim
       - f_fastfetch_wsl
       - d_fish
-      - f_fetch_logo.png
       - f_starship.toml
