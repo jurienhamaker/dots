@@ -17,9 +17,13 @@ dotfiles:
   d_nvim:
     src: config/nvim
     dst: ~/.config/nvim
-  d_fastfetch:
-    src: config/fastfetch
-    dst: ~/.config/fastfetch
+  f_fastfetch:
+    src: config/fastfetch/config.jsonc
+    dst: ~/.config/fastfetch/config.jsonc
+    chmod: "744"
+  f_fastfetch_wsl:
+    src: config/fastfetch/config-wsl.jsonc
+    dst: ~/.config/fastfetch/config.jsonc
     chmod: "744"
   d_fish:
     src: config/fish
@@ -70,7 +74,7 @@ profiles:
       - d_hypr
       - d_ags
       - d_nvim
-      - d_fastfetch
+      - f_fastfetch
       - d_fish
       - d_kitty
       - d_qt5ct
@@ -87,6 +91,7 @@ profiles:
   jurien-wsl:
     dotfiles:
       - d_nvim
-      - d_fastfetch
+      - f_fastfetch_wsl
       - d_fish
       - f_fetch_logo.png
+      - f_starship.toml
