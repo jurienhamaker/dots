@@ -110,17 +110,17 @@ $bar_ws_width_focus_active: 2.045rem;
 // Focus is the bar mode name, not the workspace state!
 
 .bar-ws-focus {
-    background-color: $layer2;
+    background-color: $surfaceVariant;
     min-width: $bar_ws_width_focus;
 }
 
 .bar-ws-focus-active {
     min-width: $bar_ws_width_focus_active;
-    background-color: $layer2;
+    background-color: $onLayer0;
 }
 
 .bar-ws-focus-occupied {
-    background-color: $layer2;
+    background-color: $secondaryContainer;
 }
 
 .bar-clock-box {
@@ -346,6 +346,7 @@ $bar_ws_width_focus_active: 2.045rem;
 .bar-systray-item {
     @include full-rounding;
     @include element_decel;
+    @include symbolic-icon;
     min-height: 1.032rem;
     min-width: 1.032rem;
     font-size: 1.032rem;
@@ -361,6 +362,7 @@ $bar_ws_width_focus_active: 2.045rem;
 
 .bar-statusicons-active {
     background-color: $layer0Active;
+    color: $onLayer0Active;
 }
 
 .bar-util-btn {
@@ -387,10 +389,9 @@ $bar_ws_width_focus_active: 2.045rem;
 
 .bar-bluetooth-device {
     @include full-rounding;
-    @include element_decel;
+    @include symbolic-icon;
     min-height: 1.032rem;
     min-width: 1.032rem;
     font-size: 1.032rem;
-    color: $barspacerightOnLayer0;
     padding: 0.205rem 0.341rem;
 }
