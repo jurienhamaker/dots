@@ -68,10 +68,6 @@ export const keybindList = [
       icon: "widgets",
       name: "Widgets (AGS)",
       binds: [
-        {
-          keys: ["", "OR", "", "+", "Tab"],
-          action: "Toggle overview/launcher",
-        },
         { keys: ["Ctrl", "", "+", "R"], action: "Restart AGS" },
         { keys: ["", "+", "/"], action: "Toggle this cheatsheet" },
         { keys: ["", "+", "N"], action: "Toggle system sidebar" },
@@ -123,10 +119,8 @@ export const keybindList = [
       icon: "apps",
       name: "Apps",
       binds: [
-        { keys: ["", "+", "Return"], action: "Launch terminal: foot" },
+        { keys: ["", "+", "Return"], action: "Launch terminal: kitty" },
         { keys: ["", "+", "W"], action: "Launch browser: Firefox" },
-        { keys: ["", "+", "C"], action: "Launch editor: vscode" },
-        { keys: ["", "+", "X"], action: "Launch editor: GNOME Text Editor" },
         {
           keys: ["", "+", "I"],
           action: "Launch settings: GNOME Control center",
