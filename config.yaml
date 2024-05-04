@@ -20,11 +20,11 @@ dotfiles:
   f_fastfetch:
     src: config/fastfetch/config.jsonc
     dst: ~/.config/fastfetch/config.jsonc
-    chmod: '744'
+    chmod: "744"
   f_fastfetch_wsl:
     src: config/fastfetch/config-wsl.jsonc
     dst: ~/.config/fastfetch/config.jsonc
-    chmod: '744'
+    chmod: "744"
   d_fish:
     src: config/fish
     dst: ~/.config/fish
@@ -37,22 +37,22 @@ dotfiles:
   d_gtk-3.0:
     src: config/gtk-3.0
     dst: ~/.config/gtk-3.0
-    chmod: '700'
+    chmod: "700"
   d_gtk-4.0:
     src: config/gtk-4.0
     dst: ~/.config/gtk-4.0
   d_spicetify:
     src: config/spicetify
     dst: ~/.config/spicetify
-    chmod: '700'
+    chmod: "700"
   f_fuzzel-emoji:
     src: local/bin/fuzzel-emoji
     dst: ~/.local/bin/fuzzel-emoji
-    chmod: '755'
+    chmod: "755"
   f_rubyshot:
     src: local/bin/rubyshot
     dst: ~/.local/bin/rubyshot
-    chmod: '755'
+    chmod: "755"
   f_wallpaper.png:
     src: Pictures/wallpaper.png
     dst: ~/Pictures/wallpaper.png
@@ -83,34 +83,38 @@ dotfiles:
   f_discord.theme.css:
     src: config/vesktop/themes/discord.theme.css
     dst: ~/.config/vesktop/themes/discord.theme.css
+  d_waynergy:
+    src: config/waynergy
+    dst: ~/.config/waynergy
 profiles:
   yugen-work:
     dotfiles:
-    - d_hypr
-    - d_ags
-    - d_nvim
-    - f_fastfetch
-    - d_fish
-    - d_kitty
-    - d_qt5ct
-    - d_gtk-3.0
-    - d_gtk-4.0
-    - d_spicetify
-    - f_fuzzel-emoji
-    - f_rubyshot
-    - f_wallpaper.png
-    - f_fetch_logo.png
-    - d_fuzzel
-    - f_starship.toml
-    - d_fusuma
-    - f_btop.conf
-    - f_ferdium_user.css
-    - f_ferdium_darkmode.css
-    - f_ferdium_user.js
-    - f_discord.theme.css
+      - d_hypr
+      - d_ags
+      - d_nvim
+      - f_fastfetch
+      - d_fish
+      - d_kitty
+      - d_qt5ct
+      - d_gtk-3.0
+      - d_gtk-4.0
+      - d_spicetify
+      - f_fuzzel-emoji
+      - f_rubyshot
+      - f_wallpaper.png
+      - f_fetch_logo.png
+      - d_fuzzel
+      - f_starship.toml
+      - d_fusuma
+      - f_btop.conf
+      - f_ferdium_user.css
+      - f_ferdium_darkmode.css
+      - f_ferdium_user.js
+      - f_discord.theme.css
+      - d_waynergy
   jurien-wsl:
     dotfiles:
-    - d_nvim
-    - f_fastfetch_wsl
-    - d_fish
-    - f_starship.toml
+      - d_nvim
+      - f_fastfetch_wsl
+      - d_fish
+      - f_starship.toml
