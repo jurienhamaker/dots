@@ -13,12 +13,14 @@ import {
     ModuleReloadIcon,
     ModuleSettingsIcon,
     ModulePowerIcon,
-    ModuleRawInput
+    ModuleRawInput,
+    ModuleCloudflareWarp
 } from "./quicktoggles.js";
 import ModuleNotificationList from "./centermodules/notificationlist.js";
-import ModuleVolumeMixer from "./centermodules/volumemixer.js";
-// import ModuleNetworks from "./centermodules/networks.js";
+import ModuleAudioControls from "./centermodules/audiocontrols.js";
+import ModuleWifiNetworks from "./centermodules/wifinetworks.js";
 import ModuleBluetooth from "./centermodules/bluetooth.js";
+import ModuleConfigure from "./centermodules/configure.js";
 import { ModuleCalendar } from "./calendar.js";
 import { getDistroIcon } from '../.miscutils/system.js';
 import { MaterialIcon } from '../.commonwidgets/materialicon.js';
@@ -32,19 +34,25 @@ const centerWidgets = [
         contentWidget: ModuleNotificationList(),
     },
     {
-        name: 'Volume mixer',
+        name: 'Audio controls',
         materialIcon: 'volume_up',
-        contentWidget: ModuleVolumeMixer(),
+        contentWidget: ModuleAudioControls(),
     },
-    // {
-    //     name: 'Networks',
-    //     materialIcon: 'lan',
-    //     contentWidget: ModuleNetworks(),
-    // },
     {
         name: 'Bluetooth',
         materialIcon: 'bluetooth',
         contentWidget: ModuleBluetooth(),
+    },
+    {
+        name: 'Wifi networks',
+        materialIcon: 'wifi',
+        contentWidget: ModuleWifiNetworks(),
+        onFocus: () => execAsync('nmcli dev wifi list').catch(print),
+    },
+    {
+        name: 'Live config',
+        materialIcon: 'tune',
+        contentWidget: ModuleConfigure(),
     },
 ];
 
@@ -77,15 +85,16 @@ const timeRow = Box({
 
 const togglesBox = Widget.Box({
     hpack: 'center',
-    className: 'sidebar-togglesbox spacing-h-10',
+    className: 'sidebar-togglesbox spacing-h-5',
     children: [
         ToggleIconWifi(),
         ToggleIconBluetooth(),
         await ModuleRawInput(),
         await HyprToggleIcon('touchpad_mouse', 'No touchpad while typing', 'input:touchpad:disable_while_typing', {}),
-        ModuleNightLight(),
+        await ModuleNightLight(),
         await ModuleInvertColors(),
         ModuleIdleInhibitor(),
+        await ModuleCloudflareWarp(),
     ]
 })
 
@@ -97,6 +106,7 @@ export const sidebarOptionsStack = ExpandingIconTabContainer({
     children: centerWidgets.map((api) => api.contentWidget),
     onChange: (self, id) => {
         self.shown = centerWidgets[id].name;
+        if (centerWidgets[id].onFocus) centerWidgets[id].onFocus();
     }
 });
 

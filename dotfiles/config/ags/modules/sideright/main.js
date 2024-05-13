@@ -2,10 +2,9 @@ import PopupWindow from '../.widgethacks/popupwindow.js';
 import SidebarRight from "./sideright.js";
 
 export default () => PopupWindow({
-    keymode: 'exclusive',
+    keymode: 'on-demand',
     anchor: ['right', 'top', 'bottom'],
     name: 'sideright',
-    showClassName: 'sideright-show',
-    hideClassName: 'sideright-hide',
+    layer: 'overlay',
     child: SidebarRight(),
 });

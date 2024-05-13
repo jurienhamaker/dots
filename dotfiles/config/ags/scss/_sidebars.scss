@@ -9,20 +9,9 @@ $sidebar_chat_textboxareaColor: mix($onSurfaceVariant, $surfaceVariant, 40%);
     @include elevation-border;
     @include elevation2;
     border-radius: $rounding_large - $elevation_margin + 0.068rem;
-    min-width: 27.818rem; // COMMENT THIS LATER IF TEXT WRAP IS USED
-    // min-height: 29.591rem;
+    min-width: 27.818rem;
     background-color: $background;
     padding: 1.023rem;
-}
-
-.sideright-show {
-    @include menu_decel;
-}
-
-.sideright-hide {
-    @include menu_accel;
-    margin-right: -30.682rem;
-    // opacity: 0;
 }
 
 .sidebar-left {
@@ -30,20 +19,9 @@ $sidebar_chat_textboxareaColor: mix($onSurfaceVariant, $surfaceVariant, 40%);
     @include elevation-border;
     @include elevation2;
     border-radius: $rounding_large - $elevation_margin + 0.068rem;
-    min-width: 27.818rem; // COMMENT THIS LATER IF TEXT WRAP IS USED
-    // min-height: 29.591rem;
+    min-width: 27.818rem;
     background-color: $background;
     padding: 1.023rem;
-}
-
-.sideleft-show {
-    @include menu_decel;
-}
-
-.sideleft-hide {
-    margin-left: -30.682rem;
-    // opacity: 0;
-    @include menu_accel;
 }
 
 .sidebar-group {
@@ -123,7 +101,6 @@ $sidebar_chat_textboxareaColor: mix($onSurfaceVariant, $surfaceVariant, 40%);
 }
 
 .sidebar-navrail {
-    // background-color: $surface;
     padding: 0rem $rounding_medium;
 }
 
@@ -327,7 +304,7 @@ $sidebar_chat_textboxareaColor: mix($onSurfaceVariant, $surfaceVariant, 40%);
     @include full-rounding;
     @include element_decel;
     background-color: $layer2;
-    color: $onSurfaceVariant;
+    color: $onLayer2;
     margin: 0.341rem;
     padding: 0.205rem 0.545rem;
 }
@@ -407,12 +384,17 @@ $sidebar_chat_textboxareaColor: mix($onSurfaceVariant, $surfaceVariant, 40%);
 .sidebar-module-btn-arrow {
     @include full-rounding;
     @include icon-material;
-    background-color: $surfaceContainerHigh;
+    background-color: $layer2;
     min-width: 1.705rem;
     min-height: 1.705rem;
 
-    &:hover {
-        background-color: $hovercolor;
+    &:hover,
+    &:focus {
+        background-color: $layer2Hover;
+    }
+
+    &:active {
+        background-color: $layer2Active;
     }
 }
 
@@ -423,12 +405,13 @@ $sidebar_chat_textboxareaColor: mix($onSurfaceVariant, $surfaceVariant, 40%);
     min-width: 1.705rem;
     min-height: 1.705rem;
 
-    &:hover {
-        background-color: $hovercolor;
+    &:hover,
+    &:focus {
+        background-color: $layer1Hover;
     }
 
     &:active {
-        background-color: $activecolor;
+        background-color: $layer1Active;
     }
 }
 
@@ -505,20 +488,15 @@ $colorpicker_rounding: 0.341rem;
     color: $onSurfaceVariant;
 }
 
-// .sidebar-chat-providerswitcher-list {
-//     margin: 0.341rem 0rem;
-// }
-
 .sidebar-chat-viewport {
     @include element_decel;
-    // margin: 0.682rem 0rem;
     padding: 0.682rem 0rem;
 }
 
 .sidebar-chat-textarea {
     @include normal-rounding;
     background-color: $layer1;
-    color: $onSurfaceVariant;
+    color: $onLayer1;
     padding: 0.682rem;
 }
 
@@ -567,11 +545,57 @@ $colorpicker_rounding: 0.341rem;
     background-color: mix($primary, $hovercolor, 40%);
 }
 
+.sidebar-chat-messagearea {
+    margin: 0.341rem;
+}
+
 .sidebar-chat-message {
-    margin: 0.682rem;
     @include normal-rounding;
     @include group-padding;
     background-color: $layer1;
+}
+
+$skeleton-accent: mix($secondary, $onSecondary, 50%);
+
+@keyframes sidebar-chat-message-skeletonline-anim {
+    0% {
+        background-position: 175% 0%;
+    }
+
+    100% {
+        background-position: 50% 0%;
+    }
+}
+
+.sidebar-chat-message-skeletonline {
+    border-radius: $rounding_verysmall;
+    min-height: 1.364rem;
+    background-color: $layer2;
+}
+
+.sidebar-chat-message-skeletonline-offset0 {
+    background-repeat: no-repeat;
+    background: linear-gradient(to right, $layer3 0%, $skeleton-accent 25%, $layer3 50%, $layer3 100%);
+    background-size: 500% 500%;
+    animation: sidebar-chat-message-skeletonline-anim 2s linear;
+    animation-iteration-count: infinite;
+}
+
+.sidebar-chat-message-skeletonline-offset1 {
+    background-repeat: no-repeat;
+    background: linear-gradient(to right, $layer3 0%, $layer3 50%, $skeleton-accent 75%, $layer3 100%);
+    background-size: 500% 500%;
+    animation: sidebar-chat-message-skeletonline-anim 2s linear;
+    animation-iteration-count: infinite;
+}
+
+.sidebar-chat-message-skeletonline-offset2 {
+    margin-right: 5.795rem;
+    background-repeat: no-repeat;
+    background: linear-gradient(to right, $layer3 0%, $layer3 25%, $skeleton-accent 50%, $layer3 75%, $layer3 100%);
+    background-size: 500% 500%;
+    animation: sidebar-chat-message-skeletonline-anim 2s linear;
+    animation-iteration-count: infinite;
 }
 
 .sidebar-chat-indicator {
@@ -592,7 +616,6 @@ $colorpicker_rounding: 0.341rem;
     @include small-rounding;
     padding: 0.341rem 0.818rem;
     margin: 0.341rem;
-    // margin-left: 0rem;
     background-color: $layer2;
     color: $onLayer2;
 }
@@ -631,7 +654,6 @@ $colorpicker_rounding: 0.341rem;
 
 .sidebar-chat-codeblock {
     @include normal-rounding;
-    // @include elevation2;
     background-color: $layer2;
     color: $onLayer2;
     margin: 0rem 0.682rem;
@@ -807,8 +829,7 @@ $waifu_image_overlay_transparency: 0.7;
     @include full-rounding;
     min-width: 1.875rem;
     min-height: 1.875rem;
-    background-color: rgba(0, 0, 0,
-            $waifu_image_overlay_transparency ); // Fixed cuz on image
+    background-color: rgba(0, 0, 0, $waifu_image_overlay_transparency ); // Fixed cuz on image
     color: rgba(255, 255, 255, $waifu_image_overlay_transparency);
 }
 
@@ -821,6 +842,16 @@ $waifu_image_overlay_transparency: 0.7;
     background-color: rgba(60, 60, 60, $waifu_image_overlay_transparency);
 }
 
+.sidebar-booru-provider {
+    @include titlefont;
+    @include small-rounding;
+    padding: 0.341rem 0.818rem;
+    margin: 0.341rem;
+    font-weight: bold;
+    background-color: $primary;
+    color: $onPrimary;
+}
+
 .sidebar-booru-imagegrid {
     @include normal-rounding;
 }
@@ -829,7 +860,6 @@ $waifu_image_overlay_transparency: 0.7;
     @include small-rounding;
     margin: 0.273rem;
     min-width: 11.932rem;
-    min-height: 11.932rem;
     // background-color: rgba(100, 200, 0, 0.3);
 }
 
@@ -883,6 +913,13 @@ $waifu_image_overlay_transparency: 0.7;
     margin: 0rem 0.682rem;
 }
 
+.sidebar-volmixer-deviceselector {
+    @include small-rounding;
+    padding: 0.477rem 0.682rem;
+    background-color: $surfaceContainerHigh;
+    color: $onSurfaceVariant;
+}
+
 .sidebar-bluetooth-device {
     padding: 0.682rem;
     @include normal-rounding;
@@ -908,4 +945,50 @@ $waifu_image_overlay_transparency: 0.7;
     @include full-rounding;
     background-color: $layer2Hover;
     padding: 0.341rem;
+}
+
+.sidebar-wifinetworks-network {
+    padding: 0.682rem;
+    @include normal-rounding;
+    background-color: $layer2;
+    color: $onLayer2;
+}
+
+.sidebar-wifinetworks-network:hover,
+.sidebar-wifinetworks-network:focus {
+    background-color: $layer2Hover;
+}
+
+.sidebar-wifinetworks-network:active {
+    background-color: $layer2Active;
+}
+
+.sidebar-wifinetworks-signal {
+    @include symbolic-icon;
+    font-size: 2.045rem;
+}
+
+.sidebar-wifinetworks-auth-entry {
+    @include small-rounding;
+    background-color: $layer1;
+    color: $onLayer1;
+    padding: 0.682rem;
+}
+
+.sidebar-centermodules-bottombar-button {
+    @include full-rounding;
+    @include element_decel;
+    min-width: 6.818rem;
+    min-height: 2.25rem;
+    background-color: $layer2;
+    color: $onLayer2;
+}
+
+.sidebar-centermodules-bottombar-button:hover,
+.sidebar-centermodules-bottombar-button:focus {
+    background-color: $layer2Hover;
+}
+
+.sidebar-centermodules-bottombar-button:active {
+    background-color: $layer2Active;
 }

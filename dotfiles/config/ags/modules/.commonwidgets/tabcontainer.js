@@ -173,6 +173,7 @@ export const ExpandingIconTabContainer = ({
     icons, names, children, className = '',
     setup = () => { }, onChange = () => { },
     tabsHpack = 'center', tabSwitcherClassName = '',
+    transitionDuration = userOptions.animations.durationLarge,
     ...rest
 }) => {
     const shownIndex = Variable(0);
@@ -241,6 +242,7 @@ export const ExpandingIconTabContainer = ({
     });
     const contentStack = Stack({
         transition: 'slide_left_right',
+        transitionDuration: transitionDuration,
         children: children.reduce((acc, currentValue, index) => {
             acc[index] = currentValue;
             return acc;
@@ -268,6 +270,12 @@ export const ExpandingIconTabContainer = ({
     mainBox.nextTab = () => shownIndex.value = Math.min(shownIndex.value + 1, count - 1);
     mainBox.prevTab = () => shownIndex.value = Math.max(shownIndex.value - 1, 0);
     mainBox.cycleTab = () => shownIndex.value = (shownIndex.value + 1) % count;
+    mainBox.focusName = (name) => {
+        const focusIndex = names.indexOf(name);
+        if (focusIndex !== -1) {
+            shownIndex.value = focusIndex;
+        }
+    }
     mainBox.shown = shownIndex;
 
     return mainBox;

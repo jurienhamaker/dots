@@ -20,8 +20,10 @@ import {
   DesktopEntryButton,
   ExecuteCommandButton,
   SearchButton,
+  AiButton
 } from "./searchbuttons.js";
 import { checkKeybind } from "../.widgetutils/keybind.js";
+import GeminiService from '../../services/gemini.js';
 
 // Add math funcs
 const { abs, sin, cos, tan, cot, asin, acos, atan, acot } = Math;
@@ -61,17 +63,9 @@ function iconExists(iconName) {
 export const SearchAndWindows = () => {
   var _appSearchResults = [];
 
-  const ClickToClose = ({ ...props }) =>
-    Widget.EventBox({
-      ...props,
-      onPrimaryClick: () => App.closeWindow("overview"),
-      onSecondaryClick: () => App.closeWindow("overview"),
-      onMiddleClick: () => App.closeWindow("overview"),
-    });
   const resultsBox = Widget.Box({
     className: "overview-search-results",
     vertical: true,
-    vexpand: true,
   });
   const resultsRevealer = Widget.Revealer({
     transitionDuration: userOptions.animations.durationLarge,
@@ -155,12 +149,9 @@ export const SearchAndWindows = () => {
         if (text.startsWith("sudo")) execAndClose(text, true);
         else execAndClose(text, false);
       } else {
+				GeminiService.send(text);
         App.closeWindow("overview");
-        execAsync([
-          "bash",
-          "-c",
-          `xdg-open '${userOptions.search.engineBaseUrl}${text} ${["", ...userOptions.search.excludedSites].join(" -site:")}' &`,
-        ]).catch(print);
+        App.openWindow('sideleft');
       }
     },
     onChange: (entry) => {
@@ -233,6 +224,7 @@ export const SearchAndWindows = () => {
       }
 
       // Add fallback: search
+      resultsBox.add(AiButton({ text: entry.text }));
       resultsBox.add(SearchButton({ text: entry.text }));
       resultsBox.show_all();
     },
@@ -240,12 +232,6 @@ export const SearchAndWindows = () => {
   return Widget.Box({
     vertical: true,
     children: [
-      ClickToClose({
-        // Top margin. Also works as a click-outside-to-close thing
-        child: Widget.Box({
-          className: "bar-height",
-        }),
-      }),
       Widget.Box({
         hpack: "center",
         children: [

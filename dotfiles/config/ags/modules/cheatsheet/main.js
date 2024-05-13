@@ -1,12 +1,25 @@
-const { Gdk, Gtk } = imports.gi;
 import Widget from "resource:///com/github/Aylur/ags/widget.js";
-import Service from "resource:///com/github/Aylur/ags/service.js";
-import { Keybinds } from "./keybinds.js";
 import { setupCursorHover } from "../.widgetutils/cursorhover.js";
 import PopupWindow from "../.widgethacks/popupwindow.js";
+import Keybinds from "./keybinds.js";
+import PeriodicTable from "./periodictable.js";
+import { ExpandingIconTabContainer } from '../.commonwidgets/tabcontainer.js';
+import { checkKeybind } from '../.widgetutils/keybind.js';
 
-const cheatsheetHeader = () =>
-  Widget.CenterBox({
+const cheatsheets = [
+    {
+        name: 'Keybinds',
+        materialIcon: 'keyboard',
+        contentWidget: Keybinds,
+    },
+    {
+        name: 'Periodic table',
+        materialIcon: 'experiment',
+        contentWidget: PeriodicTable,
+    },
+];
+
+const CheatsheetHeader = () => Widget.CenterBox({
     vertical: false,
     startWidget: Widget.Box({}),
     centerWidget: Widget.Box({
@@ -26,7 +39,7 @@ const cheatsheetHeader = () =>
             Widget.Label({
               vpack: "center",
               className: "cheatsheet-key txt-small",
-              label: "",
+              label: "󰖳",
             }),
             Widget.Label({
               vpack: "center",
@@ -40,14 +53,6 @@ const cheatsheetHeader = () =>
             }),
           ],
         }),
-        Widget.Label({
-          useMarkup: true,
-          selectable: true,
-          justify: Gtk.Justification.CENTER,
-          className: "txt-small txt",
-          label:
-            "Sheet data stored in <tt>~/.config/ags/modules/cheatsheet/data_keybinds.js</tt>\nChange keybinds in <tt>~/.config/hypr/hyprland/keybinds.conf</tt>",
-        }),
       ],
     }),
     endWidget: Widget.Button({
@@ -55,7 +60,7 @@ const cheatsheetHeader = () =>
       hpack: "end",
       className: "cheatsheet-closebtn icon-material txt txt-hugeass",
       onClicked: () => {
-        App.toggleWindow("cheatsheet");
+            closeWindowOnAllMonitors('cheatsheet');
       },
       child: Widget.Label({
         className: "icon-material txt txt-hugeass",
@@ -65,27 +70,45 @@ const cheatsheetHeader = () =>
     }),
   });
 
-const clickOutsideToClose = Widget.EventBox({
-  onPrimaryClick: () => App.closeWindow("cheatsheet"),
-  onSecondaryClick: () => App.closeWindow("cheatsheet"),
-  onMiddleClick: () => App.closeWindow("cheatsheet"),
-});
+const sheetContents = [];
+const SheetContent = (id) => {
+    sheetContents[id] = ExpandingIconTabContainer({
+        tabsHpack: 'center',
+        tabSwitcherClassName: 'sidebar-icontabswitcher',
+        transitionDuration: userOptions.animations.durationLarge * 1.4,
+        icons: cheatsheets.map((api) => api.materialIcon),
+        names: cheatsheets.map((api) => api.name),
+        children: cheatsheets.map((api) => api.contentWidget()),
+        onChange: (self, id) => {
+            self.shown = cheatsheets[id].name;
+        }
+    });
+    return sheetContents[id];
+}
 
-export default () =>
-  PopupWindow({
-    name: "cheatsheet",
-    exclusivity: "ignore",
-    keymode: "exclusive",
+export default (id) => PopupWindow({
+    monitor: id,
+    name: `cheatsheet${id}`,
+    layer: 'overlay',
+    keymode: 'on-demand',
     visible: false,
     child: Widget.Box({
       vertical: true,
       children: [
-        clickOutsideToClose,
         Widget.Box({
           vertical: true,
-          className: "cheatsheet-bg spacing-v-15",
-          children: [cheatsheetHeader(), Keybinds()],
+          className: "cheatsheet-bg spacing-v-5",
+          children: [
+              CheatsheetHeader(),
+              SheetContent(id),
+          ]
         }),
       ],
+      setup: (self) => self.on('key-press-event', (widget, event) => { // Typing
+          if (checkKeybind(event, userOptions.keybinds.cheatsheet.nextTab))
+              sheetContents[id].nextTab();
+          else if (checkKeybind(event, userOptions.keybinds.cheatsheet.prevTab))
+              sheetContents[id].prevTab();
+      })
     }),
   });

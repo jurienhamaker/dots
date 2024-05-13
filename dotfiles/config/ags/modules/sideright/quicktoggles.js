@@ -9,14 +9,14 @@ const { execAsync, exec } = Utils;
 import { BluetoothIndicator, NetworkIndicator } from '../.commonwidgets/statusicons.js';
 import { setupCursorHover } from '../.widgetutils/cursorhover.js';
 import { MaterialIcon } from '../.commonwidgets/materialicon.js';
+import { sidebarOptionsStack } from './sideright.js';
 
 export const ToggleIconWifi = (props = {}) => Widget.Button({
     className: 'txt-small sidebar-iconbutton',
     tooltipText: 'Wifi | Right-click to configure',
     onClicked: () => Network.toggleWifi(),
-    onSecondaryClickRelease: () => {
-        execAsync(['bash', '-c', 'XDG_CURRENT_DESKTOP="gnome" gnome-control-center wifi', '&']);
-        App.closeWindow('sideright');
+    onSecondaryClick: () => {
+        sidebarOptionsStack.focusName('Wifi networks')
     },
     child: NetworkIndicator(),
     setup: (self) => {
@@ -40,8 +40,8 @@ export const ToggleIconBluetooth = (props = {}) => Widget.Button({
             exec('rfkill unblock bluetooth');
     },
     onSecondaryClickRelease: () => {
-        execAsync(['bash', '-c', 'blueberry &']);
-        App.closeWindow('sideright');
+        execAsync(['bash', '-c', `${userOptions.apps.bluetooth}`]).catch(print);
+        closeEverything();
     },
     child: BluetoothIndicator(),
     setup: (self) => {
@@ -78,26 +78,68 @@ export const HyprToggleIcon = async (icon, name, hyprlandConfigValue, props = {}
     }
 }
 
-export const ModuleNightLight = (props = {}) => Widget.Button({ // TODO: Make this work
-    attribute: {
-        enabled: false,
-    },
-    className: 'txt-small sidebar-iconbutton',
-    tooltipText: 'Night Light',
-    onClicked: (self) => {
-        self.attribute.enabled = !self.attribute.enabled;
-        self.toggleClassName('sidebar-button-active', self.attribute.enabled);
-        if (self.attribute.enabled) Utils.execAsync(['wlsunset', '-t', '4500']).catch(print)
-        else Utils.execAsync('pkill wlsunset').catch(print);
-    },
-    child: MaterialIcon('nightlight', 'norm'),
-    setup: (self) => {
-        setupCursorHover(self);
-        self.attribute.enabled = !!exec('pidof wlsunset');
-        self.toggleClassName('sidebar-button-active', self.attribute.enabled);
-    },
-    ...props,
-});
+export const ModuleNightLight = async (props = {}) => {
+    if (!exec(`bash -c 'command -v gammastep'`)) return null;
+    return Widget.Button({
+        attribute: {
+            enabled: false,
+        },
+        className: 'txt-small sidebar-iconbutton',
+        tooltipText: 'Night Light',
+        onClicked: (self) => {
+            self.attribute.enabled = !self.attribute.enabled;
+            self.toggleClassName('sidebar-button-active', self.attribute.enabled);
+            if (self.attribute.enabled) Utils.execAsync('gammastep').catch(print)
+            else Utils.execAsync('pkill gammastep')
+                .then(() => {
+                    // disable the button until fully terminated to avoid race
+                    self.sensitive = false;
+                    const source = setInterval(() => {
+                        Utils.execAsync('pkill -0 gammastep')
+                            .catch(() => {
+                                self.sensitive = true;
+                                source.destroy();
+                            });
+                    }, 500);
+                })
+                .catch(print);
+        },
+        child: MaterialIcon('nightlight', 'norm'),
+        setup: (self) => {
+            setupCursorHover(self);
+            self.attribute.enabled = !!exec('pidof gammastep');
+            self.toggleClassName('sidebar-button-active', self.attribute.enabled);
+        },
+        ...props,
+    });
+}
+
+export const ModuleCloudflareWarp = async (props = {}) => {
+    if (!exec(`bash -c 'command -v warp-cli'`)) return null;
+    return Widget.Button({
+        attribute: {
+            enabled: false,
+        },
+        className: 'txt-small sidebar-iconbutton',
+        tooltipText: 'Cloudflare WARP',
+        onClicked: (self) => {
+            self.attribute.enabled = !self.attribute.enabled;
+            self.toggleClassName('sidebar-button-active', self.attribute.enabled);
+            if (self.attribute.enabled) Utils.execAsync('warp-cli connect').catch(print)
+            else Utils.execAsync('warp-cli disconnect').catch(print);
+        },
+        child: Widget.Icon({
+            icon: 'cloudflare-dns-symbolic',
+            className: 'txt-norm',
+        }),
+        setup: (self) => {
+            setupCursorHover(self);
+            self.attribute.enabled = !exec(`bash -c 'warp-cli status | grep Disconnected'`);
+            self.toggleClassName('sidebar-button-active', self.attribute.enabled);
+        },
+        ...props,
+    });
+}
 
 export const ModuleInvertColors = async (props = {}) => {
     try {
@@ -186,7 +228,7 @@ export const ModuleEditIcon = (props = {}) => Widget.Button({ // TODO: Make this
     className: 'txt-small sidebar-iconbutton',
     onClicked: () => {
         execAsync(['bash', '-c', 'XDG_CURRENT_DESKTOP="gnome" gnome-control-center', '&']);
-        App.toggleWindow('sideright');
+        App.closeWindow('sideright');
     },
     child: MaterialIcon('edit', 'norm'),
     setup: button => {
@@ -200,7 +242,7 @@ export const ModuleReloadIcon = (props = {}) => Widget.Button({
     tooltipText: 'Reload Environment config',
     onClicked: () => {
         execAsync(['bash', '-c', 'hyprctl reload || swaymsg reload &']);
-        App.toggleWindow('sideright');
+        App.closeWindow('sideright');
     },
     child: MaterialIcon('refresh', 'norm'),
     setup: button => {
@@ -213,8 +255,8 @@ export const ModuleSettingsIcon = (props = {}) => Widget.Button({
     className: 'txt-small sidebar-iconbutton',
     tooltipText: 'Open Settings',
     onClicked: () => {
-        execAsync(['bash', '-c', 'XDG_CURRENT_DESKTOP="gnome" gnome-control-center', '&']);
-        App.toggleWindow('sideright');
+        execAsync(['bash', '-c', `${userOptions.apps.settings}`, '&']);
+        App.closeWindow('sideright');
     },
     child: MaterialIcon('settings', 'norm'),
     setup: button => {
@@ -227,14 +269,11 @@ export const ModulePowerIcon = (props = {}) => Widget.Button({
     className: 'txt-small sidebar-iconbutton',
     tooltipText: 'Session',
     onClicked: () => {
-        App.toggleWindow('session');
-        App.closeWindow('sideright');
+        closeEverything();
+        Utils.timeout(1, () => openWindowOnAllMonitors('session'));
     },
     child: MaterialIcon('power_settings_new', 'norm'),
     setup: button => {
         setupCursorHover(button);
     }
 })
-
-
-
