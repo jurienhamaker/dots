@@ -7,4 +7,7 @@ if test -z "$SSH_CLIENT"
 end
 
 zoxide init --cmd cd fish | source
-starship init fish | source
+
+if test ! -z "$SSH_CLIENT"
+    starship init fish | source
+end
