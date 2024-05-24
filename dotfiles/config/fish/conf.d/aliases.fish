@@ -5,7 +5,7 @@ alias e_bash="p; cd employes; docker-compose exec app bash"
 alias ec_up="p; cd employes; docker-compose up capacitor"
 alias ec_bash="p; cd employes; docker-compose exec capacitor bash"
 alias ew_up="p; cd employes; docker-compose up web"
-alias ew_bash="p; cd employes docker-compose exec web bash"
+alias ew_bash="p; cd employes; docker-compose exec web bash"
 alias eo_up="p; cd employes; docker-compose up office"
 alias eo_bash="p; cd employes; docker-compose exec office bash"
 
