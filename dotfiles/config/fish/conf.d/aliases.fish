@@ -18,8 +18,6 @@ alias p_act="p; cd paperless; act -P ubuntu-latest=nektos/act-environments-ubunt
 alias pn_up="p; cd paperless; docker-compose up ng-playground"
 alias pn_bash="p; cd paperless; docker-compose exec ng-playground bash"
 
-alias xsel="wl-copy"
-
 alias hetzner="ssh root@46.4.64.165"
 alias media="ssh jurien@87.212.147.76"
 alias work="ssh jurien@192.168.1.40 -Y -t 'fish -li'"
