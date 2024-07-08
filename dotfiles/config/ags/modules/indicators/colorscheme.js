@@ -7,6 +7,7 @@ const { execAsync } = Utils;
 import { setupCursorHover } from '../.widgetutils/cursorhover.js';
 import { showColorScheme } from '../../variables.js';
 import { MaterialIcon } from '../.commonwidgets/materialicon.js';
+import { darkMode } from '../.miscutils/system.js';
 
 const ColorBox = ({
     name = 'Color',
@@ -88,16 +89,18 @@ const schemeOptionsArr = [
         { name: 'Expressive', value: 'expressive' },
         { name: 'Vibrant', value: 'vibrant' },
     ],
+    [
+        { name: 'Vibrant+', value: 'morevibrant' },
+    ],
     //[
     //  { name: 'Content', value: 'content' },
     //]
 ];
 
-const initColorMode = Utils.exec('bash -c "sed -n \'1p\' $HOME/.cache/ags/user/colormode.txt"');
-const initColorVal = (initColorMode == "dark") ? 1 : 0;
-const initTransparency = Utils.exec('bash -c "sed -n \'2p\' $HOME/.cache/ags/user/colormode.txt"');
+const LIGHTDARK_FILE_LOCATION = `${GLib.get_user_state_dir()}/ags/user/colormode.txt`;
+const initTransparency = Utils.exec(`bash -c "sed -n \'2p\' ${LIGHTDARK_FILE_LOCATION}"`);
 const initTransparencyVal = (initTransparency == "transparent") ? 1 : 0;
-const initScheme = Utils.exec('bash -c "sed -n \'3p\' $HOME/.cache/ags/user/colormode.txt"');
+const initScheme = Utils.exec(`bash -c "sed -n \'3p\' ${LIGHTDARK_FILE_LOCATION}"`);
 const initSchemeIndex = calculateSchemeInitIndex(schemeOptionsArr, initScheme);
 
 const ColorSchemeSettings = () => Widget.Box({
@@ -119,13 +122,13 @@ const ColorSchemeSettings = () => Widget.Box({
                     icon: 'dark_mode',
                     name: 'Dark Mode',
                     desc: 'Ya should go to sleep!',
-                    initValue: initColorVal,
-                    onChange: (self, newValue) => {
-                        let lightdark = newValue == 0 ? "light" : "dark";
-                        execAsync([`bash`, `-c`, `mkdir -p ${GLib.get_user_cache_dir()}/ags/user && sed -i "1s/.*/${lightdark}/"  ${GLib.get_user_cache_dir()}/ags/user/colormode.txt`])
-                            .then(execAsync(['bash', '-c', `${App.configDir}/scripts/color_generation/switchcolor.sh`]))
-                            .catch(print);
+                    initValue: darkMode.value,
+                    onChange: (_, newValue) => {
+                        darkMode.value = !!newValue;
                     },
+                    extraSetup: (self) => self.hook(darkMode, (self) => {
+                        self.enabled.value = darkMode.value;
+                    }),
                 }),
                 ConfigToggle({
                     icon: 'border_clear',
@@ -134,7 +137,7 @@ const ColorSchemeSettings = () => Widget.Box({
                     initValue: initTransparencyVal,
                     onChange: (self, newValue) => {
                         let transparency = newValue == 0 ? "opaque" : "transparent";
-                        execAsync([`bash`, `-c`, `mkdir -p ${GLib.get_user_cache_dir()}/ags/user && sed -i "2s/.*/${transparency}/"  ${GLib.get_user_cache_dir()}/ags/user/colormode.txt`])
+                        execAsync([`bash`, `-c`, `mkdir -p ${GLib.get_user_state_dir()}/ags/user && sed -i "2s/.*/${transparency}/"  ${GLib.get_user_state_dir()}/ags/user/colormode.txt`])
                             .then(execAsync(['bash', '-c', `${App.configDir}/scripts/color_generation/switchcolor.sh`]))
                             .catch(print);
                     },
@@ -158,7 +161,7 @@ const ColorSchemeSettings = () => Widget.Box({
                     optionsArr: schemeOptionsArr,
                     initIndex: initSchemeIndex,
                     onChange: (value, name) => {
-                        execAsync([`bash`, `-c`, `mkdir -p ${GLib.get_user_cache_dir()}/ags/user && sed -i "3s/.*/${value}/" ${GLib.get_user_cache_dir()}/ags/user/colormode.txt`])
+                        execAsync([`bash`, `-c`, `mkdir -p ${GLib.get_user_state_dir()}/ags/user && sed -i "3s/.*/${value}/" ${GLib.get_user_state_dir()}/ags/user/colormode.txt`])
                             .then(execAsync(['bash', '-c', `${App.configDir}/scripts/color_generation/switchcolor.sh`]))
                             .catch(print);
                     },
