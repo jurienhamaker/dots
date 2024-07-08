@@ -1,6 +1,7 @@
 cd end_4
 
 git checkout current
+#git diff $(git rev-parse HEAD)...f47500ce73377aa1728d9b176aacbf364994b20c >diff.patch
 git diff $(git rev-parse HEAD)...main >diff.patch
 
 sed "s/rename \(to\|from\) \.\(config\|local\)/rename \1 dotfiles\/\2/g" diff.patch >temp.patch

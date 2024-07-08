@@ -15,7 +15,7 @@ depends=(
 	rsync
 	wget
 	ripgrep
-	gojq
+	jq
 	npm
 	meson
 	typescript
