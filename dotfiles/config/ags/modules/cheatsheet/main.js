@@ -88,6 +88,7 @@ const SheetContent = (id) => {
 }
 
 export default (id) => {
+    const sheets = SheetContent(id);
     const widgetContent = Widget.Box({
       vertical: true,
       className: "cheatsheet-bg spacing-v-5",
@@ -97,7 +98,7 @@ export default (id) => {
           className: "cheatsheet-bg spacing-v-5",
           children: [
             CheatsheetHeader(),
-            SheetContent(id),
+						sheets
           ]
 				})
 		  ]
@@ -127,6 +128,16 @@ export default (id) => {
             sheetContents[id].nextTab();
           else if (checkKeybind(event, userOptions.keybinds.cheatsheet.prevTab))
             sheetContents[id].prevTab();
+          if (sheets.attribute.names[sheets.attribute.shown.value] == 'Keybinds') { // If Keybinds tab is focused
+            if (checkKeybind(event, userOptions.keybinds.cheatsheet.keybinds.nextTab)) {
+              const toSwitchTab = sheets.attribute.children[sheets.attribute.shown.value];
+              toSwitchTab.nextTab();
+            }
+            else if (checkKeybind(event, userOptions.keybinds.cheatsheet.keybinds.prevTab)) {
+              const toSwitchTab = sheets.attribute.children[sheets.attribute.shown.value];
+              toSwitchTab.prevTab();
+            }
+          }
         })
       })
 		})

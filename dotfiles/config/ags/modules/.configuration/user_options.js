@@ -28,7 +28,7 @@ let configOptions = {
         'keyboardUseFlag': false, // Use flag emoji instead of abbreviation letters
         'layerSmoke': false,
         'layerSmokeStrength': 0.2,
-        'fakeScreenRounding': true,
+        'fakeScreenRounding': 1, // 0: None | 1: Always | 2: When not fullscreen
     },
     'apps': {
         'bluetooth': "blueberry",
@@ -55,6 +55,11 @@ let configOptions = {
         'controllers': {
             'default': "auto",
         },
+    },
+    'cheatsheet': {
+        'keybinds': {
+            'configPath': "" // Path to hyprland keybind config file. Leave empty for default (~/.config/hypr/hyprland/keybinds.conf)
+        }
     },
     'gaming': {
         'crosshair': {
@@ -93,6 +98,14 @@ let configOptions = {
 
     },
     'search': {
+        'enableFeatures': {
+            'actions': true,
+            'commands': true,
+            'mathResults': true,
+            'directorySearch': true,
+            'aiSearch': true,
+            'webSearch': true,
+        },
         'engineBaseUrl': "https://www.google.com/search?q=",
         'excludedSites': ["quora.com"],
     },
@@ -108,6 +121,7 @@ let configOptions = {
     },
     'weather': {
         'city': "",
+        'preferredUnit': "C", // Either C or F
     },
     'workspaces': {
         'shown': 10,
@@ -185,19 +199,27 @@ let configOptions = {
             'prevTab': "Ctrl+Page_Up",
         },
         'cheatsheet': {
-            'nextTab': "Page_Down",
-            'prevTab': "Page_Up",
+            'keybinds': {
+                'nextTab': "Page_Down",
+                'prevTab': "Page_Up",
+            },
+            'nextTab': "Ctrl+Page_Down",
+            'prevTab': "Ctrl+Page_Up",
         }
     },
 }
 
 // Override defaults with user's options
 let optionsOkay = true;
-function overrideConfigRecursive(userOverrides, configOptions = {}) {
+function overrideConfigRecursive(userOverrides, configOptions = {}, check = true) {
     for (const [key, value] of Object.entries(userOverrides)) {
-        if (configOptions[key] === undefined) optionsOkay = false;
-        else if (typeof value === 'object') {
-            overrideConfigRecursive(value, configOptions[key]);
+        if (configOptions[key] === undefined && check) {
+            optionsOkay = false;
+        }
+        else if (typeof value === 'object' && !(value instanceof Array)) {
+            if (key === "substitutions" || key === "regexSubstitutions") {
+                overrideConfigRecursive(value, configOptions[key], false);
+            } else overrideConfigRecursive(value, configOptions[key]);
         } else {
             configOptions[key] = value;
         }

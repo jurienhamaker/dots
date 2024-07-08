@@ -121,7 +121,7 @@ const BarBattery = () =>
         className: "txt-smallie",
         setup: (self) =>
           self.hook(Battery, (label) => {
-            label.label = `${Battery.percent}%`;
+            label.label = `${Number.parseFloat(Battery.percent.toFixed(1))}%`;
           }),
       }),
       Overlay({
@@ -194,11 +194,11 @@ const BatteryModule = () =>
                       weather.current_condition[0].weatherCode;
                     const weatherDesc =
                       weather.current_condition[0].weatherDesc[0].value;
-                    const temperature = weather.current_condition[0].temp_C;
-                    const feelsLike = weather.current_condition[0].FeelsLikeC;
+                    const temperature = weather.current_condition[0][`temp_${userOptions.weather.preferredUnit}`];
+                    const feelsLike = weather.current_condition[0][`FeelsLike${userOptions.weather.preferredUnit}`];
                     const weatherSymbol = WEATHER_SYMBOL[WWO_CODE[weatherCode]];
                     self.children[0].label = weatherSymbol;
-                    self.children[1].label = `${temperature}℃ • Feels like ${feelsLike}℃`;
+                    self.children[1].label = `${temperature}°${userOptions.weather.preferredUnit} • Feels like ${feelsLike}°${userOptions.weather.preferredUnit}`;
                     self.tooltipText = weatherDesc;
                   })
                   .catch((err) => {
@@ -211,12 +211,12 @@ const BatteryModule = () =>
                         weather.current_condition[0].weatherCode;
                       const weatherDesc =
                         weather.current_condition[0].weatherDesc[0].value;
-                      const temperature = weather.current_condition[0].temp_C;
-                      const feelsLike = weather.current_condition[0].FeelsLikeC;
+                      const temperature = weather.current_condition[0][`temp_${userOptions.weather.preferredUnit}`];
+                      const feelsLike = weather.current_condition[0][`FeelsLike${userOptions.weather.preferredUnit}`];
                       const weatherSymbol =
                         WEATHER_SYMBOL[WWO_CODE[weatherCode]];
                       self.children[0].label = weatherSymbol;
-                      self.children[1].label = `${temperature}℃ • Feels like ${feelsLike}℃`;
+                      self.children[1].label = `${temperature}°${userOptions.weather.preferredUnit} • Feels like ${feelsLike}°${userOptions.weather.preferredUnit}`;
                       self.tooltipText = weatherDesc;
                     } catch (err) {
                       print(err);
