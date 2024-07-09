@@ -1,5 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "transient_prompt": {
+    "background": "transparent",
+    "foreground": "#ffbebc",
+    "template": "🍥 <#0CA0D8>{{ .PWD }}"
+  },
   "blocks": [
     {
       "type": "prompt",
@@ -9,7 +14,7 @@
           "type": "os",
           "style": "plain",
           "foreground": "#E0DEF4",
-          "template": "{{ if .WSL }}\ufa6f{{ end }}{{.Icon}} ",
+          "template": "{{ if .WSL }}\ufa6f{{ end }}{{.Icon}}  ",
           "properties": {
             "arch": "\uf303",
             "endeavouros": "\uf303",
@@ -22,9 +27,6 @@
         },
         {
           "foreground": "#ffbebc",
-          "properties": {
-            "display_host": true
-          },
           "style": "plain",
           "template": "{{ .UserName }} {{if .SSHSession }}<#9CCFD8>remotely {{ end }}<#ffffff>on</>",
           "type": "session"
@@ -76,22 +78,22 @@
         {
           "type": "root",
           "style": "plain",
+          "alias": "Root",
           "foreground": "#ffff66",
           "template": ""
         },
         {
           "foreground": "#C4A7E7",
+          "alias": "Prefix",
           "style": "plain",
-          "template": "➜ 🍥",
+          "template": "🍥",
           "type": "text"
         },
         {
           "foreground": "#0CA0D8",
+          "alias": "Path",
           "properties": {
-            "home_icon": "~",
-            "folder_separator_icon": "/",
-            "style": "letter",
-            "left_format": "/%s"
+            "style": "letter"
           },
           "style": "plain",
           "type": "path"
