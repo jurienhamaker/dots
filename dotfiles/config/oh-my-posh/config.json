@@ -6,6 +6,21 @@
       "alignment": "left",
       "segments": [
         {
+          "type": "os",
+          "style": "plain",
+          "foreground": "#E0DEF4",
+          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "properties": {
+            "arch": "\uf303",
+            "endeavouros": "\uf303",
+            "wsl": "\ue712",
+            "wsl_separator": " on ",
+            "windows": "\ufa6f",
+            "prefix": "<#ff0000>┏[</>",
+            "postfix": "<#ff0000>]</>"
+          }
+        },
+        {
           "foreground": "#ffbebc",
           "properties": {
             "display_host": true
@@ -38,8 +53,8 @@
             "fetch_upstream_icon": true,
             "fetch_worktree_count": true
           },
-          "style": "diamond",
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "style": "plain",
+          "template": "{{ .UpstreamIcon }}{{ abbrev 50 .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
           "type": "git"
         },
         {
