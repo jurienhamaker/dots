@@ -9,7 +9,7 @@
           "type": "os",
           "style": "plain",
           "foreground": "#E0DEF4",
-          "template": "{{ if .WSL }}WSL at {{ end }}{{.Icon}} ",
+          "template": "{{ if .WSL }}\ufa6f {{ end }}{{.Icon}} ",
           "properties": {
             "arch": "\uf303",
             "endeavouros": "\uf303",
