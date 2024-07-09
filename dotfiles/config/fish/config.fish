@@ -7,7 +7,4 @@ if test -z "$SSH_CLIENT"
 end
 
 zoxide init --cmd cd fish | source
-
-if test ! -z "$SSH_CLIENT"
-    starship init fish | source
-end
+oh-my-posh init fish --config ~/.config/oh-my-posh/config.json | source

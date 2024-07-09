@@ -62,9 +62,6 @@ dotfiles:
   d_fuzzel:
     src: config/fuzzel
     dst: ~/.config/fuzzel
-  f_starship.toml:
-    src: config/starship.toml
-    dst: ~/.config/starship.toml
   d_fusuma:
     src: config/fusuma
     dst: ~/.config/fusuma
@@ -89,6 +86,9 @@ dotfiles:
   d_xkb:
     src: config/xkb
     dst: ~/.config/xkb
+  d_oh_my_posh:
+    src: config/oh-my-posh
+    dst: ~/.config/oh-my-posh
 profiles:
   yugen-work:
     dotfiles:
@@ -107,7 +107,6 @@ profiles:
     - f_wallpaper.png
     - f_fetch_logo.png
     - d_fuzzel
-    - f_starship.toml
     - d_fusuma
     - f_btop.conf
     - f_ferdium_user.css
@@ -116,9 +115,10 @@ profiles:
     - f_discord.theme.css
     - d_waynergy
     - d_xkb
+    - d_oh_my_posh
   jurien-wsl:
     dotfiles:
     - d_nvim
     - f_fastfetch_wsl
     - d_fish
-    - f_starship.toml
+    - d_oh_my_posh
