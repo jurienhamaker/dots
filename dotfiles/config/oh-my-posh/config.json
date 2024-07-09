@@ -3,7 +3,7 @@
   "transient_prompt": {
     "background": "transparent",
     "foreground": "#ffbebc",
-    "template": "🍥 <#0CA0D8>{{ .PWD }}"
+    "template": "🍥 <#0CA0D8>{{ .PWD }} "
   },
   "blocks": [
     {
