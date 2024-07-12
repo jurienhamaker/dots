@@ -92,6 +92,9 @@ dotfiles:
   d_atac:
     src: config/atac
     dst: ~/.config/atac
+  d_ff_chrome:
+    src: mozilla/firefox/chrome
+    dst: ~/.mozilla/firefox/chrome
 profiles:
   yugen-work:
     dotfiles:
@@ -120,6 +123,7 @@ profiles:
       - d_xkb
       - d_oh_my_posh
       - d_atac
+      - d_ff_chrome
   jurien-wsl:
     dotfiles:
       - d_nvim
