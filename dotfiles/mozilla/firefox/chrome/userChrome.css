@@ -113,10 +113,11 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 
 :root {
   --firefoxcss-control-buttons-margin: 95px;
+  --toolbarbutton-inner-padding: 6px;
 }
 
 #navigator-toolbox #nav-bar {
-  padding-right: 32px !important;
+  padding-right: 12px !important;
   /* padding-right: calc(
     var(--firefoxcss-control-buttons-margin) - 10px
   ) !important; */
@@ -139,10 +140,10 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 }
 
 #TabsToolbar .titlebar-buttonbox-container .titlebar-button {
-  width: 14px !important;
-  min-width: 14px !important;
-  min-height: 14px !important;
-  height: 14px !important;
+  width: 5px !important;
+  min-width: 5px !important;
+  min-height: 5px !important;
+  height: 5px !important;
 }
 
 #navigator-toolbox[inFullscreen] #TabsToolbar .titlebar-buttonbox-container {
@@ -163,6 +164,8 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
 :is(.titlebar-buttonbox) .toolbarbutton-icon {
   opacity: 1 !important;
   appearance: none !important;
+  width: 8px !important;
+  height: 8px !important;
 }
 
 #TabsToolbar .titlebar-button > .toolbarbutton-icon {
@@ -408,10 +411,11 @@ toolbar:not([customizing]) > #nav-bar-customization-target {
     var(--TabsHeight) * -1px - var(--TabsBorder) * 1px
   ) !important;
   height: calc((var(--TabsHeight) * 1px + var(--TabsBorder) * 1px) + 0px);
+  padding-top: 7px !important;
 }
 
 #nav-bar {
-  margin-left: 35px !important;
+  margin-left: 5px !important;
 }
 
 #urlbar-container {
@@ -437,10 +441,10 @@ tab:not([selected="true"]),
 #scrollbutton-up,
 #scrollbutton-down,
 #TabsToolbar .titlebar-spacer,
-.tabbrowser-tab[selected="true"] .tab-text,
-.tabbrowser-tab[selected="true"] .tab-close-button,
+.tabbrowser-tab,
 .tab-line,
-.tab-throbber {
+.tab-throbber,
+#tabbrowser-arrowscrollbox-periphery {
   display: none !important;
 }
 
@@ -564,7 +568,7 @@ tab,
 
 #urlbar-container {
   flex: 1;
-  max-width: 1000px;
+  max-width: 400px;
   min-width: 200px;
   margin: auto !important;
 }
@@ -575,8 +579,12 @@ tab,
   margin-top: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
-  transition: width 0.3s ease, left 0.3s ease, margin-top 0.3s ease,
-    margin-left 0.3s ease, margin-right 0.3s ease;
+  transition:
+    width 0.3s ease,
+    left 0.3s ease,
+    margin-top 0.3s ease,
+    margin-left 0.3s ease,
+    margin-right 0.3s ease;
 }
 
 #main-window #urlbar[breakout][breakout-extend] {
@@ -587,8 +595,18 @@ tab,
   margin-left: auto !important;
   margin-right: auto !important; */
   /* margin-top: 30vh !important; */
-  transition: width 0.3s ease, left 0.3s ease, margin-top 0.3s ease,
-    margin-left 0.3s ease, margin-right 0.3s ease;
+  transition:
+    width 0.3s ease,
+    left 0.3s ease,
+    margin-top 0.3s ease,
+    margin-left 0.3s ease,
+    margin-right 0.3s ease;
+
+  top: 4px !important;
+}
+
+#main-window #urlbar[breakout][breakout-extend] {
+  padding-top: 0 !important;
 }
 
 #urlbar-background,
@@ -612,7 +630,7 @@ tab,
 /* Change URL Bar background color */
 @media (prefers-color-scheme: dark) {
   #urlbar-background {
-    background-color: #111111 !important;
+    background-color: #000 !important;
   }
 }
 
@@ -669,7 +687,9 @@ tab,
 #urlbar #identity-permission-box {
   opacity: 0 !important;
   margin-inline-start: calc(-16px - 2 * var(--urlbar-icon-padding));
-  transition: margin-inline-start 100ms linear, opacity 200ms linear;
+  transition:
+    margin-inline-start 100ms linear,
+    opacity 200ms linear;
 }
 
 #urlbar #identity-box.notSecureText #identity-icon-box {
@@ -705,7 +725,9 @@ tab,
 #page-action-buttons .urlbar-page-action {
   margin-inline-end: calc(-16px - 2 * var(--urlbar-icon-padding));
   opacity: 0;
-  transition: margin-inline-end 100ms linear, opacity 200ms linear;
+  transition:
+    margin-inline-end 100ms linear,
+    opacity 200ms linear;
 }
 
 #page-action-buttons:hover > .urlbar-page-action,
@@ -735,7 +757,9 @@ tab,
 #identity-box::after,
 #page-action-buttons::before {
   position: relative;
-  content: "•••";
+  content: " ";
+  width: 16px;
+  height: 16px;
   pointer-events: none;
   transition: opacity 100ms ease;
   align-self: center;
@@ -744,7 +768,7 @@ tab,
 
 #identity-box::after,
 #page-action-buttons::before {
-  opacity: 0.2;
+  opacity: 0;
 }
 
 #identity-box::after {
