@@ -95,6 +95,9 @@ dotfiles:
   d_ff_chrome:
     src: mozilla/firefox/chrome
     dst: ~/.mozilla/firefox/chrome
+  f_ff_user:
+    src: mozilla/firefox/user.js
+    dst: ~/.mozilla/firefox/user.js
 profiles:
   yugen-work:
     dotfiles:
@@ -124,6 +127,7 @@ profiles:
       - d_oh_my_posh
       - d_atac
       - d_ff_chrome
+      - f_ff_user
   jurien-wsl:
     dotfiles:
       - d_nvim
