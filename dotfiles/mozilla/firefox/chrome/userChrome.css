@@ -568,24 +568,31 @@ tab,
 
 #urlbar-container {
   flex: 1;
-  max-width: 400px;
+  max-width: 1000px;
   min-width: 200px;
   margin: auto !important;
 }
 
 #main-window #urlbar {
   z-index: 9999 !important;
-  width: 100% !important;
+  width: 400px !important;
   margin-top: 0 !important;
   margin-left: 0 !important;
   margin-right: 0 !important;
   transition:
-    width 0.3s ease,
-    left 0.3s ease,
     margin-top 0.3s ease,
     margin-left 0.3s ease,
     margin-right 0.3s ease;
+
+  left: 50%;
+  transform: translateX(-50%);
 }
+
+/*#main-window #urlbar:hover {
+  width: 100% !important;
+  left: 0;
+  transform: translateX(0);
+}*/
 
 #main-window #urlbar[breakout][breakout-extend] {
   /* opacity: 0.97 !important; */
@@ -596,17 +603,18 @@ tab,
   margin-right: auto !important; */
   /* margin-top: 30vh !important; */
   transition:
-    width 0.3s ease,
-    left 0.3s ease,
     margin-top 0.3s ease,
     margin-left 0.3s ease,
     margin-right 0.3s ease;
 
   top: 4px !important;
+  left: 0;
+  transform: translateX(0);
 }
 
 #main-window #urlbar[breakout][breakout-extend] {
   padding-top: 0 !important;
+  width: 100% !important;
 }
 
 #urlbar-background,
