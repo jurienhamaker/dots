@@ -1,18 +1,18 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "width": 20,
+    "width": 38,
+    "type": "builtin",
+    "source": "arch",
   },
   "modules": [
+    { "type": "custom", "format": "‼️ SSH SESSION ‼️" },
+    "break",
     "os",
     "host",
     "kernel",
     "uptime",
     "shell",
-    "display",
-    "de",
-    "wm",
-    "theme",
     "terminal",
     "terminalfont",
     "cpu",

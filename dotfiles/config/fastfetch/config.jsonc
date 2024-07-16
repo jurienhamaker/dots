@@ -20,6 +20,8 @@
     "gpu",
     "memory",
     "break",
+    "weather",
+    "break",
     "colors",
   ],
 }

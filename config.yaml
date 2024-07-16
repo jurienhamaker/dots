@@ -21,6 +21,10 @@ dotfiles:
     src: config/fastfetch/config.jsonc
     dst: ~/.config/fastfetch/config.jsonc
     chmod: "744"
+  f_fastfetch_ssh:
+    src: config/fastfetch/config-ssh.jsonc
+    dst: ~/.config/fastfetch/config-ssh.jsonc
+    chmod: "744"
   f_fastfetch_wsl:
     src: config/fastfetch/config-wsl.jsonc
     dst: ~/.config/fastfetch/config.jsonc
@@ -105,6 +109,7 @@ profiles:
       - d_ags
       - d_nvim
       - f_fastfetch
+      - f_fastfetch_ssh
       - d_fish
       - d_kitty
       - d_qt5ct

@@ -1,3 +1,3 @@
 function n
-    fastfetch $argv
+    ff $argv
 end
