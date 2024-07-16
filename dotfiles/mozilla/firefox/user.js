@@ -11,3 +11,7 @@ user_pref("browser.urlbar.trimURLs", true);
 // url bar tools
 user_pref("browser.urlbar.unitConversion.enabled", true);
 user_pref("browser.urlbar.suggest.calculator", true);
+
+// disable sharing indicator
+user_pref("privacy.webrtc.legacyGlobalIndicator", false);
+user_pref("privacy.webrtc.hideGlobalIndicator", true);
