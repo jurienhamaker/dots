@@ -8,7 +8,7 @@ vim.opt.shiftwidth = 4
 vim.opt.tabstop = 2
 
 vim.opt.autochdir = true
-vim.g.root_spec = { "cwd" }
+-- vim.g.root_spec = { "cwd" }
 
 vim.o.shell = "fish"
 
