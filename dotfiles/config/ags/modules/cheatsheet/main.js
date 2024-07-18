@@ -90,19 +90,13 @@ const SheetContent = (id) => {
 export default (id) => {
     const sheets = SheetContent(id);
     const widgetContent = Widget.Box({
-      vertical: true,
-      className: "cheatsheet-bg spacing-v-5",
-      children: [
-        Widget.Box({
-          vertical: true,
-          className: "cheatsheet-bg spacing-v-5",
-          children: [
-            CheatsheetHeader(),
-						sheets
-          ]
-				})
-		  ]
-    });
+       vertical: true,
+       className: "cheatsheet-bg spacing-v-5",
+       children: [
+         CheatsheetHeader(),
+				sheets
+       ]
+		});
     return PopupWindow({
       monitor: id,
       name: `cheatsheet${id}`,
