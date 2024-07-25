@@ -14,6 +14,9 @@ vim.o.shell = "fish"
 
 vim.opt.clipboard:append("unnamedplus")
 
+-- root dir
+vim.g.root_spec = { "cwd" }
+
 -- Fix "waiting for osc52 response from terminal" message
 -- https://github.com/neovim/neovim/issues/28611
 

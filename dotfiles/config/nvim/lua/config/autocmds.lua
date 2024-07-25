@@ -3,6 +3,6 @@
 -- Add any additional autocmds here
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*.ts*",
-  command = ":TSToolsOrganizeImports sync", -- added `sync` here
+  pattern = { "*.ts*", "*.js*" },
+  command = ":VtsExec organize_imports", -- added `sync` here
 })
