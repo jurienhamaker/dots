@@ -21,3 +21,5 @@ alias pn_bash="p; cd paperless; docker-compose exec ng-playground bash"
 alias juriendev="ssh jurien@51.15.23.40"
 alias media="ssh root@87.212.147.76"
 alias work="ssh jurien@192.168.1.40 -Y -t 'fish -li'"
+
+alias dnode="docker run -it -v /mnt/Programming:/opt/app -w /opt/app -p 4200:4200 -p 3000:3000 --rm --entrypoint bash node:latest"
