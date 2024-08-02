@@ -12,5 +12,7 @@ vim.keymap.set("n", "<leader>on", ":ObsidianTemplate note<cr> :lua vim.cmd([[1,/
 vim.keymap.set("n", "<leader>of", ":s/\\(# \\)[^_]*_/\\1/ | s/-/ /g<cr>")
 --
 -- search for files in full vault
-vim.keymap.set("n", "<leader>os", ':Telescope find_files search_dirs={"/home/jurien/vault/notes"}<cr>')
-vim.keymap.set("n", "<leader>oz", ':Telescope live_grep search_dirs={"/home/jurien/vault/notes"}<cr>')
+-- vim.keymap.set("n", "<leader>os", ':Telescope find_files search_dirs={"/home/jurien/vault/notes"}<cr>')
+-- vim.keymap.set("n", "<leader>oz", ':Telescope live_grep search_dirs={"/home/jurien/vault/notes"}<cr>')
+vim.keymap.set("n", "<leader>os", ':FzfLua files search_dirs={"/home/jurien/vault/notes"}<cr>')
+vim.keymap.set("n", "<leader>oz", ':FzfLua live_grep search_dirs={"/home/jurien/vault/notes"}<cr>')

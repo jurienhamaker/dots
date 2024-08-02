@@ -2,6 +2,9 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
+-- Use FZF
+vim.g.lazyvim_picker = "fzf"
+
 -- Use tabs instead of spaces
 vim.opt.expandtab = false
 vim.opt.shiftwidth = 4
