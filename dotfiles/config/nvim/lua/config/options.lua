@@ -5,7 +5,7 @@
 -- Use tabs instead of spaces
 vim.opt.expandtab = false
 vim.opt.shiftwidth = 4
-vim.opt.tabstop = 2
+vim.opt.tabstop = 4
 
 vim.opt.autochdir = true
 -- vim.g.root_spec = { "cwd" }
@@ -16,6 +16,10 @@ vim.opt.clipboard:append("unnamedplus")
 
 -- root dir
 vim.g.root_spec = { "cwd" }
+
+-- folding
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldmethod = "expr"
 
 -- Fix "waiting for osc52 response from terminal" message
 -- https://github.com/neovim/neovim/issues/28611
