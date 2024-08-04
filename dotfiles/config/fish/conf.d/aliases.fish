@@ -19,5 +19,5 @@ alias pn_up="p; cd paperless; docker-compose up ng-playground"
 alias pn_bash="p; cd paperless; docker-compose exec ng-playground bash"
 
 alias juriendev="ssh jurien@51.15.23.40"
-alias media="ssh jurien@87.212.147.76"
+alias media="ssh root@87.212.147.76"
 alias work="ssh jurien@192.168.1.40 -Y -t 'fish -li'"
