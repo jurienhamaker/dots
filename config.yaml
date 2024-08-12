@@ -20,15 +20,15 @@ dotfiles:
   f_fastfetch:
     src: config/fastfetch/config.jsonc
     dst: ~/.config/fastfetch/config.jsonc
-    chmod: "744"
+    chmod: '744'
   f_fastfetch_ssh:
     src: config/fastfetch/config-ssh.jsonc
     dst: ~/.config/fastfetch/config-ssh.jsonc
-    chmod: "744"
+    chmod: '744'
   f_fastfetch_wsl:
     src: config/fastfetch/config-wsl.jsonc
     dst: ~/.config/fastfetch/config.jsonc
-    chmod: "744"
+    chmod: '744'
   d_fish:
     src: config/fish
     dst: ~/.config/fish
@@ -41,22 +41,22 @@ dotfiles:
   d_gtk-3.0:
     src: config/gtk-3.0
     dst: ~/.config/gtk-3.0
-    chmod: "700"
+    chmod: '700'
   d_gtk-4.0:
     src: config/gtk-4.0
     dst: ~/.config/gtk-4.0
   d_spicetify:
     src: config/spicetify
     dst: ~/.config/spicetify
-    chmod: "700"
+    chmod: '700'
   f_fuzzel-emoji:
     src: local/bin/fuzzel-emoji
     dst: ~/.local/bin/fuzzel-emoji
-    chmod: "755"
+    chmod: '755'
   f_rubyshot:
     src: local/bin/rubyshot
     dst: ~/.local/bin/rubyshot
-    chmod: "755"
+    chmod: '755'
   f_wallpaper.png:
     src: Pictures/wallpaper.png
     dst: ~/Pictures/wallpaper.png
@@ -102,41 +102,45 @@ dotfiles:
   f_ff_user:
     src: mozilla/firefox/user.js
     dst: ~/.mozilla/firefox/user.js
+  d_lazygit:
+    src: config/lazygit
+    dst: ~/.config/lazygit
 profiles:
   yugen-work:
     dotfiles:
-      - d_hypr
-      - d_ags
-      - d_nvim
-      - f_fastfetch
-      - f_fastfetch_ssh
-      - d_fish
-      - d_kitty
-      - d_qt5ct
-      - d_gtk-3.0
-      - d_gtk-4.0
-      - d_spicetify
-      - f_fuzzel-emoji
-      - f_rubyshot
-      - f_wallpaper.png
-      - f_fetch_logo.png
-      - d_fuzzel
-      - d_fusuma
-      - f_btop.conf
-      - f_ferdium_user.css
-      - f_ferdium_darkmode.css
-      - f_ferdium_user.js
-      - f_discord.theme.css
-      - d_waynergy
-      - d_xkb
-      - d_oh_my_posh
-      - d_atac
-      - d_ff_chrome
-      - f_ff_user
+    - d_hypr
+    - d_ags
+    - d_nvim
+    - f_fastfetch
+    - f_fastfetch_ssh
+    - d_fish
+    - d_kitty
+    - d_qt5ct
+    - d_gtk-3.0
+    - d_gtk-4.0
+    - d_spicetify
+    - f_fuzzel-emoji
+    - f_rubyshot
+    - f_wallpaper.png
+    - f_fetch_logo.png
+    - d_fuzzel
+    - d_fusuma
+    - f_btop.conf
+    - f_ferdium_user.css
+    - f_ferdium_darkmode.css
+    - f_ferdium_user.js
+    - f_discord.theme.css
+    - d_waynergy
+    - d_xkb
+    - d_oh_my_posh
+    - d_atac
+    - d_ff_chrome
+    - f_ff_user
+    - d_lazygit
   jurien-wsl:
     dotfiles:
-      - d_nvim
-      - f_fastfetch_wsl
-      - d_fish
-      - d_oh_my_posh
-      - d_atac
+    - d_nvim
+    - f_fastfetch_wsl
+    - d_fish
+    - d_oh_my_posh
+    - d_atac
