@@ -27,4 +27,17 @@ return {
 			desc = "Todo-comments jump previous",
 		},
 	},
+	opts = {
+		highlight = {
+			-- NOTE: test
+			-- NOTE(LUA): test
+			-- NOTE (LUA): test
+			-- NOTE[TS_STRICT]: test
+			-- NOTE [TS_STRICT]: test
+			pattern = {
+				[[.*<((KEYWORDS)%(\s?\(.{-1,}\))?):]],
+				[[.*<((KEYWORDS)%(\s?\[.{-1,}\])?):]],
+			},
+		},
+	},
 }
