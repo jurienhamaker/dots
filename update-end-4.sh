@@ -1,5 +1,8 @@
 cd end_4
 
+git checkout main
+git pull
+
 git checkout current
 #git diff $(git rev-parse HEAD)...f47500ce73377aa1728d9b176aacbf364994b20c >diff.patch
 git diff $(git rev-parse HEAD)...main >diff.patch
