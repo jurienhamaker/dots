@@ -66,7 +66,7 @@ const Windows = () => [
     ...(userOptions.appearance.barRoundCorners ? [
         forMonitors(BarCornerTopleft),
         forMonitors(BarCornerTopright),
-    : []),
+	] : []),
 ];
 const CLOSE_ANIM_TIME = 210; // Longer than actual anim time to make sure widgets animate fully
 const closeWindowDelays = {}; // For animations
