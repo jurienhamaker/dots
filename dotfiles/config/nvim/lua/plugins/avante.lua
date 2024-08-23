@@ -4,9 +4,10 @@ return {
 		event = "VeryLazy",
 		build = "make",
 		opts = {
-			behaviour = {
-				auto_apply_diff_after_generation = true,
-			},
+			provider = "gemini",
+			-- behaviour = {
+			-- 	auto_apply_diff_after_generation = true,
+			-- },
 			hints = {
 				enabled = false,
 			},
