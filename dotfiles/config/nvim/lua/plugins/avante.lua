@@ -4,6 +4,12 @@ return {
 		event = "VeryLazy",
 		build = "make",
 		opts = {
+			behaviour = {
+				auto_apply_diff_after_generation = true,
+			},
+			hints = {
+				enabled = false,
+			},
 			-- add any opts here
 		},
 		dependencies = {
