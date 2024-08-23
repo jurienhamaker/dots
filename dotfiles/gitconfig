@@ -1,0 +1,18 @@
+[user]
+	email = whoami@jurien.dev
+	name = Jurien Hamaker
+	signingKey = ""
+[gpg]
+	format = openpgp
+	program = gpg
+[commit]
+	gpgSign = false
+[tag]
+	forceSignAnnotated = false
+[gpg "ssh"]
+	program = ssh-keygen
+	allowedSignersFile = ""
+[pull]
+	rebase = true
+[core]
+	excludesFile = ~/.gitignore
