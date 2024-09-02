@@ -1,5 +1,0 @@
-return {
-  {
-    "yioneko/nvim-vtsls",
-  },
-}
