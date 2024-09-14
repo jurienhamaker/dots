@@ -14,5 +14,5 @@ function on
     set formatted_file_name $(date "+%Y-%m-%d")_{$file_name}.md
     cd "/home/jurien/vault/$location" || exit
     touch $formatted_file_name
-    nvim $formatted_file_name
+    nvim $formatted_file_name -c "au VimEnter * call timer_start(200, { tid -> execute('ObsidianTemplate note')})"
 end
