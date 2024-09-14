@@ -121,7 +121,7 @@ export const keybindList = [
       name: "Apps",
       binds: [
         { keys: ["", "+", "Return"], action: "Launch terminal: kitty" },
-        { keys: ["", "+", "W"], action: "Launch browser: Firefox" },
+        { keys: ["", "+", "W"], action: "Launch browser: Zen" },
         {
           keys: ["", "+", "I"],
           action: "Launch settings: GNOME Control center",
