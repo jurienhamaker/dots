@@ -3,6 +3,11 @@
 -- Add any additional autocmds here
 
 -- vim.api.nvim_create_autocmd("BufWritePre", {
---   pattern = { "*.ts*", "*.js", "*.jsx" },
---   command = ":VtsExec organize_imports", -- added `sync` here
+-- 	pattern = { "*.ts*", "*.js", "*.jsx" },
+-- 	command = ":VtsExec remove_unused_imports", -- added `sync` here
+-- })
+
+-- vim.api.nvim_create_autocmd("BufWritePre", {
+-- 	pattern = { "*.ts*", "*.js", "*.jsx" },
+-- 	command = "normal \\co", -- added `sync` here
 -- })
