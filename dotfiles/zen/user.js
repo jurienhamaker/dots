@@ -26,5 +26,5 @@ user_pref("general.smoothScroll.other.durationMinMS", 200);
 user_pref("general.smoothScroll.pages.durationMaxMS", 400);
 user_pref("general.smoothScroll.pages.durationMinMS", 200);
 user_pref("mousewheel.acceleration.start", 0);
-user_pref("mousewheel.min_line_scroll_amount", 50);
+user_pref("mousewheel.min_line_scroll_amount", 20);
 user_pref("toolkit.scrollbox.smoothScroll", false);
