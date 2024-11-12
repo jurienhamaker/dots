@@ -1,0 +1,19 @@
+{
+  "name": "@jurienhamaker/dots/snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./angular/typescript.json"
+      },
+      {
+        "language": "html",
+        "path": "./angular/html.json"
+      },
+      {
+        "language": "dockerfile",
+        "path": "./angular/dockerfile.json"
+      }
+    ]
+  }
+}

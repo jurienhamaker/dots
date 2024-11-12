@@ -16,3 +16,5 @@ vim.keymap.set("n", "<leader>os", ':Telescope find_files search_dirs={"/home/jur
 vim.keymap.set("n", "<leader>oz", ':Telescope live_grep search_dirs={"/home/jurien/vault/notes"}<cr>')
 -- vim.keymap.set("n", "<leader>os", ':FzfLua files search_dirs={"/home/jurien/vault/notes"}<cr>')
 -- vim.keymap.set("n", "<leader>oz", ':FzfLua live_grep search_dirs={"/home/jurien/vault/notes"}<cr>')
+--
+vim.keymap.set("n", "<leader>tl", ":Telescope luasnip<cr>")
