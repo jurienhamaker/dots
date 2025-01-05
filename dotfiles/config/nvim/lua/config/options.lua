@@ -24,6 +24,9 @@ vim.g.root_spec = { "cwd" }
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldmethod = "expr"
 
+-- disable scroll
+vim.g.snacks_scroll = false
+
 -- Fix "waiting for osc52 response from terminal" message
 -- https://github.com/neovim/neovim/issues/28611
 
