@@ -13,20 +13,20 @@ next_environment = "Shift-E"
 display_cookies = "Shift-C"
 
 [keybindings.generic]
-display_help = "Shift-h" # Take care to not overlap other inputs, the help can be triggered from anywhere
+display_help = "f1" # Take care to not overlap other inputs, the help can be triggered from anywhere
 
 # Collection name, request name, URL, Header, Query param, Basic Auth, Bearer Token
 [keybindings.generic.text_inputs.text_input]
-validate = "Enter"
-
-cancel = "Esc"
 confirm = "Enter"
+cancel = "Esc"
 
 delete_backward = "Delete"
 delete_forward = "Backspace"
 
 move_cursor_left = "Ctrl-h"
 move_cursor_right = "Ctrl-l"
+move_cursor_line_start = "Home"
+move_cursor_line_end = "End"
 
 # Request body
 [keybindings.generic.text_inputs]
@@ -48,23 +48,23 @@ alt_move_cursor_down = "Ctrl-j"
 alt_move_cursor_left = "Ctrl-h"
 alt_move_cursor_right = "Ctrl-l"
 
-go_back = "q"
+go_back = "Esc"
 select = "Enter"
 
 # Collections list, query params, headers, cookies
 [keybindings.generic.list_and_table_actions]
-create_element = "n"
-delete_element = "d"
-edit_element = "Enter" # Edit query param, header, basic auth, bearer token
-rename_element = "r"   # Only used in the collections list (main menu)
-toggle_element = "t"   # Only used in tables (Query params, headers, cookies)
+create_element = "Shift-N"
+delete_element = "Shift-D"
+edit_element = "Enter"     # Edit query param, header, basic auth, bearer token
+rename_element = "Shift-R" # Only used in the collections list (main menu)
+toggle_element = "Shift-T" # Only used in tables (Query params, headers, cookies)
 
 [keybindings.request_selected]
-param_next_tab = "]"
+param_next_tab = "t"
 
-change_url = "u"
-change_method = "m"
-request_settings = "s"
+change_url = "Shift-U"
+change_method = "Shift-M"
+request_settings = "Shift-S"
 
 next_view = "Shift-V"
 
@@ -72,8 +72,8 @@ send_request = "Space"
 alt_send_request = "Ctrl-Enter"
 
 [keybindings.request_selected.param_tabs]
-change_auth_method = "a"
-change_body_content_type = "b"
+change_auth_method = "Shift-A"
+change_body_content_type = "Shift-B"
 
 [keybindings.request_selected.result_tabs]
 scroll_up = "Ctrl-k"
