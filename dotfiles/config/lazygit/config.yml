@@ -3,3 +3,7 @@ customCommands:
     command: "git fetch --prune"
     context: "localBranches"
     stream: true
+  - key: "R"
+    command: "git reset HEAD~"
+    context: "localBranches"
+    stream: true
