@@ -5,5 +5,5 @@ customCommands:
     stream: true
   - key: "R"
     command: "git reset HEAD~"
-    context: "localBranches"
+    context: "commits"
     stream: true
