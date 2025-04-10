@@ -6,63 +6,68 @@ import GLib from 'gi://GLib';
 import Soup from 'gi://Soup?version=3.0';
 import { fileExists } from '../modules/.miscutils/files.js';
 
-const PROVIDERS = Object.assign({ // There's this list hmm https://github.com/zukixa/cool-ai-stuff/
-    'openai': {
-        'name': 'OpenAI',
-        'logo_name': 'openai-symbolic',
-        'description': getString('Official OpenAI API.\nPricing: Free for the first $5 or 3 months, whichever is less.'),
-        'base_url': 'https://api.openai.com/v1/chat/completions',
-        'key_get_url': 'https://platform.openai.com/api-keys',
-        'key_file': 'openai_key.txt',
-        'model': 'gpt-3.5-turbo',
+const PROVIDERS = Object.assign({
+    "ollama_llama_3_2": {
+        "name": "Ollama - Llama 3.2",
+        "logo_name": "ollama-symbolic",
+        "description": getString('Ollama - Llama-3.2'),
+        "base_url": 'http://localhost:11434/v1/chat/completions',
+        "key_get_url": "",
+        "requires_key": false,
+        "key_file": "ollama_key.txt",
+        "model": "llama3.2",
     },
-    'ollama': {
-        'name': 'Ollama (Llama 3)',
-        'logo_name': 'ollama-symbolic',
-        'description': getString('Official Ollama API.\nPricing: Free.'),
-        'base_url': 'http://localhost:11434/v1/chat/completions',
-        'key_get_url': 'it\'s just ollama',
-        'key_file': 'ollama_key.txt',
-        'model': 'llama3:instruct',
+    "ollama_deepseek_r1": {
+        "name": "Ollama - DeepSeek R1",
+        "logo_name": "deepseek-symbolic",
+        "description": getString('That popular Chinese model that thinks thoroughly'),
+        "base_url": "http://localhost:11434/v1/chat/completions",
+        "key_get_url": "",
+        "key_file": "ollama_key.txt",
+        "requires_key": false,
+        "model": "deepseek-r1",
     },
-    'openrouter': {
-        'name': 'OpenRouter (Llama-3-70B)',
-        'logo_name': 'openrouter-symbolic',
-        'description': getString('A unified interface for LLMs'),
-        'base_url': 'https://openrouter.ai/api/v1/chat/completions',
-        'key_get_url': 'https://openrouter.ai/keys',
-        'key_file': 'openrouter_key.txt',
-        'model': 'meta-llama/llama-3-70b-instruct',
+    "ollama_gemma3": {
+        "name": "Ollama - Gemma 3",
+        "logo_name": "google-gemini-symbolic",
+        "description": getString('Gemma 3 from Google. Runs on a single GPU.'),
+        "base_url": "http://localhost:11434/v1/chat/completions",
+        "key_get_url": "",
+        "key_file": "ollama_key.txt",
+        "requires_key": false,
+        "model": "gemma3",
     },
-    'oxygen4o': {
-        'name': 'Oxygen (GPT-4o)',
-        'logo_name': 'ai-oxygen-symbolic',
-        'description': getString('An API from Tornado Softwares\nPricing: Free: 100/day\nRequires you to join their Discord for a key'),
-        'base_url': 'https://app.oxyapi.uk/v1/chat/completions',
-        'key_get_url': 'https://discord.com/invite/kM6MaCqGKA',
-        'key_file': 'oxygen_key.txt',
-        'model': 'gpt-4o',
+    "openrouter": {
+        "name": "OpenRouter (Llama-3-70B)",
+        "logo_name": "openrouter-symbolic",
+        "description": getString('A unified interface for LLMs'),
+        "base_url": "https://openrouter.ai/api/v1/chat/completions",
+        "key_get_url": "https://openrouter.ai/keys",
+        "requires_key": true,
+        "key_file": "openrouter_key.txt",
+        "model": "meta-llama/llama-3-70b-instruct",
     },
-    'zukijourney': {
-        'name': 'zukijourney (GPT-3.5)',
-        'logo_name': 'ai-zukijourney',
-        'description': getString("An API from @zukixa on GitHub.\nNote: Keys are IP-locked so it's buggy sometimes\nPricing: Free: 10/min, 800/day.\nRequires you to join their Discord for a key"),
-        'base_url': 'https://zukijourney.xyzbot.net/v1/chat/completions',
-        'key_get_url': 'https://discord.com/invite/Y4J6XXnmQ6',
-        'key_file': 'zuki_key.txt',
-        'model': 'gpt-3.5-turbo',
+    "openai": {
+        "name": "OpenAI - GPT-3.5",
+        "logo_name": "openai-symbolic",
+        "description": getString('Official OpenAI API.\nPricing: Free for the first $5 or 3 months, whichever is less.'),
+        "base_url": "https://api.openai.com/v1/chat/completions",
+        "key_get_url": "https://platform.openai.com/api-keys",
+        "requires_key": true,
+        "key_file": "openai_key.txt",
+        "model": "gpt-3.5-turbo",
     },
-}, userOptions.sidebar.ai.extraGptModels)
+}, userOptions.ai.extraGptModels)
 
 // Custom prompt
 const initMessages =
     [
         { role: "user", content: getString("You are an assistant on a sidebar of a Wayland Linux desktop. Please always use a casual tone when answering your questions, unless requested otherwise or making writing suggestions. These are the steps you should take to respond to the user's queries:\n1. If it's a writing- or grammar-related question or a sentence in quotation marks, Please point out errors and correct when necessary using underlines, and make the writing more natural where appropriate without making too major changes. If you're given a sentence in quotes but is grammatically correct, explain briefly concepts that are uncommon.\n2. If it's a question about system tasks, give a bash command in a code block with brief explanation.\n3. Otherwise, when asked to summarize information or explaining concepts, you are should use bullet points and headings. For mathematics expressions, you *have to* use LaTeX within a code block with the language set as \"latex\". \nNote: Use casual language, be short, while ensuring the factual correctness of your response. If you are unsure or don’t have enough information to provide a confident answer, simply say “I don’t know” or “I’m not sure.”. \nThanks!"), },
         { role: "assistant", content: "- Got it!", },
-        { role: "user", content: "\"He rushed to where the event was supposed to be hold, he didn't know it got calceled\"", },
-        { role: "assistant", content: "## Grammar correction\nErrors:\n\"He rushed to where the event was supposed to be __hold____,__ he didn't know it got calceled\"\nCorrection + minor improvements:\n\"He rushed to the place where the event was supposed to be __held____, but__ he didn't know that it got calceled\"", },
+        { role: "user", content: "\"He rushed to where the event was supposed to be hold, he didn't know it got canceled\"", },
+        { role: "assistant", content: "## Grammar correction\nErrors:\n\"He rushed to where the event was supposed to be __hold____,__ he didn't know it got canceled\"\nCorrection + minor improvements:\n\"He rushed to the place where the event was supposed to be __held____, but__ he didn't know that it got canceled\"", },
         { role: "user", content: "raise volume by 5%", },
-        { role: "assistant", content: "## Volume +5```bash\nwpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+\n```\nThis command uses the `wpctl` utility to adjust the volume of the default sink.", },
+        { role: "assistant", content: "## Volume +5\n```bash\nwpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+\n```\nThis command uses the `wpctl` utility to adjust the volume of the default sink.", },
         { role: "user", content: "main advantages of the nixos operating system", },
         { role: "assistant", content: "## NixOS advantages\n- **Reproducible**: A config working on one device will also work on another\n- **Declarative**: One config language to rule them all. Effortlessly share them with others.\n- **Reliable**: Per-program software versioning. Mitigates the impact of software breakage", },
         { role: "user", content: "whats skeumorphism", },
@@ -86,6 +91,7 @@ class GPTMessage extends Service {
 
     _role = '';
     _content = '';
+    _lastContentLength = 0;
     _thinking;
     _done = false;
 
@@ -106,8 +112,11 @@ class GPTMessage extends Service {
     get content() { return this._content }
     set content(content) {
         this._content = content;
-        this.notify('content')
-        this.emit('changed')
+        if (this._content.length - this._lastContentLength >= userOptions.ai.charsEachUpdate) {
+            this.notify('content')
+            this.emit('changed')
+            this._lastContentLength = this._content.length;
+        }
     }
 
     get label() { return this._parserState.parsed + this._parserState.stack.join('') }
@@ -249,11 +258,11 @@ class GPTService extends Service {
         const aiResponse = new GPTMessage('assistant', '', true, false)
 
         const body = {
-            model: PROVIDERS[this._currentProvider]['model'],
-            messages: this._messages.map(msg => { let m = { role: msg.role, content: msg.content }; return m; }),
-            temperature: this._temperature,
-            // temperature: 2, // <- Nuts
-            stream: true,
+            "model": PROVIDERS[this._currentProvider]['model'],
+            "messages": this._messages.map(msg => { let m = { role: msg.role, content: msg.content }; return m; }),
+            "temperature": this._temperature,
+            "stream": true,
+            "keep_alive": userOptions.ai.keepAlive,
         };
         const proxyResolver = new Gio.SimpleProxyResolver({ 'default-proxy': userOptions.ai.proxyUrl });
         const session = new Soup.Session({ 'proxy-resolver': proxyResolver });

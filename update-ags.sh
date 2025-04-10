@@ -7,4 +7,6 @@ source ./scriptdata/functions
 source ./scriptdata/installers
 source ./scriptdata/options
 
-v install-ags
+rm -rf ./cache
+#install-python-packages
+install-agsv1

@@ -6,7 +6,7 @@
 -- vim.g.lazyvim_picker = "fzf"
 
 -- Disable logging unless I am debugging
-vim.lsp.set_log_level("off")
+-- vim.lsp.set_log_level("off")
 
 -- Use tabs instead of spaces
 vim.opt.expandtab = false

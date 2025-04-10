@@ -35,6 +35,9 @@ dotfiles:
   d_kitty:
     src: config/kitty
     dst: ~/.config/kitty
+  d_kvantum:
+    src: config/Kvantum
+    dst: ~/.config/Kvantum
   d_qt5ct:
     src: config/qt5ct
     dst: ~/.config/qt5ct
@@ -124,6 +127,7 @@ profiles:
       - f_fastfetch_ssh
       - d_fish
       - d_kitty
+      - d_kvantum
       - d_qt5ct
       - d_gtk-3.0
       - d_gtk-4.0
