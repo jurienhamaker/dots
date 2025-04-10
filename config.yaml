@@ -84,9 +84,6 @@ dotfiles:
   f_ferdium_user.js:
     src: config/Ferdium/recipes/whatsapp/user.js
     dst: ~/.config/Ferdium/recipes/whatsapp/user.js
-  f_discord.theme.css:
-    src: config/vesktop/themes/discord.theme.css
-    dst: ~/.config/vesktop/themes/discord.theme.css
   d_waynergy:
     src: config/waynergy
     dst: ~/.config/waynergy
