@@ -29,5 +29,5 @@ fi
 
 sleep 1
 
-killall ags ydotool
-ags &
+killall agsv1 ydotool
+agsv1 &
