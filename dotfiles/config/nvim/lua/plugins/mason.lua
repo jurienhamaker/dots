@@ -1,9 +1,10 @@
-
 return {
+	{ "mason-org/mason.nvim", version = "^1.0.0" },
 	{
-		"williamboman/mason-lspconfig.nvim", 
+		"mason-org/mason-lspconfig.nvim",
+		version = "^1.0.0",
 		opts = {
-			ensure_installed = { "angularls@18.2.0"},
-		}
-	}
+			ensure_installed = { "angularls@18.2.0" },
+		},
+	},
 }
