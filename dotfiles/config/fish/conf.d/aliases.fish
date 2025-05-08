@@ -9,8 +9,10 @@ alias ew_bash="p; cd employes; docker compose exec web bash"
 alias eo_up="p; cd employes; docker compose up office"
 alias eo_bash="p; cd employes; docker compose exec office bash"
 
-alias es_up="p; cd employes-style; docker compose up"
-alias es_bash="p; cd employes-style; docker compose exec style bash"
+alias w_up="p; cd employes-website; docker compose up next"
+alias w_bash="p; cd employes-website; docker compose exec next bash"
+alias ws_up="p; cd employes-website; docker compose up slicemachine"
+alias ws_bash="p; cd employes-website; docker compose exec next slicemachine"
 
 alias p_up="p; cd paperless; docker compose up storybook"
 alias p_bash="p; cd paperless; docker compose exec storybook bash"
