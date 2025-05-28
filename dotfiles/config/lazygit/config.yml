@@ -7,3 +7,9 @@ customCommands:
     command: "git reset HEAD~"
     context: "commits"
     stream: true
+  - key: "C"
+    description: Pick LLM commit
+    loadingText: "waiting for LLM to generate commit messages..."
+    command: fish -c ai-commit
+    context: files
+    subprocess: true
