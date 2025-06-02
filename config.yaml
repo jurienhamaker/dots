@@ -84,6 +84,9 @@ dotfiles:
   f_ferdium_user.js:
     src: config/Ferdium/recipes/whatsapp/user.js
     dst: ~/.config/Ferdium/recipes/whatsapp/user.js
+  f_electron-flags.conf:
+    src: config/electron-flags.conf
+    dst: ~/.config/electron-flags.conf
   d_waynergy:
     src: config/waynergy
     dst: ~/.config/waynergy
@@ -139,7 +142,7 @@ profiles:
       - f_ferdium_user.css
       - f_ferdium_darkmode.css
       - f_ferdium_user.js
-      - f_discord.theme.css
+      - f_electron-flags.conf
       - d_waynergy
       - d_xkb
       - d_oh_my_posh
