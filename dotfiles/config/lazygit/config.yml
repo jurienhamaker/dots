@@ -2,14 +2,14 @@ customCommands:
   - key: "F"
     command: "git fetch --prune"
     context: "localBranches"
-    stream: true
+    output: log
   - key: "R"
     command: "git reset HEAD~"
     context: "commits"
-    stream: true
+    output: log
   - key: "C"
     description: Pick LLM commit
     loadingText: "waiting for LLM to generate commit messages..."
     command: fish -c ai-commit
     context: files
-    subprocess: true
+    output: terminal
