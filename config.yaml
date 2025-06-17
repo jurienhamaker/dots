@@ -117,6 +117,10 @@ dotfiles:
   f_zen_user:
     src: zen/user.js
     dst: ~/.zen/user.js
+  d_commitlint:
+    src: config/commitlint
+    dst: ~/.config/commitlint
+    chmod: "750"
 profiles:
   yugen-work:
     dotfiles:
@@ -147,12 +151,13 @@ profiles:
       - d_xkb
       - d_oh_my_posh
       - d_atac
-      # - d_ff_chrome
-      # - f_ff_user
+        # - d_ff_chrome
+        # - f_ff_user
       - d_lazygit
       - f_gitignore
       - f_gitconfig
       - f_zen_user
+      - d_commitlint
   jurien-wsl:
     dotfiles:
       - d_nvim

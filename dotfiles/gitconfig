@@ -17,3 +17,4 @@
 [core]
 	excludesFile = ~/.gitignore
 	editor = nvim
+	hooksPath = /home/jurien/.config/commitlint/hooks
