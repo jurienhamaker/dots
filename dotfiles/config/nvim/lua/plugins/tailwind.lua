@@ -2,11 +2,11 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		opts = {
-			server = {
+			servers = {
 				tailwindcss = {
 					settings = {
 						tailwindCSS = {
-							classFunctions = { "cva", "cn", "cx" },
+							classFunctions = { "cva", "cn", "cx", "tw", "clsx" },
 						},
 					},
 				},
