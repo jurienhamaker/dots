@@ -8,12 +8,6 @@ config:
   link_on_import: absolute
   longkey: false
 dotfiles:
-  d_hypr:
-    src: config/hypr
-    dst: ~/.config/hypr
-  d_ags:
-    src: config/ags
-    dst: ~/.config/ags
   d_nvim:
     src: config/nvim
     dst: ~/.config/nvim
@@ -52,26 +46,12 @@ dotfiles:
     src: config/spicetify
     dst: ~/.config/spicetify
     chmod: "700"
-  f_fuzzel-emoji:
-    src: local/bin/fuzzel-emoji
-    dst: ~/.local/bin/fuzzel-emoji
-    chmod: "755"
-  f_rubyshot:
-    src: local/bin/rubyshot
-    dst: ~/.local/bin/rubyshot
-    chmod: "755"
   f_wallpaper.png:
     src: Pictures/wallpaper.png
-    dst: ~/Pictures/wallpaper.png
+    dst: ~/Pictures/Wallpapers/wallpaper.png
   f_fetch_logo.png:
     src: Pictures/fetch_logo.png
     dst: ~/Pictures/fetch_logo.png
-  d_fuzzel:
-    src: config/fuzzel
-    dst: ~/.config/fuzzel
-  d_fusuma:
-    src: config/fusuma
-    dst: ~/.config/fusuma
   f_btop.conf:
     src: config/btop/btop.conf
     dst: ~/.config/btop/btop.conf
@@ -121,11 +101,12 @@ dotfiles:
     src: config/commitlint
     dst: ~/.config/commitlint
     chmod: "750"
+  d_hypr:
+    src: config/hypr
+    dst: ~/.config/hypr
 profiles:
   yugen-work:
     dotfiles:
-      - d_hypr
-      - d_ags
       - d_nvim
       - f_fastfetch
       - f_fastfetch_ssh
@@ -135,29 +116,18 @@ profiles:
       - d_qt5ct
       - d_gtk-3.0
       - d_gtk-4.0
-      - d_spicetify
-      - f_fuzzel-emoji
-      - f_rubyshot
       - f_wallpaper.png
       - f_fetch_logo.png
-      - d_fuzzel
-      - d_fusuma
       - f_btop.conf
-      - f_ferdium_user.css
-      - f_ferdium_darkmode.css
-      - f_ferdium_user.js
       - f_electron-flags.conf
-      - d_waynergy
-      - d_xkb
       - d_oh_my_posh
       - d_atac
-        # - d_ff_chrome
-        # - f_ff_user
       - d_lazygit
       - f_gitignore
       - f_gitconfig
       - f_zen_user
       - d_commitlint
+      - d_hypr
   jurien-wsl:
     dotfiles:
       - d_nvim

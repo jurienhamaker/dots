@@ -6,6 +6,7 @@ done
 
 ip=$(ip -f inet -o addr show wlan0 | cut -d\  -f 7 | cut -d/ -f 1)
 
+echo $ip
 if [ "$ip" == "192.168.1.40" ]; then
 	sleep $1
 	$2

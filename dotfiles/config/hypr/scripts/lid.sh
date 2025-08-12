@@ -6,8 +6,8 @@
 echo "$(date) - $(grep open /proc/acpi/button/lid/LID0/state)" >>~/.lid_log
 
 if grep open /proc/acpi/button/lid/LID0/state; then
-	hyprctl keyword monitor "eDP-1, modeline 932.84 2880 3136 3456 4032 1800 1801 1804 1928 -HSync +Vsync, 0x0, 1 " >>~/.lid_log
-	hyprctl keyword monitor "DP-1, modeline 311.83 2560 2744 3024 3488 1440 1441 1444 1490 -HSync +Vsync, 2560x0, 1" >>~/.lid_log
+	hyprctl keyword monitor "eDP-1, modeline 932.84 2880 3136 3456 4032 1800 1801 1804 1928 -HSync +Vsync, 0x0, 1.33" >>~/.lid_log
+	hyprctl keyword monitor "DP-1, modeline 311.83 2560 2744 3024 3488 1440 1441 1444 1490 -HSync +Vsync, 2880x0, 1" >>~/.lid_log
 
 	sleep 1
 
@@ -28,6 +28,3 @@ else
 fi
 
 sleep 1
-
-killall agsv1 ydotool
-agsv1 &

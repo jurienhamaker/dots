@@ -62,7 +62,7 @@ label {
 # USER
 label {
     monitor =
-    text = cmd[update:1000] echo "$USER"
+    text = cmd[update:1000] echo "$USER@$(hostname)"
     color = rgb($foreground)
     font_size = 14
     font_family = Iosevka Nerd Font Bold Italic
