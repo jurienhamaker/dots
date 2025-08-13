@@ -14,15 +14,15 @@ dotfiles:
   f_fastfetch:
     src: config/fastfetch/config.jsonc
     dst: ~/.config/fastfetch/config.jsonc
-    chmod: '744'
+    chmod: "744"
   f_fastfetch_ssh:
     src: config/fastfetch/config-ssh.jsonc
     dst: ~/.config/fastfetch/config-ssh.jsonc
-    chmod: '744'
+    chmod: "744"
   f_fastfetch_wsl:
     src: config/fastfetch/config-wsl.jsonc
     dst: ~/.config/fastfetch/config.jsonc
-    chmod: '744'
+    chmod: "744"
   d_fish:
     src: config/fish
     dst: ~/.config/fish
@@ -38,14 +38,14 @@ dotfiles:
   d_gtk-3.0:
     src: config/gtk-3.0
     dst: ~/.config/gtk-3.0
-    chmod: '700'
+    chmod: "700"
   d_gtk-4.0:
     src: config/gtk-4.0
     dst: ~/.config/gtk-4.0
   d_spicetify:
     src: config/spicetify
     dst: ~/.config/spicetify
-    chmod: '700'
+    chmod: "700"
   f_wallpaper.png:
     src: Pictures/wallpaper.png
     dst: ~/Pictures/Wallpapers/wallpaper.png
@@ -73,9 +73,6 @@ dotfiles:
   d_xkb:
     src: config/xkb
     dst: ~/.config/xkb
-  d_oh_my_posh:
-    src: config/oh-my-posh
-    dst: ~/.config/oh-my-posh
   d_atac:
     src: config/atac
     dst: ~/.config/atac
@@ -100,45 +97,49 @@ dotfiles:
   d_commitlint:
     src: config/commitlint
     dst: ~/.config/commitlint
-    chmod: '750'
+    chmod: "750"
   d_hypr:
     src: config/hypr
     dst: ~/.config/hypr
   d_matugen:
     src: config/matugen
     dst: ~/.config/matugen
+  f_starship.toml:
+    src: config/starship.toml
+    dst: ~/.config/starship.toml
 profiles:
   yugen-work:
     dotfiles:
-    - d_nvim
-    - f_fastfetch
-    - f_fastfetch_ssh
-    - d_fish
-    - d_kitty
-    - d_kvantum
-    - d_qt5ct
-    - d_gtk-3.0
-    - d_gtk-4.0
-    - f_wallpaper.png
-    - f_fetch_logo.png
-    - f_btop.conf
-    - f_electron-flags.conf
-    - d_oh_my_posh
-    - d_atac
-    - d_lazygit
-    - f_gitignore
-    - f_gitconfig
-    - f_zen_user
-    - d_commitlint
-    - d_hypr
-    - d_matugen
+      - d_nvim
+      - f_fastfetch
+      - f_fastfetch_ssh
+      - d_fish
+      - d_kitty
+      - d_kvantum
+      - d_qt5ct
+      - d_gtk-3.0
+      - d_gtk-4.0
+      - f_wallpaper.png
+      - f_fetch_logo.png
+      - f_btop.conf
+      - f_electron-flags.conf
+      - d_oh_my_posh
+      - d_atac
+      - d_lazygit
+      - f_gitignore
+      - f_gitconfig
+      - f_zen_user
+      - d_commitlint
+      - d_hypr
+      - d_matugen
+      - f_starship.toml
   jurien-wsl:
     dotfiles:
-    - d_nvim
-    - f_fastfetch_wsl
-    - d_fish
-    - d_oh_my_posh
-    - d_atac
-    - d_lazygit
-    - f_gitignore
-    - f_gitconfig
+      - d_nvim
+      - f_fastfetch_wsl
+      - d_fish
+      - d_oh_my_posh
+      - d_atac
+      - d_lazygit
+      - f_gitignore
+      - f_gitconfig
