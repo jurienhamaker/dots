@@ -1,0 +1,312 @@
+{
+    "app_config": {
+        "audio_config": {
+            "audio": "pulseaudio"
+        },
+        "bluetooth_config": {
+            "enabled": true
+        }
+    },
+    "archinstall-language": "English",
+    "auth_config": {},
+    "bootloader": "Grub",
+    "custom_commands": [],
+    "disk_config": {
+        "config_type": "manual_partitioning",
+        "device_modifications": [
+            {
+                "device": "/dev/nvme0n1",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": "/dev/nvme0n1p1",
+                        "flags": [
+                            "esp",
+                            "boot"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": null,
+                        "obj_id": "eb7d3976-35d3-4f9f-ba29-c0ff384b205a",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 272629760
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "sectors",
+                            "value": 2048
+                        },
+                        "status": "delete",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "dev_path": "/dev/nvme0n1p3",
+                        "flags": [],
+                        "fs_type": "ext4",
+                        "mount_options": [],
+                        "mountpoint": null,
+                        "obj_id": "038699f7-9b60-41a5-b4a3-f4a6ec9beb4a",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 262144000000
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "sectors",
+                            "value": 66070528
+                        },
+                        "status": "delete",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "dev_path": "/dev/nvme0n1p4",
+                        "flags": [],
+                        "fs_type": "ext4",
+                        "mount_options": [],
+                        "mountpoint": null,
+                        "obj_id": "e2fbe15b-cf5d-4aab-bb7e-21c81207b891",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 728237080576
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "sectors",
+                            "value": 578070528
+                        },
+                        "status": "delete",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "boot",
+                            "esp"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "68afeb04-5ae8-409d-a720-d46d90ea867b",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 272629760
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "dev_path": "/dev/nvme0n1p2",
+                        "flags": [
+                            "swap"
+                        ],
+                        "fs_type": "linux-swap",
+                        "mount_options": [],
+                        "mountpoint": null,
+                        "obj_id": "5b6f742b-6f0e-48f4-8fe6-49a54a704649",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 33554432000
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "sectors",
+                            "value": 534528
+                        },
+                        "status": "modify",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [
+                            {
+                                "mountpoint": "/",
+                                "name": "root"
+                            },
+                            {
+                                "mountpoint": "/mnt/Programming",
+                                "name": "Programming"
+                            }
+                        ],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "btrfs",
+                        "mount_options": [],
+                        "mountpoint": null,
+                        "obj_id": "b94c6a1c-504b-4953-9ef8-7fd66c5ff9c5",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 990380032000
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 33828110336
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": false
+            }
+        ]
+    },
+    "hostname": "yugen-work",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US.UTF-8"
+    },
+    "mirror_config": {
+        "custom_repositories": [],
+        "custom_servers": [],
+        "mirror_regions": {
+            "Netherlands": [
+                "http://ftp.nluug.nl/os/Linux/distr/archlinux/$repo/os/$arch",
+                "http://mirror.ams1.nl.leaseweb.net/archlinux/$repo/os/$arch",
+                "https://mirror.ams1.nl.leaseweb.net/archlinux/$repo/os/$arch",
+                "http://mirror.i3d.net/pub/archlinux/$repo/os/$arch",
+                "https://mirror.i3d.net/pub/archlinux/$repo/os/$arch",
+                "http://ftp.snt.utwente.nl/pub/os/linux/archlinux/$repo/os/$arch",
+                "http://nl.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "https://nl.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "http://archlinux.mirror.wearetriple.com/$repo/os/$arch",
+                "https://archlinux.mirror.wearetriple.com/$repo/os/$arch",
+                "http://arch.mirrors.lavatech.top/$repo/os/$arch",
+                "https://arch.mirrors.lavatech.top/$repo/os/$arch",
+                "http://mirrors.xtom.nl/archlinux/$repo/os/$arch",
+                "https://mirrors.xtom.nl/archlinux/$repo/os/$arch",
+                "http://mirror.mijn.host/archlinux/$repo/os/$arch",
+                "https://mirror.mijn.host/archlinux/$repo/os/$arch",
+                "http://archlinux.mirror.liteserver.nl/$repo/os/$arch",
+                "https://archlinux.mirror.liteserver.nl/$repo/os/$arch",
+                "http://mirror.serverion.com/archlinux/$repo/os/$arch",
+                "https://mirror.serverion.com/archlinux/$repo/os/$arch",
+                "http://mirror.lyrahosting.com/archlinux/$repo/os/$arch",
+                "https://mirror.lyrahosting.com/archlinux/$repo/os/$arch",
+                "http://mirror.cj2.nl/archlinux/$repo/os/$arch",
+                "https://mirror.cj2.nl/archlinux/$repo/os/$arch",
+                "https://mirror.iusearchbtw.nl/$repo/os/$arch",
+                "http://nl.mirror.flokinet.net/archlinux/$repo/os/$arch",
+                "https://nl.mirror.flokinet.net/archlinux/$repo/os/$arch",
+                "http://mirrors.evoluso.com/archlinux/$repo/os/$arch",
+                "http://mirror.bouwhuis.network/archlinux/$repo/os/$arch",
+                "https://mirror.bouwhuis.network/archlinux/$repo/os/$arch",
+                "http://ams.nl.mirrors.bjg.at/arch/$repo/os/$arch",
+                "https://ams.nl.mirrors.bjg.at/arch/$repo/os/$arch",
+                "https://nl.arch.niranjan.co/$repo/os/$arch",
+                "http://mirror.nl.cdn-perfprod.com/archlinux/$repo/os/$arch",
+                "https://mirror.nl.cdn-perfprod.com/archlinux/$repo/os/$arch"
+            ]
+        },
+        "optional_repositories": []
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "ntp": true,
+    "packages": [
+        "adwaita-cursors",
+        "atac",
+        "bat",
+        "docker",
+        "docker-compose",
+        "docker-buildx",
+        "eza",
+        "fastfetch",
+        "fish",
+        "fisher",
+        "fzf",
+        "go",
+        "kitty",
+        "lazygit",
+        "networkmanager",
+        "nm-connection-editor",
+        "network-manager-applet",
+        "dhcpcd",
+        "starship",
+        "rsync",
+        "npm",
+        "nodejs",
+        "kvantum",
+        "neovim",
+        "openssh",
+        "thefuck",
+        "zoxide",
+        "git"
+    ],
+    "parallel_downloads": 0,
+    "profile_config": {
+        "gfx_driver": "Intel (open-source)",
+        "greeter": "ly",
+        "profile": {
+            "custom_settings": {
+                "Hyprland": {
+                    "seat_access": "polkit"
+                }
+            },
+            "details": [
+                "Hyprland"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "script": null,
+    "services": [],
+    "swap": true,
+    "timezone": "Europe/Amsterdam",
+    "version": "3.0.9"
+}

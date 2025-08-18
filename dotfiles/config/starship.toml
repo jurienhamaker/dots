@@ -6,15 +6,15 @@ palette = 'colors'
 
 [palettes.colors]
 mustard = '#af8700' # example
-color1 = '#474747'
-color2 = '#1b1b1b'
-color3 = '#c6c6c6'
-color4 = '#1f1f1f'
-color5 = '#1b1b1b'
-color6 = '#131313'
-color7 = '#131313'
-color8 = '#ffffff'
-color9 = '#e2e2e2'
+color1 = '#81d4dc'
+color2 = '#00363b'
+color3 = '#bec8c9'
+color4 = '#1a2121'
+color5 = '#00363b'
+color6 = '#0e1415'
+color7 = '#0e1415'
+color8 = '#81d4dc'
+color9 = '#b7c7ea'
 
 # Prompt symbols 
 [character]
@@ -24,6 +24,11 @@ vicmd_symbol = "[🍥](#f9e2af)"
 
 [directory]
 format = "[](fg:color1)[󰉋](bg:color1 fg:color2)[ ](fg:color1 bg:color4)[$path ](fg:color3 bg:color4)[ ](fg:color4)"
+truncate_to_repo = false
+truncation_length = 99
+fish_style_pwd_dir_length = 1
+use_logical_path=true
+
 
 [directory.substitutions]
 "Documents" = "󰈙 "
