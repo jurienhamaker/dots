@@ -12,4 +12,4 @@ cd ../../
 ls -la
 rm -rf ./tmp
 
-yay -Sy $(cat ./packages) --noconfirm
+yay -Sy $(cat ./yay-packages) --noconfirm
