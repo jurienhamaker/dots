@@ -6,15 +6,15 @@ palette = 'colors'
 
 [palettes.colors]
 mustard = '#af8700' # example
-color1 = '#81d4dc'
-color2 = '#00363b'
-color3 = '#bec8c9'
-color4 = '#1a2121'
-color5 = '#00363b'
-color6 = '#0e1415'
-color7 = '#0e1415'
-color8 = '#81d4dc'
-color9 = '#b7c7ea'
+color1 = '#474747'
+color2 = '#1b1b1b'
+color3 = '#c6c6c6'
+color4 = '#1f1f1f'
+color5 = '#1b1b1b'
+color6 = '#131313'
+color7 = '#131313'
+color8 = '#ffffff'
+color9 = '#e2e2e2'
 
 # Prompt symbols 
 [character]
@@ -38,6 +38,7 @@ use_logical_path=true
 
 [git_branch]
 format = "[](fg:color8)[ ](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5) $branch](fg:color3 bg:color4)[](fg:color4) "
+truncation_length=42
 
 [time]
 format = "[](fg:color8)[ ](bg:color8 fg:color5)[](fg:color8 bg:color4)[(bg:color8 fg:color5) $time](fg:color3 bg:color4)[](fg:color4) "

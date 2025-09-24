@@ -30,5 +30,5 @@ return {
 		},
 	},
 	-- Optional dependencies
-	dependencies = { "echasnovski/mini.icons" },
+	dependencies = { "nvim-mini/mini.icons" },
 }
