@@ -26,3 +26,5 @@ alias work="ssh jurien@192.168.1.40 -Y -t 'fish -li'"
 
 alias dnode="docker run -it --name dnode -v /mnt/Programming:/opt/app -w /opt/app -p 4200:4200 -p 3000:3000 --rm --entrypoint bash node:latest"
 alias dgo="docker run -it -u $(whoami) --name go -v /mnt/Programming:/opt/app -p 3000:3000 --rm --entrypoint bash jurienhamaker/golang:latest"
+
+alias k kubectl
