@@ -7,6 +7,7 @@ if status is-interactive
 end
 
 set -U fish_prompt_pwd_dir_length 1
+set -U fish_user_paths (yarn global bin) $fish_user_paths
 
 export EDITOR=nvim
 zoxide init --cmd cd fish | source

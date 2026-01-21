@@ -1,8 +1,16 @@
 function cdb
-    if test "$argv[1]" = ""
-        set cdb_hostname "employes-pg-dev.employes.dev"
+    set type ""
+
+    if test -n "$argv[3]"
+        set type "-$argv[3]"
+    end
+
+    if test "$argv[1]" = "" || test "$argv[1]" = dev
+        set cdb_hostname "employes$type-pg-dev.employes.dev"
+    else if test "$argv[1]" = jh
+        set cdb_hostname "employes$type-pg-jh.employes.dev"
     else
-        set cdb_hostname "employes-pg-pro-$argv[1].employes.dev"
+        set cdb_hostname "employes$type-pg-pro-$argv[1].employes.dev"
     end
 
     if test "$argv[2]" = ""
