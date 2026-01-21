@@ -279,7 +279,9 @@
     "git",
     "cloudflared",
     "pavucontrol",
-    "blueman"
+    "blueman",
+    "lsof",
+    "viu"
   ],
   "parallel_downloads": 0,
   "profile_config": {

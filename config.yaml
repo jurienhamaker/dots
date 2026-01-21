@@ -107,6 +107,9 @@ dotfiles:
   f_starship.toml:
     src: config/starship.toml
     dst: ~/.config/starship.toml
+  d_ambxst:
+    src: config/Ambxst
+    dst: ~/.config/Ambxst
 profiles:
   yugen-work:
     dotfiles:
@@ -123,7 +126,6 @@ profiles:
       - f_fetch_logo.png
       - f_btop.conf
       - f_electron-flags.conf
-      - d_oh_my_posh
       - d_atac
       - d_lazygit
       - f_gitignore
@@ -133,12 +135,12 @@ profiles:
       - d_hypr
       - d_matugen
       - f_starship.toml
+      - d_ambxst
   jurien-wsl:
     dotfiles:
       - d_nvim
       - f_fastfetch_wsl
       - d_fish
-      - d_oh_my_posh
       - d_atac
       - d_lazygit
       - f_gitignore
