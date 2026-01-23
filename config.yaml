@@ -14,15 +14,15 @@ dotfiles:
   f_fastfetch:
     src: config/fastfetch/config.jsonc
     dst: ~/.config/fastfetch/config.jsonc
-    chmod: "744"
+    chmod: '744'
   f_fastfetch_ssh:
     src: config/fastfetch/config-ssh.jsonc
     dst: ~/.config/fastfetch/config-ssh.jsonc
-    chmod: "744"
+    chmod: '744'
   f_fastfetch_wsl:
     src: config/fastfetch/config-wsl.jsonc
     dst: ~/.config/fastfetch/config.jsonc
-    chmod: "744"
+    chmod: '744'
   d_fish:
     src: config/fish
     dst: ~/.config/fish
@@ -38,14 +38,14 @@ dotfiles:
   d_gtk-3.0:
     src: config/gtk-3.0
     dst: ~/.config/gtk-3.0
-    chmod: "700"
+    chmod: '700'
   d_gtk-4.0:
     src: config/gtk-4.0
     dst: ~/.config/gtk-4.0
   d_spicetify:
     src: config/spicetify
     dst: ~/.config/spicetify
-    chmod: "700"
+    chmod: '700'
   f_wallpaper.png:
     src: Pictures/wallpaper.png
     dst: ~/Pictures/Wallpapers/wallpaper.png
@@ -97,7 +97,7 @@ dotfiles:
   d_commitlint:
     src: config/commitlint
     dst: ~/.config/commitlint
-    chmod: "750"
+    chmod: '750'
   d_hypr_pc:
     src: config/hypr/pc
     dst: ~/.config/hypr
@@ -113,63 +113,68 @@ dotfiles:
   d_ambxst:
     src: config/Ambxst
     dst: ~/.config/Ambxst
+  d_go-hass-agent:
+    src: config/go-hass-agent
+    dst: ~/.config/go-hass-agent
+    chmod: '750'
 profiles:
   yugen-work:
     dotfiles:
-      - d_nvim
-      - f_fastfetch
-      - f_fastfetch_ssh
-      - d_fish
-      - d_kitty
-      - d_kvantum
-      - d_qt5ct
-      - d_gtk-3.0
-      - d_gtk-4.0
-      - f_wallpaper.png
-      - f_fetch_logo.png
-      - f_btop.conf
-      - f_electron-flags.conf
-      - d_atac
-      - d_lazygit
-      - f_gitignore
-      - f_gitconfig
-      - f_zen_user
-      - d_commitlint
-      - d_hypr_laptop
-      - d_matugen
-      - f_starship.toml
-      - d_ambxst
+    - d_nvim
+    - f_fastfetch
+    - f_fastfetch_ssh
+    - d_fish
+    - d_kitty
+    - d_kvantum
+    - d_qt5ct
+    - d_gtk-3.0
+    - d_gtk-4.0
+    - f_wallpaper.png
+    - f_fetch_logo.png
+    - f_btop.conf
+    - f_electron-flags.conf
+    - d_atac
+    - d_lazygit
+    - f_gitignore
+    - f_gitconfig
+    - f_zen_user
+    - d_commitlint
+    - d_hypr_laptop
+    - d_matugen
+    - f_starship.toml
+    - d_ambxst
   yugen:
     dotfiles:
-      - d_nvim
-      - f_fastfetch
-      - f_fastfetch_ssh
-      - d_fish
-      - d_kitty
-      - d_kvantum
-      - d_qt5ct
-      - d_gtk-3.0
-      - d_gtk-4.0
-      - f_wallpaper.png
-      - f_fetch_logo.png
-      - f_btop.conf
-      - f_electron-flags.conf
-      - d_atac
-      - d_lazygit
-      - f_gitignore
-      - f_gitconfig
-      - f_zen_user
-      - d_commitlint
-      - d_hypr_pc
-      - d_matugen
-      - f_starship.toml
-      - d_ambxst
+    - d_nvim
+    - f_fastfetch
+    - f_fastfetch_ssh
+    - d_fish
+    - d_kitty
+    - d_kvantum
+    - d_qt5ct
+    - d_gtk-3.0
+    - d_gtk-4.0
+    - f_wallpaper.png
+    - f_fetch_logo.png
+    - f_btop.conf
+    - f_electron-flags.conf
+    - d_atac
+    - d_lazygit
+    - f_gitignore
+    - f_gitconfig
+    - f_zen_user
+    - d_commitlint
+    - d_hypr_pc
+    - d_matugen
+    - f_starship.toml
+    - d_ambxst
+    - d_go-hass-agent
   jurien-wsl:
     dotfiles:
-      - d_nvim
-      - f_fastfetch_wsl
-      - d_fish
-      - d_atac
-      - d_lazygit
-      - f_gitignore
-      - f_gitconfig
+    - d_nvim
+    - f_fastfetch_wsl
+    - d_fish
+    - d_atac
+    - d_lazygit
+    - f_gitignore
+    - f_gitconfig

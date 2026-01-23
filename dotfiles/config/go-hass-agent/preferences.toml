@@ -1,0 +1,108 @@
+[agent]
+registered = true
+
+[cpu_vulnerabilities]
+disabled = false
+
+[device]
+id = '7a3e3f65-0a3f-43dc-958d-06dcd77a7427'
+name = 'yugen'
+
+[hass]
+apiurl = 'https://hooks.nabu.casa/gAAAAABpc9seZTuOmycqCHab6Xb_cabybF3mW1ActCWKUQsf3FkHrxMqIGldPLaKfHPo6yu6-5p5x4p1pDdZ1Jg0KeVEehIeyxvgQuvVUVCn9kdOqEQQZvE-BJqVSHCxr1Jih83oEqGxxW5B6IG3hOGW8cuoUSOB0wmcwVFViZ1YYuH4emgnBsU='
+secret = ''
+webhook_id = '12b4bde2fcb6b40eb3516b786356737800e6b16693696ee36e0ad179959f7022'
+websocketurl = 'wss://home.zero-two.xyz/api/websocket'
+
+[registration]
+server = 'https://home.zero-two.xyz'
+token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI2NDc5YTU0MjZhNDc0YjZjYjNmMGNlZDQ4MTBmMDk4NyIsImlhdCI6MTc2OTIwMDQwMSwiZXhwIjoyMDg0NTYwNDAxfQ.Z-mJ4Iw7LMYkIbNQBmALBd3OhIVAeG0EZsG6m1EKrkY'
+
+[scripts]
+disabled = false
+
+[sensors]
+[sensors.agent]
+[sensors.agent.connection_latency]
+disabled = true
+
+[sensors.agent.external_ip]
+disabled = true
+
+[sensors.agent.version]
+disabled = false
+
+[sensors.batteries]
+disabled = false
+
+[sensors.cpu]
+[sensors.cpu.frequencies]
+disabled = true 
+update_interval = '30s'
+
+[sensors.cpu.load_averages]
+disabled = true
+
+[sensors.cpu.usage]
+disabled = true
+update_interval = '10s'
+
+[sensors.disk]
+[sensors.disk.rates]
+disabled = true
+update_interval = '5s'
+
+[sensors.disk.usage]
+disabled = true
+update_interval = '1m0s'
+ignored_mounts = ['/tmp/crun', '/run', '/var/lib/containers', '/sys', '/proc']
+
+[sensors.media]
+[sensors.media.microphone_in_use]
+disabled = true
+
+[sensors.media.webcam_in_use]
+disabled = true
+
+[sensors.memory]
+[sensors.memory.oom_events]
+disabled = true
+
+[sensors.memory.usage]
+disabled = true
+update_interval = '1m0s'
+
+[sensors.network]
+[sensors.network.connections]
+disabled = true
+ignored_devices = ['lo', 'veth', 'podman', 'docker', 'vnet']
+
+[sensors.network.links]
+disabled = true
+ignored_devices = ['lo', 'veth', 'podman', 'docker', 'vnet']
+
+[sensors.network.usage]
+disabled = true
+ignored_devices = ['lo', 'veth', 'podman', 'docker', 'vnet']
+update_interval = '5s'
+
+[sensors.power]
+[sensors.power.profile]
+disabled = false
+
+[sensors.power.screen_lock]
+disabled = true
+
+[sensors.power.state]
+disabled = true
+
+[sensors.system]
+[sensors.system.hardware_sensors]
+disabled = true
+update_interval = '1m0s'
+
+[sensors.system.info_sensors]
+disabled = true
+
+[sensors.system.users]
+disabled = true
