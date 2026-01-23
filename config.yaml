@@ -111,7 +111,7 @@ dotfiles:
     src: config/Ambxst
     dst: ~/.config/Ambxst
 profiles:
-  yugen-work:
+  yugen:
     dotfiles:
       - d_nvim
       - f_fastfetch

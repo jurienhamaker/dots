@@ -1,0 +1,245 @@
+{
+    "app_config": {
+        "audio_config": {
+            "audio": "pipewire"
+        },
+        "bluetooth_config": {
+            "enabled": true
+        }
+    },
+    "archinstall-language": "English",
+    "auth_config": {},
+    "bootloader_config": {
+        "bootloader": "Grub",
+        "removable": true,
+        "uki": false
+    },
+    "custom_commands": [],
+    "disk_config": {
+        "config_type": "manual_partitioning",
+        "device_modifications": [
+            {
+                "device": "/dev/nvme0n1",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "boot",
+                            "esp"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "86bcd50f-71ff-4d4a-9f6f-595365500185",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 1
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "swap"
+                        ],
+                        "fs_type": "linux-swap",
+                        "mount_options": [],
+                        "mountpoint": null,
+                        "obj_id": "c23209b5-f719-4439-a709-ec6b179fb941",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 32
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1074790400
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [
+                            {
+                                "mountpoint": "/",
+                                "name": "root"
+                            },
+                            {
+                                "mountpoint": "/home",
+                                "name": "home"
+                            },
+                            {
+                                "mountpoint": "/mnt/Programming",
+                                "name": "programming"
+                            },
+                            {
+                                "mountpoint": "/mnt/Data",
+                                "name": "data"
+                            }
+                        ],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "btrfs",
+                        "mount_options": [],
+                        "mountpoint": null,
+                        "obj_id": "f93c3d6d-f42c-4aec-ac18-82d0007371e4",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 964768563200
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 35434528768
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ]
+    },
+    "hostname": "yugen",
+    "kernels": [
+        "linux"
+    ],
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US.UTF-8"
+    },
+    "mirror_config": {
+        "custom_repositories": [],
+        "custom_servers": [],
+        "mirror_regions": {
+            "Netherlands": [
+                "http://ftp.nluug.nl/os/Linux/distr/archlinux/$repo/os/$arch",
+                "http://mirror.ams1.nl.leaseweb.net/archlinux/$repo/os/$arch",
+                "https://mirror.ams1.nl.leaseweb.net/archlinux/$repo/os/$arch",
+                "http://mirror.i3d.net/pub/archlinux/$repo/os/$arch",
+                "https://mirror.i3d.net/pub/archlinux/$repo/os/$arch",
+                "http://ftp.snt.utwente.nl/pub/os/linux/archlinux/$repo/os/$arch",
+                "http://nl.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "https://nl.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "http://archlinux.mirror.wearetriple.com/$repo/os/$arch",
+                "https://archlinux.mirror.wearetriple.com/$repo/os/$arch",
+                "http://arch.mirrors.lavatech.top/$repo/os/$arch",
+                "https://arch.mirrors.lavatech.top/$repo/os/$arch",
+                "http://mirrors.xtom.nl/archlinux/$repo/os/$arch",
+                "https://mirrors.xtom.nl/archlinux/$repo/os/$arch",
+                "http://mirror.mijn.host/archlinux/$repo/os/$arch",
+                "https://mirror.mijn.host/archlinux/$repo/os/$arch",
+                "http://archlinux.mirror.liteserver.nl/$repo/os/$arch",
+                "https://archlinux.mirror.liteserver.nl/$repo/os/$arch",
+                "http://mirror.serverion.com/archlinux/$repo/os/$arch",
+                "https://mirror.serverion.com/archlinux/$repo/os/$arch",
+                "http://mirror.lyrahosting.com/archlinux/$repo/os/$arch",
+                "https://mirror.lyrahosting.com/archlinux/$repo/os/$arch",
+                "http://mirror.cj2.nl/archlinux/$repo/os/$arch",
+                "https://mirror.cj2.nl/archlinux/$repo/os/$arch",
+                "https://mirror.iusearchbtw.nl/$repo/os/$arch",
+                "http://nl.mirror.flokinet.net/archlinux/$repo/os/$arch",
+                "https://nl.mirror.flokinet.net/archlinux/$repo/os/$arch",
+                "http://mirrors.evoluso.com/archlinux/$repo/os/$arch",
+                "http://mirror.bouwhuis.network/archlinux/$repo/os/$arch",
+                "https://mirror.bouwhuis.network/archlinux/$repo/os/$arch",
+                "http://ams.nl.mirrors.bjg.at/arch/$repo/os/$arch",
+                "https://ams.nl.mirrors.bjg.at/arch/$repo/os/$arch",
+                "https://nl.arch.niranjan.co/$repo/os/$arch",
+                "http://mirror.nl.cdn-perfprod.com/archlinux/$repo/os/$arch",
+                "https://mirror.nl.cdn-perfprod.com/archlinux/$repo/os/$arch"
+            ]
+        },
+        "optional_repositories": []
+    },
+    "ntp": true,
+    "packages": [
+        "adwaita-cursors",
+        "atac",
+        "bat",
+        "docker",
+        "docker-compose",
+        "docker-buildx",
+        "eza",
+        "fastfetch",
+        "fish",
+        "fisher",
+        "fzf",
+        "go",
+        "kitty",
+        "lazygit",
+        "networkmanager",
+        "nm-connection-editor",
+        "network-manager-applet",
+        "dhcpcd",
+        "starship",
+        "rsync",
+        "npm",
+        "nodejs",
+        "kvantum",
+        "neovim",
+        "openssh",
+        "thefuck",
+        "zoxide",
+        "git",
+        "cloudflared",
+        "pavucontrol",
+        "blueman",
+        "lsof",
+        "viu"
+    ],
+    "parallel_downloads": 0,
+    "profile_config": {
+        "gfx_driver": "Nvidia (open kernel module for newer GPUs, Turing+)",
+        "greeter": "ly",
+        "profile": {
+            "custom_settings": {
+                "Hyprland": {
+                    "seat_access": "polkit"
+                }
+            },
+            "details": [
+                "Hyprland"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "script": null,
+    "services": [],
+    "swap": {
+        "algorithm": "zstd",
+        "enabled": true
+    },
+    "timezone": "Europe/Amsterdam",
+    "version": "3.0.15"
+}
