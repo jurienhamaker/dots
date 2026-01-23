@@ -84,7 +84,7 @@
                 "argument": "loginctl lock-session",
                 "dispatcher": "exec",
                 "flags": "",
-                "key": "L",
+                "key": "\\",
                 "modifiers": [
                     "SUPER"
                 ]

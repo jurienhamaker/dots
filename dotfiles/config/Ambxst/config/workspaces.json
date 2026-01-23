@@ -1,6 +1,6 @@
 {
     "shown": 10,
-    "showAppIcons": true,
+    "showAppIcons": false,
     "alwaysShowNumbers": false,
     "showNumbers": false,
     "dynamic": false
