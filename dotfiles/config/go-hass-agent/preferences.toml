@@ -1,6 +1,21 @@
 [agent]
 registered = true
 
+[controls]
+[controls.power]
+[controls.power.inhibit_controls]
+disabled = false
+
+[controls.power.power_controls]
+disabled = false
+
+[controls.power.screen_lock_controls]
+disabled = false
+
+[controls.system]
+[controls.system.dbus_commands]
+disabled = false
+
 [cpu_vulnerabilities]
 disabled = false
 
@@ -14,8 +29,15 @@ secret = ''
 webhook_id = '12b4bde2fcb6b40eb3516b786356737800e6b16693696ee36e0ad179959f7022'
 websocketurl = 'wss://home.zero-two.xyz/api/websocket'
 
+[mqtt]
+enabled = true
+password = 'mqtt-user'
+server = 'tcp://192.168.1.212:1883'
+topic_prefix = 'homeassistant'
+user = 'mqtt-user'
+
 [registration]
-server = 'https://home.zero-two.xyz'
+server = 'http://192.168.1.212:8123'
 token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI2NDc5YTU0MjZhNDc0YjZjYjNmMGNlZDQ4MTBmMDk4NyIsImlhdCI6MTc2OTIwMDQwMSwiZXhwIjoyMDg0NTYwNDAxfQ.Z-mJ4Iw7LMYkIbNQBmALBd3OhIVAeG0EZsG6m1EKrkY'
 
 [scripts]
@@ -24,10 +46,10 @@ disabled = false
 [sensors]
 [sensors.agent]
 [sensors.agent.connection_latency]
-disabled = true
+disabled = false
 
 [sensors.agent.external_ip]
-disabled = true
+disabled = false
 
 [sensors.agent.version]
 disabled = false
@@ -37,52 +59,64 @@ disabled = false
 
 [sensors.cpu]
 [sensors.cpu.frequencies]
-disabled = true 
+disabled = false
 update_interval = '30s'
 
 [sensors.cpu.load_averages]
-disabled = true
+disabled = false
 
 [sensors.cpu.usage]
-disabled = true
+disabled = false
 update_interval = '10s'
 
 [sensors.disk]
 [sensors.disk.rates]
-disabled = true
+disabled = false
 update_interval = '5s'
 
 [sensors.disk.usage]
-disabled = true
-update_interval = '1m0s'
+disabled = false
 ignored_mounts = ['/tmp/crun', '/run', '/var/lib/containers', '/sys', '/proc']
+update_interval = '1m0s'
 
 [sensors.media]
+[sensors.media.audio]
+disabled = false
+
 [sensors.media.microphone_in_use]
-disabled = true
+disabled = false
+
+[sensors.media.mpris]
+disabled = false
+
+[sensors.media.video]
+camera_device = '/dev/video0'
+camera_formats = ['Motion-JPEG']
+camera_video_height = 640
+camera_video_width = 480
 
 [sensors.media.webcam_in_use]
-disabled = true
+disabled = false
 
 [sensors.memory]
 [sensors.memory.oom_events]
-disabled = true
+disabled = false
 
 [sensors.memory.usage]
-disabled = true
+disabled = false
 update_interval = '1m0s'
 
 [sensors.network]
 [sensors.network.connections]
-disabled = true
+disabled = false
 ignored_devices = ['lo', 'veth', 'podman', 'docker', 'vnet']
 
 [sensors.network.links]
-disabled = true
+disabled = false
 ignored_devices = ['lo', 'veth', 'podman', 'docker', 'vnet']
 
 [sensors.network.usage]
-disabled = true
+disabled = false
 ignored_devices = ['lo', 'veth', 'podman', 'docker', 'vnet']
 update_interval = '5s'
 
@@ -91,18 +125,18 @@ update_interval = '5s'
 disabled = false
 
 [sensors.power.screen_lock]
-disabled = true
+disabled = false
 
 [sensors.power.state]
-disabled = true
+disabled = false
 
 [sensors.system]
 [sensors.system.hardware_sensors]
-disabled = true
+disabled = false
 update_interval = '1m0s'
 
 [sensors.system.info_sensors]
-disabled = true
+disabled = false
 
 [sensors.system.users]
-disabled = true
+disabled = false
