@@ -1,4 +1,6 @@
 alias p="cd /mnt/Programming"
+alias games="cd /mnt/Games"
+alias data="cd /mnt/Data"
 
 alias e_up="p; cd employes; docker compose up app"
 alias e_bash="p; cd employes; docker compose exec app bash"
