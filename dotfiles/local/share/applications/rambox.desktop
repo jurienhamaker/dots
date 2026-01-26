@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Rambox
+Exec=/home/jurien/.local/share/applications/Rambox.AppImage --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto --no-sandbox %U
+Terminal=false
+Type=Application
+Icon=/home/jurien/.local/share/applications/rambox.png
+StartupWMClass=Rambox
+Categories=Network;
+Comment=Free and Open Source messaging and emailing app that combines common web applications into one.

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Spotify
+Exec=kitty -T 'Spotify' sh -c 'spotify_player'
+Terminal=false
+Type=Application
+Icon=/home/jurien/.local/share/applications/spotify.png
+StartupWMClass=Spotify
+Categories=Music;
+Comment=A Spotify player in the terminal with full feature parity 

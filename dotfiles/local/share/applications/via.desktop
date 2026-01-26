@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Via
+Exec=/home/jurien/.local/share/applications/via.AppImage --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto --no-sandbox %U
+Terminal=false
+Type=Application
+Icon=/home/jurien/.local/share/applications/via.png
+StartupWMClass=Via
+Categories=Tools;
+Comment=Keyboard mapping configurator
