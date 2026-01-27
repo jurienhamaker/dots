@@ -138,5 +138,9 @@ update_interval = '1m0s'
 [sensors.system.info_sensors]
 disabled = false
 
+[sensors.system.last_active]
+disabled = false
+update_interval = '10s'
+
 [sensors.system.users]
 disabled = false
