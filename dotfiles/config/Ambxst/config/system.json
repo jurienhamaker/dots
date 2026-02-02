@@ -9,12 +9,7 @@
             "before_sleep_cmd": "loginctl lock-session",
             "after_sleep_cmd": "ambxst screen on"
         },
-        "listeners": [
-            {
-                "onTimeout": "loginctl lock-session",
-                "timeout": 600
-            }
-        ]
+        "listeners": []
     },
     "ocr": {
         "eng": true,
