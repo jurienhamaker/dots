@@ -35,8 +35,8 @@ gdbus call --session \
 	--dest org.freedesktop.Notifications \
 	--object-path /org/freedesktop/Notifications \
 	--method org.freedesktop.Notifications.Notify \
-	'Sound Sink Switcher' 0 audio-volume-high \
-	"Sound Sink Switcher" "Switched to $ALIAS" [] \
+	'Sound Switcher' 0 audio-volume-high \
+	"Sound Switcher" "Switched to $ALIAS" [] \
 	"{'transient': <true>}" 5000 |
 	sed 's/(uint32 \([0-9]\+\),)/\1/g' >/tmp/sss.id
 
