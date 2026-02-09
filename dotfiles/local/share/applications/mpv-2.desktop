@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=mpv
+MimeType=video/mp4;
+Name=mpv
+NoDisplay=true
+Type=Application
