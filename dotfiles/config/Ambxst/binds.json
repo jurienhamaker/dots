@@ -124,9 +124,8 @@
                 "argument": "ambxst run screenrecord",
                 "dispatcher": "exec",
                 "flags": "",
-                "key": "R",
+                "key": "Print\n",
                 "modifiers": [
-                    "SUPER",
                     "SHIFT"
                 ]
             },
@@ -134,10 +133,8 @@
                 "argument": "ambxst run screenshot",
                 "dispatcher": "exec",
                 "flags": "",
-                "key": "S",
+                "key": "Print\n",
                 "modifiers": [
-                    "SUPER",
-                    "SHIFT"
                 ]
             },
             "tools": {
