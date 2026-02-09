@@ -1,4 +1,4 @@
 function vp
-    cd /mnt/Programming/paperless/
+    cd /mnt/Programming/employes/paperless/
     v
 end

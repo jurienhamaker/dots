@@ -1,4 +1,4 @@
 function vw
-    cd /mnt/Programming/employes-website/
+    cd /mnt/Programming/employes/website/
     v
 end
