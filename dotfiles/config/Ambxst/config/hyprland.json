@@ -14,7 +14,7 @@
     "syncBorderColor": false,
     "syncShadowOpacity": false,
     "syncShadowColor": true,
-    "gapsIn": 4,
+    "gapsIn": 2,
     "gapsOut": 4,
     "layout": "dwindle",
     "shadowEnabled": true,
