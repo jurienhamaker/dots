@@ -1,11 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export DISPLAY:172\x2e18\x2e208\x2e1\x3a0\x2e0
 SETUVAR __fish_initialized:4300
-SETUVAR _fisher_evanlucas_2F_fish_2D_kubectl_2D_completions_files:\x7e/\x2econfig/fish/completions/kubectl\x2efish
-SETUVAR _fisher_patrickf1_2F_fzf_2E_fish_files:\x7e/\x2econfig/fish/functions/_fzf_configure_bindings_help\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_extract_var_info\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_preview_changed_file\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_preview_file\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_report_diff_type\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_report_file_type\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_directory\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_git_log\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_git_status\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_history\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_processes\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_variables\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_wrapper\x2efish\x1e\x7e/\x2econfig/fish/functions/fzf_configure_bindings\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fzf\x2efish\x1e\x7e/\x2econfig/fish/completions/fzf_configure_bindings\x2efish
-SETUVAR _fisher_plugins:patrickf1/fzf\x2efish\x1eevanlucas/fish\x2dkubectl\x2dcompletions
-SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_greeting:
 SETUVAR fish_prompt_pwd_dir_length:1
-SETUVAR fish_user_paths:/home/jurien/\x2eyarn/bin\x1e\x1b\x5b31m\x1b\x5b1mUsage\x20Error\x1b\x5b22m\x1b\x5b39m\x1e\x20Couldn\x27t\x20find\x20the\x20node_modules\x20state\x20file\x20\x2d\x20running\x20an\x20install\x20might\x20help\x20\x28findPackageLocation\x29\x1e\x1e\x1b\x5b1m\x24\x20\x1b\x5b22myarn\x20run\x20\x5b\x2d\x2dinspect\x5d\x20\x5b\x2d\x2dinspect\x2dbrk\x5d\x20\x5b\x2dT\x2c\x2d\x2dtop\x2dlevel\x5d\x20\x5b\x2dB\x2c\x2d\x2dbinaries\x2donly\x5d\x20\x5b\x2d\x2drequire\x20\x230\x5d\x20\x3cscriptName\x3e\x20\x2e\x2e\x2e\x1einfo\x20Visit\x20https\x1e//yarnpkg\x2ecom/en/docs/cli/global\x20for\x20documentation\x20about\x20this\x20command\x2e\x1e\x20The\x20\x27yarn\x20global\x27\x20commands\x20have\x20been\x20removed\x20in\x202\x2ex\x20\x2d\x20consider\x20using\x20\x27yarn\x20dlx\x27\x20or\x20a\x20third\x2dparty\x20plugin\x20instead\x1e/home/jurien/\x2ebun/bin\x1e/home/jurien/\x2enpm\x2dglobal/bin
+SETUVAR fish_user_paths:/home/jurien/\x2eyarn/bin
