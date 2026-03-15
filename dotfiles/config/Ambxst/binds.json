@@ -169,13 +169,10 @@
             "actions": [
                 {
                     "argument": "",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "killactive",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -193,13 +190,10 @@
             "actions": [
                 {
                     "argument": "1",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -217,13 +211,10 @@
             "actions": [
                 {
                     "argument": "2",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -241,13 +232,10 @@
             "actions": [
                 {
                     "argument": "3",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -265,13 +253,10 @@
             "actions": [
                 {
                     "argument": "4",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -289,13 +274,10 @@
             "actions": [
                 {
                     "argument": "5",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -313,13 +295,10 @@
             "actions": [
                 {
                     "argument": "6",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -337,13 +316,10 @@
             "actions": [
                 {
                     "argument": "7",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -361,13 +337,10 @@
             "actions": [
                 {
                     "argument": "8",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -385,13 +358,10 @@
             "actions": [
                 {
                     "argument": "9",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -409,13 +379,10 @@
             "actions": [
                 {
                     "argument": "10",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -433,13 +400,10 @@
             "actions": [
                 {
                     "argument": "1",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movetoworkspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -458,13 +422,10 @@
             "actions": [
                 {
                     "argument": "2",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movetoworkspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -483,13 +444,10 @@
             "actions": [
                 {
                     "argument": "3",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movetoworkspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -508,13 +466,10 @@
             "actions": [
                 {
                     "argument": "4",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movetoworkspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -533,13 +488,10 @@
             "actions": [
                 {
                     "argument": "5",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movetoworkspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -558,13 +510,10 @@
             "actions": [
                 {
                     "argument": "6",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movetoworkspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -583,13 +532,10 @@
             "actions": [
                 {
                     "argument": "7",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movetoworkspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -608,13 +554,10 @@
             "actions": [
                 {
                     "argument": "8",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movetoworkspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -633,13 +576,10 @@
             "actions": [
                 {
                     "argument": "9",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movetoworkspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -658,13 +598,10 @@
             "actions": [
                 {
                     "argument": "10",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movetoworkspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -683,13 +620,10 @@
             "actions": [
                 {
                     "argument": "e-1",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -707,13 +641,10 @@
             "actions": [
                 {
                     "argument": "e+1",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -731,13 +662,10 @@
             "actions": [
                 {
                     "argument": "e-1",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -756,13 +684,10 @@
             "actions": [
                 {
                     "argument": "e+1",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -781,13 +706,10 @@
             "actions": [
                 {
                     "argument": "-1",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": false,
@@ -805,13 +727,10 @@
             "actions": [
                 {
                     "argument": "+1",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "workspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": false,
@@ -829,13 +748,10 @@
             "actions": [
                 {
                     "argument": "",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movewindow",
-                    "flags": "m"
+                    "flags": "m",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -853,13 +769,10 @@
             "actions": [
                 {
                     "argument": "",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "resizewindow",
-                    "flags": "m"
+                    "flags": "m",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -877,13 +790,10 @@
             "actions": [
                 {
                     "argument": "playerctl play-pause",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "exec",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -900,13 +810,10 @@
             "actions": [
                 {
                     "argument": "playerctl previous",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "exec",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -923,13 +830,10 @@
             "actions": [
                 {
                     "argument": "playerctl next",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "exec",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -946,13 +850,10 @@
             "actions": [
                 {
                     "argument": "playerctl play-pause",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "exec",
-                    "flags": "l"
+                    "flags": "l",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -969,13 +870,10 @@
             "actions": [
                 {
                     "argument": "playerctl stop",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "exec",
-                    "flags": "l"
+                    "flags": "l",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -992,13 +890,10 @@
             "actions": [
                 {
                     "argument": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 10%+",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "exec",
-                    "flags": "le"
+                    "flags": "le",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1015,13 +910,10 @@
             "actions": [
                 {
                     "argument": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 10%-",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "exec",
-                    "flags": "le"
+                    "flags": "le",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1038,13 +930,10 @@
             "actions": [
                 {
                     "argument": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "exec",
-                    "flags": "le"
+                    "flags": "le",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1061,13 +950,10 @@
             "actions": [
                 {
                     "argument": "ambxst brightness +5",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "exec",
-                    "flags": "le"
+                    "flags": "le",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1084,13 +970,10 @@
             "actions": [
                 {
                     "argument": "ambxst brightness -5",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "exec",
-                    "flags": "le"
+                    "flags": "le",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1107,13 +990,10 @@
             "actions": [
                 {
                     "argument": "notify-send \"Soon\"",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "exec",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1130,13 +1010,10 @@
             "actions": [
                 {
                     "argument": "",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "togglespecialworkspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1155,13 +1032,10 @@
             "actions": [
                 {
                     "argument": "special",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movetoworkspace",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1180,13 +1054,10 @@
             "actions": [
                 {
                     "argument": "loginctl lock-session",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "exec",
-                    "flags": "l"
+                    "flags": "l",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1202,14 +1073,11 @@
         {
             "actions": [
                 {
-                    "argument": "hyprctl dispatch dpms off",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
+                    "argument": "axctl monitor set-dpms 0",
                     "dispatcher": "exec",
-                    "flags": "l"
+                    "flags": "l",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1225,14 +1093,11 @@
         {
             "actions": [
                 {
-                    "argument": "hyprctl dispatch dpms on",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
+                    "argument": "axctl monitor set-dpms 1",
                     "dispatcher": "exec",
-                    "flags": "l"
+                    "flags": "l",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1249,26 +1114,20 @@
             "actions": [
                 {
                     "argument": "focus u",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 },
                 {
                     "argument": "u",
-                    "compositor": {
-                        "layouts": [
-                            "dwindle",
-                            "master"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movefocus",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "dwindle",
+                        "master"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1293,26 +1152,20 @@
             "actions": [
                 {
                     "argument": "focus d",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 },
                 {
                     "argument": "d",
-                    "compositor": {
-                        "layouts": [
-                            "master",
-                            "dwindle"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movefocus",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "master",
+                        "dwindle"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1337,26 +1190,20 @@
             "actions": [
                 {
                     "argument": "focus l",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 },
                 {
                     "argument": "l",
-                    "compositor": {
-                        "layouts": [
-                            "dwindle",
-                            "master"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movefocus",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "dwindle",
+                        "master"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1388,26 +1235,20 @@
             "actions": [
                 {
                     "argument": "focus r",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 },
                 {
                     "argument": "r",
-                    "compositor": {
-                        "layouts": [
-                            "master",
-                            "dwindle"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movefocus",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "master",
+                        "dwindle"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1439,26 +1280,20 @@
             "actions": [
                 {
                     "argument": "l",
-                    "compositor": {
-                        "layouts": [
-                            "master",
-                            "dwindle"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movewindow",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "master",
+                        "dwindle"
+                    ]
                 },
                 {
                     "argument": "movewindowto l",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1484,26 +1319,20 @@
             "actions": [
                 {
                     "argument": "r",
-                    "compositor": {
-                        "layouts": [
-                            "dwindle",
-                            "master"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movewindow",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "dwindle",
+                        "master"
+                    ]
                 },
                 {
                     "argument": "movewindowto r",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1529,26 +1358,20 @@
             "actions": [
                 {
                     "argument": "u",
-                    "compositor": {
-                        "layouts": [
-                            "master",
-                            "dwindle"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movewindow",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "master",
+                        "dwindle"
+                    ]
                 },
                 {
                     "argument": "movewindowto u",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1574,25 +1397,19 @@
             "actions": [
                 {
                     "argument": "d",
-                    "compositor": {
-                        "layouts": [
-                            "master",
-                            "dwindle"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "movewindow",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "master",
+                        "dwindle"
+                    ]
                 },
                 {
                     "argument": "movewindowto d",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1618,26 +1435,20 @@
             "actions": [
                 {
                     "argument": "colresize +0.1",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 },
                 {
                     "argument": "50 0",
-                    "compositor": {
-                        "layouts": [
-                            "master",
-                            "dwindle"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "resizeactive",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "master",
+                        "dwindle"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1663,26 +1474,20 @@
             "actions": [
                 {
                     "argument": "colresize -0.1",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 },
                 {
                     "argument": "-50 0",
-                    "compositor": {
-                        "layouts": [
-                            "master",
-                            "dwindle"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "resizeactive",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "master",
+                        "dwindle"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1708,13 +1513,10 @@
             "actions": [
                 {
                     "argument": "0 50",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "resizeactive",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1740,13 +1542,10 @@
             "actions": [
                 {
                     "argument": "0 -50",
-                    "compositor": {
-                        "layouts": [
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "resizeactive",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                    ]
                 }
             ],
             "enabled": true,
@@ -1772,14 +1571,11 @@
             "actions": [
                 {
                     "argument": "promote",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1798,14 +1594,11 @@
             "actions": [
                 {
                     "argument": "togglefit",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1824,14 +1617,11 @@
             "actions": [
                 {
                     "argument": "colresize +conf",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1850,14 +1640,11 @@
             "actions": [
                 {
                     "argument": "swapcol l",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1885,14 +1672,11 @@
             "actions": [
                 {
                     "argument": "swapcol r",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1920,14 +1704,11 @@
             "actions": [
                 {
                     "argument": "movecoltoworkspace 1",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1947,14 +1728,11 @@
             "actions": [
                 {
                     "argument": "movecoltoworkspace 2",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -1974,14 +1752,11 @@
             "actions": [
                 {
                     "argument": "movecoltoworkspace 3",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -2001,14 +1776,11 @@
             "actions": [
                 {
                     "argument": "movecoltoworkspace 4",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -2028,14 +1800,11 @@
             "actions": [
                 {
                     "argument": "movecoltoworkspace 5",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -2055,14 +1824,11 @@
             "actions": [
                 {
                     "argument": "movecoltoworkspace 6",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -2082,14 +1848,11 @@
             "actions": [
                 {
                     "argument": "movecoltoworkspace 7",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -2109,14 +1872,11 @@
             "actions": [
                 {
                     "argument": "movecoltoworkspace 8",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -2136,14 +1896,11 @@
             "actions": [
                 {
                     "argument": "movecoltoworkspace 9",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,
@@ -2163,14 +1920,11 @@
             "actions": [
                 {
                     "argument": "movecoltoworkspace 10",
-                    "compositor": {
-                        "layouts": [
-                            "scrolling"
-                        ],
-                        "type": "hyprland"
-                    },
                     "dispatcher": "layoutmsg",
-                    "flags": ""
+                    "flags": "",
+                    "layouts": [
+                        "scrolling"
+                    ]
                 }
             ],
             "enabled": true,

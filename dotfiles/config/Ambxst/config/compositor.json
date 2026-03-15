@@ -16,7 +16,6 @@
     "syncShadowColor": true,
     "gapsIn": 2,
     "gapsOut": 4,
-    "layout": "dwindle",
     "shadowEnabled": true,
     "shadowRange": 4,
     "shadowRenderPower": 3,
