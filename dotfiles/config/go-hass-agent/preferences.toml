@@ -69,6 +69,13 @@ disabled = false
 disabled = false
 update_interval = '10s'
 
+[sensors.desktop]
+[sensors.desktop.app_sensors]
+disabled = false
+
+[sensors.desktop.desktop_settings_sensors]
+disabled = false
+
 [sensors.disk]
 [sensors.disk.rates]
 disabled = false
