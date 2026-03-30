@@ -1,0 +1,17 @@
+theme = Matugen
+
+resize-overlay = never
+
+foreground = #e7e0e8
+background = #151218
+cursor-color = #e7e0e8 
+
+font-family = "JetBrains Mono Nerd Font"
+font-size = 14
+
+mouse-scroll-multiplier = 0.25
+
+window-padding-x = 4
+window-padding-y = 4
+
+command = fish

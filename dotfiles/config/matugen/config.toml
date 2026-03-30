@@ -20,6 +20,11 @@ input_path = "~/.config/matugen/kitty-colors.conf"
 output_path = "~/.config/kitty/colors.conf"
 post_hook = "pkill -SIGUSR1 kitty"
 
+[templates.ghostty]
+input_path = '~/.config/matugen/ghostty'
+output_path = '~/.config/ghostty/themes/Matugen'
+post_hook = 'pkill -SIGUSR2 ghostty'
+
 [templates.starship]
 input_path = "~/.config/matugen/starship-colors.conf"
 output_path = "~/.config/starship.toml"
