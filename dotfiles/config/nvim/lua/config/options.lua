@@ -6,8 +6,8 @@
 -- vim.g.lazyvim_picker = "fzf"
 
 -- Disable logging unless I am debugging
-vim.lsp.set_log_level("off")
---vim.lsp.set_log_level("debug")
+-- vim.lsp.set_log_level("off")
+vim.lsp.set_log_level("info")
 
 -- LazyVim options
 vim.g.lazyvim_eslint_auto_format = true

@@ -3,33 +3,26 @@ return {
 		"ThePrimeagen/99",
 		config = function()
 			local _99 = require("99")
-			local cwd = (vim.uv or vim.loop).cwd()
-			local basename = vim.fs.basename(cwd)
+
+			vim.fn.setenv("OPENCODE_PERMISSION", '{"edit": "allow"}')
 
 			_99.setup({
-				logger = {
-					level = _99.DEBUG,
-					path = "/tmp/" .. basename .. ".99.debug",
-					print_on_error = true,
-				},
-				tmp_dir = "./tmp",
-				completion = {
-					custom_rules = { "scratch/custom_rules/" },
-					source = "native",
-				},
+				show_in_flight_requests = true,
 				md_files = { "AGENT.md" },
+				provider = _99.Providers.OpenCodeProvider,
+				model = "anthropic/claude-opus-4-6",
+				completion = {
+					custom_rules = { "~/skills/skills" },
+					source = "blink",
+				},
 				display_errors = true,
 			})
 
-			vim.keymap.set("v", "<leader>9v", function()
-				_99.visual()
-			end)
-			vim.keymap.set("n", "<leader>9x", function()
-				_99.stop_all_requests()
-			end)
-			vim.keymap.set("n", "<leader>9s", function()
-				_99.search()
-			end)
+			require("which-key").add({ { "<leader>9", group = "+99 AI", mode = "n" } })
+
+			vim.keymap.set("v", "<leader>9", _99.visual, { desc = "visual selection with prompt" })
+			vim.keymap.set("n", "<leader>9x", _99.stop_all_requests, { desc = "stop all requests" })
+			vim.keymap.set("n", "<leader>9s", _99.search, { desc = "search" })
 		end,
 	},
 }
