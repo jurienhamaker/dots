@@ -49,9 +49,7 @@
             "action": {
                 "args": {
                 },
-                "id": "ambxst.launcher",
-                "layouts": [
-                ]
+                "id": "ambxst.launcher"
             },
             "key": "D",
             "modifiers": [
@@ -158,7 +156,7 @@
                     },
                     "id": "ambxst.screenrecord"
                 },
-                "key": "Print\n",
+                "key": "Print",
                 "modifiers": [
                     "SHIFT"
                 ]
@@ -169,7 +167,7 @@
                     },
                     "id": "ambxst.screenshot"
                 },
-                "key": "Print\n",
+                "key": "Print",
                 "modifiers": [
                 ]
             },
@@ -691,7 +689,7 @@
                     ]
                 }
             ],
-            "enabled": true,
+            "enabled": false,
             "keys": [
                 {
                     "key": "mouse_down",
@@ -713,7 +711,7 @@
                     ]
                 }
             ],
-            "enabled": true,
+            "enabled": false,
             "keys": [
                 {
                     "key": "mouse_up",
@@ -769,50 +767,6 @@
                 }
             ],
             "name": "Next Occupied Workspace"
-        },
-        {
-            "actions": [
-                {
-                    "args": {
-                        "offset": "-1"
-                    },
-                    "id": "workspace.switch-relative",
-                    "layouts": [
-                    ]
-                }
-            ],
-            "enabled": false,
-            "keys": [
-                {
-                    "key": "Z",
-                    "modifiers": [
-                        "SUPER"
-                    ]
-                }
-            ],
-            "name": "Previous Workspace"
-        },
-        {
-            "actions": [
-                {
-                    "args": {
-                        "offset": "+1"
-                    },
-                    "id": "workspace.switch-relative",
-                    "layouts": [
-                    ]
-                }
-            ],
-            "enabled": false,
-            "keys": [
-                {
-                    "key": "X",
-                    "modifiers": [
-                        "SUPER"
-                    ]
-                }
-            ],
-            "name": "Next Workspace"
         },
         {
             "actions": [
@@ -1215,8 +1169,7 @@
                 {
                     "key": "k",
                     "modifiers": [
-                        "SUPER",
-                        "CTRL"
+                        "SUPER"
                     ]
                 }
             ],
@@ -1255,8 +1208,7 @@
                 {
                     "key": "j",
                     "modifiers": [
-                        "SUPER",
-                        "CTRL"
+                        "SUPER"
                     ]
                 }
             ],
@@ -1293,17 +1245,9 @@
                     ]
                 },
                 {
-                    "key": "z",
-                    "modifiers": [
-                        "SUPER",
-                        "CTRL"
-                    ]
-                },
-                {
                     "key": "h",
                     "modifiers": [
-                        "SUPER",
-                        "CTRL"
+                        "SUPER"
                     ]
                 }
             ],
@@ -1340,17 +1284,9 @@
                     ]
                 },
                 {
-                    "key": "x",
-                    "modifiers": [
-                        "SUPER",
-                        "CTRL"
-                    ]
-                },
-                {
                     "key": "l",
                     "modifiers": [
-                        "SUPER",
-                        "CTRL"
+                        "SUPER"
                     ]
                 }
             ],
