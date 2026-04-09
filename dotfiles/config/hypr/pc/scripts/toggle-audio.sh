@@ -5,7 +5,7 @@
 # Add sink names (separated with '|') to SKIP while switching with this script. Choose names to skip from the output of this command:
 # wpctl status -n | grep -zoP '(?<=Sinks:)(?s).*?(?=├─)' | grep -a "vol:"
 # if no skip names are added, this script will switch between every available audio sink (output).
-SINKS_TO_SKIP=("alsa_output.pci-0000_01_00.1.hdmi-stereo|alsa_output.usb-Shure_Inc_Shure_MV6_MV6_6-4eb2c88c8e0c5352ad3815605656d2a3-01.analog-stereo|alsa_output.pci-0000_10_00.6.iec958-stereo|easyeffects_sink")
+SINKS_TO_SKIP=("alsa_output.pci-0000_01_00.1.hdmi-stereo|alsa_output.usb-Shure_Inc_Shure_MV6_MV6_6-4eb2c88c8e0c5352ad3815605656d2a3-01.analog-stereo|alsa_output.pci-0000_10_00.6.iec958-stereo|alsa_output.pci-0000_10_00.6.analog-stereo|easyeffects_sink")
 
 #Define Aliases (OPTIONAL)
 ALIASES="alsa_output.usb-Logitech_G560_Gaming_Speaker_00000000-00.pro-output-0:Speakers\nalsa_output.usb-FIIO_FIIO_KA13-01.analog-stereo:Headset"
