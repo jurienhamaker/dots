@@ -9,8 +9,8 @@ return {
 			_99.setup({
 				show_in_flight_requests = true,
 				md_files = { "AGENT.md" },
-				provider = _99.Providers.OpenCodeProvider,
-				model = "anthropic/claude-opus-4-6",
+				provider = _99.Providers.ClaudeCodeProvider,
+				model = "claude-opus-4-6",
 				completion = {
 					custom_rules = { "~/skills/skills" },
 					source = "blink",
