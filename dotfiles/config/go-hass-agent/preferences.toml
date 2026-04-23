@@ -138,6 +138,10 @@ disabled = false
 disabled = false
 
 [sensors.system]
+[sensors.system.abrt_problems]
+disabled = false
+update_interval = '15m0s'
+
 [sensors.system.hardware_sensors]
 disabled = false
 update_interval = '1m0s'
