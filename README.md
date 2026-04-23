@@ -1,13 +1,16 @@
 # Dots
 
-My personal set of dotfiles based on [end_4's Hyprland dotfiles](https://github.com/end-4/dots-hyprland).
+My personal set of dotfiles & archinstall configuration
 
 ## Installation
 
-The `install.sh` file is a heavily modified/simplified version of end_4's script.
-Beware however, because it's also a lot less strict and tested on **my machine**
+Use the arch installer to install one of the configurations in the archinstall folder
+
+The `post-install.sh` file is there to install & configure anything after initial installation
+
+Beware however, these are all configured to work on **my machines**
 (> Insert works on my machine meme)
 
 ## Screenshots
 
-![fastfetch screenshot](./.github/fastfetch.png)
+![screenshot](./.github/ff-screenshot.png)
