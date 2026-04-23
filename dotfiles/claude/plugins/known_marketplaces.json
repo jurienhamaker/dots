@@ -1,0 +1,26 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/home/jurien/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-04-07T16:08:13.923Z"
+  },
+  "ecc": {
+    "source": {
+      "source": "git",
+      "url": "https://github.com/affaan-m/everything-claude-code.git"
+    },
+    "installLocation": "/home/jurien/.claude/plugins/marketplaces/ecc",
+    "lastUpdated": "2026-04-07T16:08:35.592Z"
+  },
+  "caveman": {
+    "source": {
+      "source": "github",
+      "repo": "JuliusBrussee/caveman"
+    },
+    "installLocation": "/home/jurien/.claude/plugins/marketplaces/caveman",
+    "lastUpdated": "2026-04-23T14:50:28.835Z"
+  }
+}

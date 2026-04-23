@@ -1,0 +1,55 @@
+{
+  "version": 2,
+  "plugins": {
+    "ecc@ecc": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/ecc/ecc/1.10.0",
+        "version": "1.10.0",
+        "installedAt": "2026-04-07T16:08:45.417Z",
+        "lastUpdated": "2026-04-07T16:08:45.417Z",
+        "gitCommitSha": "62519f2b622b44d8289d573bb6e74c4c95fc7400"
+      }
+    ],
+    "figma@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/claude-plugins-official/figma/2.0.7",
+        "version": "2.0.7",
+        "installedAt": "2026-04-07T16:11:28.255Z",
+        "lastUpdated": "2026-04-07T16:11:28.255Z",
+        "gitCommitSha": "500e8738438ed1204eaf23e61280d872f47534fd"
+      }
+    ],
+    "lua-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/claude-plugins-official/lua-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-04-09T07:13:33.096Z",
+        "lastUpdated": "2026-04-09T07:13:33.096Z",
+        "gitCommitSha": "104d39be10b7b1380b2ae23a387a11a297b599c3"
+      }
+    ],
+    "gopls-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/claude-plugins-official/gopls-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-04-10T16:45:57.398Z",
+        "lastUpdated": "2026-04-10T16:45:57.398Z",
+        "gitCommitSha": "104d39be10b7b1380b2ae23a387a11a297b599c3"
+      }
+    ],
+    "caveman@caveman": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/caveman/caveman/92f892f2b997",
+        "version": "92f892f2b997",
+        "installedAt": "2026-04-22T12:25:14.169Z",
+        "lastUpdated": "2026-04-22T12:25:14.169Z",
+        "gitCommitSha": "92f892f2b99744a4501f35bce9a2e384878e4877"
+      }
+    ]
+  }
+}

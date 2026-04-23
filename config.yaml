@@ -129,6 +129,9 @@ dotfiles:
   d_ghostty:
     src: config/ghostty
     dst: ~/.config/ghostty
+  d_claude:
+    src: claude
+    dst: ~/.claude
 profiles:
   yugen-work:
     dotfiles:
@@ -156,6 +159,7 @@ profiles:
       - d_ambxst
       - f_wallpapers.json
       - d_ghostty
+      - d_claude
   yugen:
     dotfiles:
       - d_nvim
@@ -185,3 +189,4 @@ profiles:
       - f_app.toml
       - d_applications
       - d_ghostty
+      - d_claude
