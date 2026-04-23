@@ -1,0 +1,4 @@
+[MIME Cache]
+x-scheme-handler/claude-cli=claude-code-url-handler.desktop;
+x-scheme-handler/discord-1216669957799018608=discord-1216669957799018608.desktop;
+x-scheme-handler/rambox=rambox.desktop;
