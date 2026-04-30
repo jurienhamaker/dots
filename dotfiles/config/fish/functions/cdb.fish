@@ -7,6 +7,8 @@ function cdb
 
     if test "$argv[1]" = "" || test "$argv[1]" = dev
         set cdb_hostname "employes$type-pg-dev.employes.dev"
+    else if test "$argv[1]" = prod
+        set cdb_hostname "employes$type-pg-prod.employes.nl"
     else if test "$argv[1]" = jh
         set cdb_hostname "employes$type-pg-jh.employes.dev"
     else
