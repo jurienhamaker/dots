@@ -86,6 +86,9 @@ disabled = false
 ignored_mounts = ['/tmp/crun', '/run', '/var/lib/containers', '/sys', '/proc']
 update_interval = '1m0s'
 
+[sensors.location]
+disabled = true
+
 [sensors.media]
 [sensors.media.audio]
 disabled = false
