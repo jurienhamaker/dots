@@ -8,7 +8,7 @@
 SINKS_TO_SKIP=("alsa_output.pci-0000_01_00.1.hdmi-stereo|alsa_output.usb-Shure_Inc_Shure_MV6_MV6_6-4eb2c88c8e0c5352ad3815605656d2a3-01.analog-stereo|alsa_output.pci-0000_10_00.6.iec958-stereo|alsa_output.pci-0000_10_00.6.analog-stereo|easyeffects_sink")
 
 #Define Aliases (OPTIONAL)
-ALIASES="alsa_output.usb-Logitech_G560_Gaming_Speaker_00000000-00.pro-output-0:Speakers\nalsa_output.usb-FIIO_FIIO_KA13-01.analog-stereo:Headset"
+ALIASES="alsa_output.usb-Logitech_G560_Gaming_Speaker_00000000-00.pro-output-0:Speakers\nalsa_output.usb-FIIO_FIIO_KA13-01.pro-output-0:Headset"
 
 #Create array of sink names to switch to
 declare -a SINKS_TO_SWITCH=($(wpctl status -n | grep -zoP '(?<=Sinks:)(?s).*?(?=├─)' | grep -a "vol:" | tr -d \* | awk '{print ($3)}' | grep -Ev $SINKS_TO_SKIP))
