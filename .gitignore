@@ -5,3 +5,6 @@ diff.patch
 end_4
 cache
 tmp
+/dotfiles/claude/plans
+/dotfiles/claude/.last-cleanup
+/dotfiles/claude/remote-settings.json

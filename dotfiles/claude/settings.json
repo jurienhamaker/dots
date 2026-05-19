@@ -3,7 +3,7 @@
     "CAVEMAN_DEFAULT_MODE": "ultra"
   },
   "permissions": {
-    "defaultMode": "acceptEdits",
+    "defaultMode": "auto",
     "permissions": {
       "allow": [
         "Bash(yarn run *)",
@@ -11,10 +11,12 @@
         "Bash(git * main)",
         "Bash(rtk *)"
       ],
-      "deny": ["Bash(git push *)"]
+      "deny": [
+        "Bash(git push *)"
+      ]
     }
   },
-  "model": "opus",
+  "model": "opusplan",
   "hooks": {
     "PreToolUse": [
       {
@@ -389,5 +391,6 @@
       }
     }
   },
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true
 }
