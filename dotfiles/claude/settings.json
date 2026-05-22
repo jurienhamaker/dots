@@ -375,7 +375,8 @@
     "figma@claude-plugins-official": true,
     "lua-lsp@claude-plugins-official": true,
     "gopls-lsp@claude-plugins-official": true,
-    "caveman@caveman": true
+    "caveman@caveman": true,
+    "understand-anything@understand-anything": true
   },
   "extraKnownMarketplaces": {
     "ecc": {
@@ -388,6 +389,12 @@
       "source": {
         "source": "github",
         "repo": "JuliusBrussee/caveman"
+      }
+    },
+    "understand-anything": {
+      "source": {
+        "source": "github",
+        "repo": "Lum1104/Understand-Anything"
       }
     }
   },

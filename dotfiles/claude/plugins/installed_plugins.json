@@ -50,6 +50,16 @@
         "lastUpdated": "2026-04-22T12:25:14.169Z",
         "gitCommitSha": "92f892f2b99744a4501f35bce9a2e384878e4877"
       }
+    ],
+    "understand-anything@understand-anything": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/understand-anything/understand-anything/2.7.4",
+        "version": "2.7.4",
+        "installedAt": "2026-05-22T10:45:51.538Z",
+        "lastUpdated": "2026-05-22T10:45:51.538Z",
+        "gitCommitSha": "17eed788767d97dc29cfe812640af0133a97f767"
+      }
     ]
   }
 }
