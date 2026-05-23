@@ -19,6 +19,7 @@ telemetry
 .caveman-active
 sessions
 plans
+plans/*
 .last-cleanup
 remote-settings.json
 plugins/install-counts-cache.json
