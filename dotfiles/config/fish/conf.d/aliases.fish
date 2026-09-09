@@ -31,4 +31,4 @@ alias dnode="docker run -it --name dnode -v /mnt/Programming:/opt/app -w /opt/ap
 alias dgo="docker run -it -u $(whoami) --name go -v /mnt/Programming:/opt/app -p 3000:3000 --rm --entrypoint bash jurienhamaker/golang:latest"
 
 alias k kubectl
-alias c="claude --model opusplan --permission-mode plan"
+alias c="claude --permission-mode plan --dangerously-skip-permissions --model opusplan "
