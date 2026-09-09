@@ -1,30 +1,33 @@
 {
-    "disks": [
-        "/",
-        "/mnt/Games"
-    ],
-    "updateServiceEnabled": true,
-    "idle": {
-        "general": {
-            "lock_cmd": "ambxst lock",
-            "before_sleep_cmd": "loginctl lock-session",
-            "after_sleep_cmd": "ambxst screen on"
-        },
-        "listeners": []
+  "disks": [
+    "/",
+    "/mnt/Games"
+  ],
+  "updateServiceEnabled": true,
+  "idle": {
+    "general": {
+      "lock_cmd": "ambxst lock",
+      "before_sleep_cmd": "loginctl lock-session",
+      "after_sleep_cmd": "ambxst screen on"
     },
-    "ocr": {
-        "eng": true,
-        "spa": false,
-        "lat": false,
-        "jpn": true,
-        "chi_sim": false,
-        "chi_tra": false,
-        "kor": false
-    },
-    "pomodoro": {
-        "workTime": 1500,
-        "restTime": 300,
-        "autoStart": false,
-        "syncSpotify": false
-    }
+    "listeners": []
+  },
+  "ocr": {
+    "eng": true,
+    "spa": false,
+    "lat": false,
+    "jpn": true,
+    "chi_sim": false,
+    "chi_tra": false,
+    "kor": false
+  },
+  "pomodoro": {
+    "workTime": 1500,
+    "restTime": 300,
+    "autoStart": false,
+    "syncSpotify": false
+  },
+  "clipboard": {
+    "tmpfs": false
+  }
 }
