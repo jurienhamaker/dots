@@ -1,0 +1,1 @@
+hl.env("JAVA_HOME", "/usr/lib/jvm/java-26-temurin")

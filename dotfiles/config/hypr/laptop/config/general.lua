@@ -1,0 +1,1 @@
+hl.device({ name = "elan07cd:00-04f3:310a-touchpad", sensitivity = 0.4, accel_profile = "flat" })

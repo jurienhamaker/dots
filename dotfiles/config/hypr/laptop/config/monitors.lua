@@ -1,0 +1,13 @@
+hl.monitor({ output = "eDP-1", mode = "modeline 932.84 2880 3136 3456 4032 1800 1801 1804 1928 -HSync +Vsync", position = "0x0", scale = 1.33 })
+hl.monitor({ output = "DP-1",  mode = "modeline 311.83 2560 2744 3024 3488 1440 1441 1444 1490 -HSync +Vsync", position = "2880x0", scale = 1 })
+
+hl.workspace_rule({ workspace = "1", monitor = "DP-3" })
+hl.workspace_rule({ workspace = "2", monitor = "DP-3" })
+hl.workspace_rule({ workspace = "3", monitor = "DP-3" })
+hl.workspace_rule({ workspace = "4", monitor = "eDP-1" })
+hl.workspace_rule({ workspace = "5", monitor = "DP-3" })
+hl.workspace_rule({ workspace = "6", monitor = "eDP-1" })
+hl.workspace_rule({ workspace = "7", monitor = "eDP-1" })
+hl.workspace_rule({ workspace = "8", monitor = "DP-3" })
+hl.workspace_rule({ workspace = "9", monitor = "DP-3" })
+hl.workspace_rule({ workspace = "10", monitor = "DP-3" })
