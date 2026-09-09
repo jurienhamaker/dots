@@ -60,6 +60,16 @@
         "lastUpdated": "2026-05-22T10:45:51.538Z",
         "gitCommitSha": "17eed788767d97dc29cfe812640af0133a97f767"
       }
+    ],
+    "impeccable@impeccable": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/impeccable/impeccable/4.0.2",
+        "version": "4.0.2",
+        "installedAt": "2026-07-24T19:23:50.877Z",
+        "lastUpdated": "2026-07-24T19:23:50.877Z",
+        "gitCommitSha": "08676d575721a2f3f9c30fc4807d1f61e1462b3b"
+      }
     ]
   }
 }

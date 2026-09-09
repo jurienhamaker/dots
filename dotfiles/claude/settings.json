@@ -376,13 +376,15 @@
     "lua-lsp@claude-plugins-official": true,
     "gopls-lsp@claude-plugins-official": true,
     "caveman@caveman": true,
-    "understand-anything@understand-anything": true
+    "understand-anything@understand-anything": true,
+    "impeccable@impeccable": true
   },
   "extraKnownMarketplaces": {
     "ecc": {
       "source": {
-        "source": "git",
-        "url": "https://github.com/affaan-m/everything-claude-code.git"
+        "source": "github",
+        "url": "https://github.com/affaan-m/everything-claude-code.git",
+        "repo": "affaan-m/everything-claude-code"
       }
     },
     "caveman": {
@@ -395,6 +397,12 @@
       "source": {
         "source": "github",
         "repo": "Lum1104/Understand-Anything"
+      }
+    },
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
       }
     }
   },

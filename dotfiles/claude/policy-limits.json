@@ -1,8 +1,5 @@
 {
   "restrictions": {
-    "allow_remote_control": {
-      "allowed": false
-    },
     "allow_workflows": {
       "allowed": false
     },
