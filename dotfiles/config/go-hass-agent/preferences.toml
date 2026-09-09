@@ -3,6 +3,9 @@ registered = true
 
 [controls]
 [controls.power]
+[controls.power.backlight]
+disabled = false
+
 [controls.power.inhibit_controls]
 disabled = false
 
@@ -81,6 +84,10 @@ disabled = false
 disabled = false
 update_interval = '5s'
 
+[sensors.disk.smart]
+disabled = false
+update_interval = '1m0s'
+
 [sensors.disk.usage]
 disabled = false
 ignored_mounts = ['/tmp/crun', '/run', '/var/lib/containers', '/sys', '/proc']
@@ -144,6 +151,10 @@ disabled = false
 [sensors.system.abrt_problems]
 disabled = false
 update_interval = '15m0s'
+
+[sensors.system.app_sensors]
+disabled = false
+idle_timeout = '5s'
 
 [sensors.system.hardware_sensors]
 disabled = false
