@@ -1,0 +1,39 @@
+{
+    "device": "ZB-240",
+    "segments": [
+        {
+            "flags": 0,
+            "leds_count": 52,
+            "matrix_map": {
+                "height": 0,
+                "width": 0
+            },
+            "name": "Outer",
+            "start_idx": 0,
+            "type": 1
+        },
+        {
+            "flags": 0,
+            "leds_count": 9,
+            "matrix_map": {
+                "height": 0,
+                "width": 0
+            },
+            "name": "Fan 1",
+            "start_idx": 52,
+            "type": 1
+        },
+        {
+            "flags": 0,
+            "leds_count": 9,
+            "matrix_map": {
+                "height": 0,
+                "width": 0
+            },
+            "name": "Fan 2",
+            "start_idx": 61,
+            "type": 1
+        }
+    ],
+    "vendor": "Jonsbo"
+}
