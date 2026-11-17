@@ -12,7 +12,11 @@ function cdb
     else if test "$argv[1]" = jh
         set cdb_hostname "employes$type-pg-jh.employes.dev"
     else
-        set cdb_hostname "employes$type-pg-pro-$argv[1].employes.dev"
+        if test "$argv[4]" = true
+            set cdb_hostname "employes$type-pg-$argv[1].employes.dev"
+        else
+            set cdb_hostname "employes$type-pg-pro-$argv[1].employes.dev"
+        end
     end
 
     if test "$argv[2]" = ""
