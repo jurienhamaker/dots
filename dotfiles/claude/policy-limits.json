@@ -3,7 +3,10 @@
     "allow_workflows": {
       "allowed": false
     },
-    "allow_cobalt_plinth": {
+    "allow_cobalt_plinth_alkanet": {
+      "allowed": false
+    },
+    "allow_connector_file_downloads": {
       "allowed": false
     },
     "enforce_web_search_mcp_isolation": {
