@@ -135,6 +135,15 @@ dotfiles:
   d_wallpapers:
     src: Pictures/Wallpapers
     dst: ~/Pictures/Wallpapers
+  d_omp:
+    src: omp
+    dst: ~/.omp
+  d_agents:
+    src: agents
+    dst: ~/.agents
+  d_ccstatusline:
+    src: config/ccstatusline
+    dst: ~/.config/ccstatusline
 profiles:
   yugen-work:
     dotfiles:
@@ -195,3 +204,6 @@ profiles:
     - d_ghostty
     - d_claude
     - d_wallpapers
+    - d_omp
+    - d_agents
+    - d_ccstatusline

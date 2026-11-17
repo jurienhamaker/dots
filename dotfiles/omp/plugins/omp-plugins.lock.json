@@ -1,0 +1,45 @@
+{
+  "plugins": {
+    "mattpocock-skills": {
+      "version": "1.3.1",
+      "enabledFeatures": null,
+      "enabled": true
+    },
+    "@dietrichgebert/ponytail": {
+      "version": "5.3.3",
+      "enabledFeatures": null,
+      "enabled": true
+    },
+    "pstack": {
+      "version": "0.15.43",
+      "enabledFeatures": null,
+      "enabled": true
+    },
+    "superpowers": {
+      "version": "7.0.2",
+      "enabledFeatures": null,
+      "enabled": true
+    },
+    "hyperframes-monorepo": {
+      "version": "0.9.60",
+      "enabledFeatures": null,
+      "enabled": true
+    },
+    "caveman-installer": {
+      "version": "4.1.0",
+      "enabledFeatures": null,
+      "enabled": true
+    },
+    "ecc-universal": {
+      "version": "2.2.3",
+      "enabledFeatures": null,
+      "enabled": true
+    },
+    "figma": {
+      "version": "2.2.157",
+      "enabledFeatures": null,
+      "enabled": true
+    }
+  },
+  "settings": {}
+}

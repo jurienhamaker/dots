@@ -1,0 +1,77 @@
+{
+  "version": 2,
+  "plugins": {
+    "mattpocock-skills@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.omp/plugins/cache/plugins/claude-plugins-official___mattpocock-skills___1.3.1",
+        "version": "1.3.1",
+        "installedAt": "2026-11-17T10:12:08.437Z",
+        "lastUpdated": "2026-11-17T10:12:08.437Z"
+      }
+    ],
+    "ponytail@ponytail": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.omp/plugins/cache/plugins/ponytail___ponytail___5.3.3",
+        "version": "5.3.3",
+        "installedAt": "2026-11-17T10:13:16.253Z",
+        "lastUpdated": "2026-11-17T10:13:16.253Z"
+      }
+    ],
+    "pstack@cursor-plugins": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.omp/plugins/cache/plugins/cursor-plugins___pstack___0.15.43",
+        "version": "0.15.43",
+        "installedAt": "2026-11-17T10:13:34.132Z",
+        "lastUpdated": "2026-11-17T10:13:34.132Z"
+      }
+    ],
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.omp/plugins/cache/plugins/claude-plugins-official___superpowers___7.0.2",
+        "version": "7.0.2",
+        "installedAt": "2026-11-17T10:13:54.255Z",
+        "lastUpdated": "2026-11-17T10:13:54.255Z"
+      }
+    ],
+    "hyperframes@hyperframes": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.omp/plugins/cache/plugins/hyperframes___hyperframes___0.9.60",
+        "version": "0.9.60",
+        "installedAt": "2026-11-17T10:14:01.458Z",
+        "lastUpdated": "2026-11-17T10:14:01.458Z"
+      }
+    ],
+    "caveman@caveman": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.omp/plugins/cache/plugins/caveman___caveman___4.1.0",
+        "version": "4.1.0",
+        "installedAt": "2026-11-17T10:14:51.517Z",
+        "lastUpdated": "2026-11-17T10:14:51.517Z"
+      }
+    ],
+    "ecc@ecc": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.omp/plugins/cache/plugins/ecc___ecc___2.2.3",
+        "version": "2.2.3",
+        "installedAt": "2026-11-17T10:34:11.438Z",
+        "lastUpdated": "2026-11-17T10:34:11.438Z"
+      }
+    ],
+    "figma@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.omp/plugins/cache/plugins/claude-plugins-official___figma___2.2.157",
+        "version": "2.2.157",
+        "installedAt": "2026-11-17T10:34:24.702Z",
+        "lastUpdated": "2026-11-17T10:34:24.702Z"
+      }
+    ]
+  }
+}

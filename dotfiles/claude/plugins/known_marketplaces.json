@@ -1,0 +1,58 @@
+{
+  "cursor-plugins": {
+    "source": {
+      "source": "github",
+      "repo": "cursor/plugins"
+    },
+    "installLocation": "/home/jurien/.claude/plugins/marketplaces/cursor-plugins",
+    "lastUpdated": "2026-11-17T09:44:19.610Z"
+  },
+  "ponytail": {
+    "source": {
+      "source": "github",
+      "repo": "DietrichGebert/ponytail"
+    },
+    "installLocation": "/home/jurien/.claude/plugins/marketplaces/ponytail",
+    "lastUpdated": "2026-11-17T09:46:04.663Z"
+  },
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "/home/jurien/.claude/plugins/marketplaces/claude-plugins-official",
+    "lastUpdated": "2026-11-17T09:47:58.068Z"
+  },
+  "hyperframes": {
+    "source": {
+      "source": "github",
+      "repo": "heygen-com/hyperframes"
+    },
+    "installLocation": "/home/jurien/.claude/plugins/marketplaces/hyperframes",
+    "lastUpdated": "2026-11-17T09:48:37.607Z"
+  },
+  "claude-flightdeck": {
+    "source": {
+      "source": "github",
+      "repo": "scasella/claude-flightdeck"
+    },
+    "installLocation": "/home/jurien/.claude/plugins/marketplaces/claude-flightdeck",
+    "lastUpdated": "2026-11-17T09:54:26.397Z"
+  },
+  "claude-statuspane": {
+    "source": {
+      "source": "github",
+      "repo": "xuanji86/claude-statuspane"
+    },
+    "installLocation": "/home/jurien/.claude/plugins/marketplaces/claude-statuspane",
+    "lastUpdated": "2026-11-17T09:58:06.553Z"
+  },
+  "ecc": {
+    "source": {
+      "source": "github",
+      "repo": "affaan-m/everything-claude-code"
+    },
+    "installLocation": "/home/jurien/.claude/plugins/marketplaces/ecc",
+    "lastUpdated": "2026-11-17T10:34:03.282Z"
+  }
+}

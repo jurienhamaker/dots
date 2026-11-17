@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "marketplaces": [
+    {
+      "name": "claude-plugins-official",
+      "sourceType": "github",
+      "sourceUri": "anthropics/claude-plugins-official",
+      "catalogPath": "/home/jurien/.omp/plugins/cache/marketplaces/claude-plugins-official/marketplace.json",
+      "addedAt": "2026-11-17T10:11:18.067Z",
+      "updatedAt": "2026-11-17T10:11:18.067Z"
+    },
+    {
+      "name": "cursor-plugins",
+      "sourceType": "github",
+      "sourceUri": "cursor/plugins",
+      "catalogPath": "/home/jurien/.omp/plugins/cache/marketplaces/cursor-plugins/marketplace.json",
+      "addedAt": "2026-11-17T10:12:33.727Z",
+      "updatedAt": "2026-11-17T10:12:33.727Z"
+    },
+    {
+      "name": "hyperframes",
+      "sourceType": "github",
+      "sourceUri": "heygen-com/hyperframes",
+      "catalogPath": "/home/jurien/.omp/plugins/cache/marketplaces/hyperframes/marketplace.json",
+      "addedAt": "2026-11-17T10:12:45.987Z",
+      "updatedAt": "2026-11-17T10:12:45.987Z"
+    },
+    {
+      "name": "ponytail",
+      "sourceType": "github",
+      "sourceUri": "dietrichgebert/ponytail",
+      "catalogPath": "/home/jurien/.omp/plugins/cache/marketplaces/ponytail/marketplace.json",
+      "addedAt": "2026-11-17T10:12:55.834Z",
+      "updatedAt": "2026-11-17T10:12:55.834Z"
+    },
+    {
+      "name": "caveman",
+      "sourceType": "github",
+      "sourceUri": "JuliusBrussee/caveman",
+      "catalogPath": "/home/jurien/.omp/plugins/cache/marketplaces/caveman/marketplace.json",
+      "addedAt": "2026-11-17T10:14:44.126Z",
+      "updatedAt": "2026-11-17T10:14:44.126Z"
+    },
+    {
+      "name": "ecc",
+      "sourceType": "github",
+      "sourceUri": "affaan-m/everything-claude-code",
+      "catalogPath": "/home/jurien/.omp/plugins/cache/marketplaces/ecc/marketplace.json",
+      "addedAt": "2026-11-17T10:33:49.360Z",
+      "updatedAt": "2026-11-17T10:33:49.360Z"
+    }
+  ]
+}

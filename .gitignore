@@ -14,3 +14,11 @@ tmp
 /dotfiles/local/share/applications/userapp-Thunderbird-A4ESP3.desktop
 /dotfiles/local/share/applications/userapp-Thunderbird-CBJ0Q3.desktop
 /dotfiles/Pictures/Wallpapers/*.mp4
+/dotfiles/claude/plugins/marketplaces
+/dotfiles/claude/session-env
+/dotfiles/claude/ponytail-modes
+/dotfiles/omp/logs
+/dotfiles/omp/natives/
+/dotfiles/omp/plugins/node_modules
+/dotfiles/omp/run/daemons/
+/dotfiles/omp/agent

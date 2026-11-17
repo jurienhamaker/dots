@@ -2,8 +2,13 @@
   "env": {
     "ANTHROPIC_BASE_URL": "http://127.0.0.1:8787/w/claude",
     "_CLAUDE_CODE_ASSUME_FIRST_PARTY_BASE_URL": "1",
-    "ENABLE_TOOL_SEARCH": "true"
+    "ENABLE_TOOL_SEARCH": "true",
+    "ANTHROPIC_CUSTOM_MODEL_OPTION": "caveman-auto[1m]",
+    "ANTHROPIC_CUSTOM_MODEL_OPTION_NAME": "Auto",
+    "ANTHROPIC_CUSTOM_MODEL_OPTION_DESCRIPTION": "Caveman pick model + effort each turn. Hard ask, big brain. Easy ask, save rocks.",
+    "ANTHROPIC_CUSTOM_MODEL_OPTION_SUPPORTED_CAPABILITIES": "effort,max_effort,xhigh_effort,thinking,adaptive_thinking,interleaved_thinking"
   },
+  "model": "opus[1m]",
   "hooks": {
     "SessionStart": [
       {
@@ -12,6 +17,16 @@
             "type": "command",
             "command": "'/home/jurien/.caveman/bin/caveman-proxy' native-hook claude --adapter '/home/jurien/.caveman/cli/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js' --node '/usr/sbin/node'",
             "timeout": 30
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ ! -f '/home/jurien/.claude/skills/impeccable/scripts/impeccable' ] || '/home/jurien/.claude/skills/impeccable/scripts/impeccable' hook",
+            "timeout": 5,
+            "statusMessage": "Preparing build session"
           }
         ]
       }
@@ -55,6 +70,15 @@
             "timeout": 5
           }
         ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "rtk hook claude"
+          }
+        ]
       }
     ],
     "PostToolUse": [
@@ -64,6 +88,17 @@
             "type": "command",
             "command": "'/home/jurien/.caveman/bin/caveman-proxy' native-hook claude --adapter '/home/jurien/.caveman/cli/lib/node_modules/@caveman-ai/cli/dist/native-hook-fast.js' --node '/usr/sbin/node'",
             "timeout": 30
+          }
+        ]
+      },
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ ! -f '/home/jurien/.claude/skills/impeccable/scripts/impeccable' ] || '/home/jurien/.claude/skills/impeccable/scripts/impeccable' hook",
+            "timeout": 5,
+            "statusMessage": "Checking UI changes"
           }
         ]
       }
@@ -121,6 +156,16 @@
             "timeout": 30
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ ! -f '/home/jurien/.claude/skills/impeccable/scripts/impeccable' ] || '/home/jurien/.claude/skills/impeccable/scripts/impeccable' hook",
+            "timeout": 30,
+            "statusMessage": "Design deep pass"
+          }
+        ]
       }
     ],
     "SessionEnd": [
@@ -134,5 +179,66 @@
         ]
       }
     ]
-  }
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "npx -y ccstatusline@latest",
+    "padding": 0,
+    "refreshInterval": 10
+  },
+  "enabledPlugins": {
+    "pstack@cursor-plugins": true,
+    "ponytail@ponytail": true,
+    "mattpocock-skills@claude-plugins-official": true,
+    "hyperframes@hyperframes": true,
+    "superpowers@claude-plugins-official": true,
+    "statuspane@claude-statuspane": true,
+    "ecc@ecc": true
+  },
+  "extraKnownMarketplaces": {
+    "cursor-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "cursor/plugins"
+      }
+    },
+    "ponytail": {
+      "source": {
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
+      }
+    },
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    },
+    "hyperframes": {
+      "source": {
+        "source": "github",
+        "repo": "heygen-com/hyperframes"
+      }
+    },
+    "claude-flightdeck": {
+      "source": {
+        "source": "github",
+        "repo": "scasella/claude-flightdeck"
+      }
+    },
+    "claude-statuspane": {
+      "source": {
+        "source": "github",
+        "repo": "xuanji86/claude-statuspane"
+      }
+    },
+    "ecc": {
+      "source": {
+        "source": "github",
+        "repo": "affaan-m/everything-claude-code"
+      }
+    }
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "description": "Impeccable design detector: immediate-tier checks after Edit/Write on UI files, full-rule deep pass on Stop."
 }

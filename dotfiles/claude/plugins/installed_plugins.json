@@ -1,0 +1,75 @@
+{
+  "version": 2,
+  "plugins": {
+    "pstack@cursor-plugins": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/cursor-plugins/pstack/0.15.43",
+        "version": "0.15.43",
+        "installedAt": "2026-11-17T09:44:24.512Z",
+        "lastUpdated": "2026-11-17T09:44:24.512Z",
+        "gitCommitSha": "e1cc03121a0e71129a4fb730d7c5528a0a3e43c8"
+      }
+    ],
+    "ponytail@ponytail": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/ponytail/ponytail/5.3.3",
+        "version": "5.3.3",
+        "installedAt": "2026-11-17T09:46:08.545Z",
+        "lastUpdated": "2026-11-17T09:46:08.545Z",
+        "gitCommitSha": "96608e078b2d5ea607c5c3b8b5a54d1c1fba6846"
+      }
+    ],
+    "mattpocock-skills@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/claude-plugins-official/mattpocock-skills/1.3.1",
+        "version": "1.3.1",
+        "installedAt": "2026-11-17T09:48:12.668Z",
+        "lastUpdated": "2026-11-17T09:48:12.668Z",
+        "gitCommitSha": "49dd158d1076134a641b33efb035946536778336"
+      }
+    ],
+    "hyperframes@hyperframes": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/hyperframes/hyperframes/0.9.60",
+        "version": "0.9.60",
+        "installedAt": "2026-11-17T09:48:46.607Z",
+        "lastUpdated": "2026-11-17T09:48:46.607Z",
+        "gitCommitSha": "efc91fc877d89d8057611dd87c81220be46df9a2"
+      }
+    ],
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/claude-plugins-official/superpowers/7.0.2",
+        "version": "7.0.2",
+        "installedAt": "2026-11-17T09:57:29.106Z",
+        "lastUpdated": "2026-11-17T09:57:29.106Z",
+        "gitCommitSha": "22f0b463e7a5e579904dd6211a520321035526f7"
+      }
+    ],
+    "statuspane@claude-statuspane": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/claude-statuspane/statuspane/1.3.4",
+        "version": "1.3.4",
+        "installedAt": "2026-11-17T10:01:39.686Z",
+        "lastUpdated": "2026-11-17T10:01:39.686Z",
+        "gitCommitSha": "e183da95628d8a378afce9711d02785165dd43d2"
+      }
+    ],
+    "ecc@ecc": [
+      {
+        "scope": "user",
+        "installPath": "/home/jurien/.claude/plugins/cache/ecc/ecc/2.2.3",
+        "version": "2.2.3",
+        "installedAt": "2026-11-17T10:35:12.606Z",
+        "lastUpdated": "2026-11-17T10:35:12.606Z",
+        "gitCommitSha": "3f14a103a8694e51c1df9a806217a6d0b5f7a6f7"
+      }
+    ]
+  }
+}
