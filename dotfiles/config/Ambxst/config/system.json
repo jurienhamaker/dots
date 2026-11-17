@@ -3,6 +3,7 @@
     "/",
     "/mnt/Games"
   ],
+  "language": "auto",
   "updateServiceEnabled": true,
   "idle": {
     "general": {

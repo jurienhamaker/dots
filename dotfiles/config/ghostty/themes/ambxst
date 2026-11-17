@@ -1,0 +1,26 @@
+cursor-color = e8e3e3
+cursor-text = e6e1e1
+
+foreground = e8e3e3
+background = 000000
+background-opacity = 1
+selection-foreground = 332935
+selection-background = b69abc
+
+palette = 0=1e1e1e
+palette = 1=bd7476
+palette = 2=959f87
+palette = 3=dbc093
+palette = 4=eae6e6
+palette = 5=b294b8
+palette = 6=93ada9
+palette = 7=5f5d5d
+palette = 8=2e2d2d
+palette = 9=c17b7e
+palette = 10=9ba58e
+palette = 11=ddc399
+palette = 12=a0b3c5
+palette = 13=b69abc
+palette = 14=99b2ae
+palette = 15=e8e3e3
+

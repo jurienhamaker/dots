@@ -16,6 +16,8 @@
   "syncShadowColor": true,
   "gapsIn": 2,
   "gapsOut": 4,
+  "keyboardLayouts": "",
+  "keyboardVariants": "",
   "shadowEnabled": true,
   "shadowRange": 4,
   "shadowRenderPower": 3,
