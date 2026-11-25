@@ -5,4 +5,5 @@ exec_once = [
   "gsettings set org.gnome.desktop.interface cursor-size 24",
   'gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"',
   'gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3-dark"',
+  "/home/jurien/dots/dotfiles/config/mango/shared/scroller-proportion.sh",
 ]
