@@ -1,0 +1,4 @@
+# Ported from hypr laptop/config/general.lua (elan touchpad: sensitivity=0.4, accel_profile=flat)
+[global]
+trackpad_accel_profile = 1
+trackpad_accel_speed = 0.4

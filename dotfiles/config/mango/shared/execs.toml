@@ -1,0 +1,8 @@
+# Ported from hypr shared/execs.lua, shared/theme.lua (hyprctl setcursor dropped: cursor_theme/cursor_size in env.toml)
+[global]
+exec_once = [
+  "gsettings set org.gnome.desktop.interface cursor-theme Breeze5_Snow",
+  "gsettings set org.gnome.desktop.interface cursor-size 24",
+  'gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"',
+  'gsettings set org.gnome.desktop.interface gtk-theme "adw-gtk3-dark"',
+]

@@ -1,0 +1,10 @@
+# Ported from hypr pc/config/macropad-keybinds.lua
+
+[bind.default]
+"SUPER+KP_End" = "spawn,steam"
+"SUPER+KP_Down" = "spawn,bolt"
+"SUPER+KP_Next" = 'spawn_shell,ghostty -e fish -c "ve"'
+"SUPER+KP_Left" = "spawn,equibop"
+"CTRL+SHIFT+ALT+0" = "spawn,/home/jurien/dots/dotfiles/config/hypr/pc/scripts/toggle-audio.sh"
+"CTRL+SHIFT+ALT+1" = "spawn,/home/jurien/dots/dotfiles/config/hypr/pc/scripts/set-audio.sh Gaming"
+"CTRL+SHIFT+ALT+2" = "spawn,/home/jurien/dots/dotfiles/config/hypr/pc/scripts/set-audio.sh FIIO"

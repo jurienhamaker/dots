@@ -1,0 +1,34 @@
+# Ported from hypr shared/general.lua
+[global]
+# input.follow_mouse=1, sensitivity=-0.5, accel_profile=flat on the Logitech mice
+sloppy_focus = 1
+mouse_accel_speed = -0.5
+mouse_accel_profile = 1
+trackpad_accel_speed = -0.5
+# cursor.no_warps
+warp_cursor = 0
+# misc.middle_click_paste=false
+disable_middle_paste = 1
+
+# decoration.blur contrast/brightness (vibrancy and shadow.render_power have no equivalent)
+blur_params_contrast = 1
+blur_params_brightness = 1
+# skwd-wall-vk wallpaper sits on the bottom layer, which optimized blur ignores: with blur on, translucent windows composite over black
+blur = 0
+
+# Animations: Hyprland's trailing overrides (customBezier 2.5 => 250ms), plus windowsIn/Out/fadeIn/fadeOut
+animations = 1
+animation_type_open = "zoom"
+zoom_initial_ratio = 0.87
+animation_duration_open = 410
+animation_curve_open = [0.23, 1.0, 0.32, 1.0]
+animation_duration_close = 149
+animation_curve_close = "linear"
+animation_duration_move = 250
+animation_curve_move = [0.4, 0.0, 0.2, 1.0]
+animation_duration_tag = 250
+animation_curve_tag = [0.4, 0.0, 0.2, 1.0]
+animation_duration_focus = 250
+animation_curve_focus = [0.4, 0.0, 0.2, 1.0]
+animation_curve_opacity_fade_in = [0.5, 0.5, 0.75, 1.0]
+animation_curve_opacity_fade_out = [0.5, 0.5, 0.75, 1.0]

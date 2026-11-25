@@ -1,0 +1,14 @@
+# Ported from hypr laptop/config/execs.lua
+# Target tags/monitors come from the window_rules in shared/rules.toml; the kitties have no rule, so they use spawn_on_empty.
+# Hypr launched 2 kitties on workspace 3; spawn_on_empty skips an occupied tag, so only one is started there.
+[global]
+exec_once = [
+  "nm-applet",
+  "/home/jurien/dots/dotfiles/config/hypr/shared/scripts/is-not-home.sh 3 zen-browser",
+  '/home/jurien/dots/dotfiles/config/hypr/shared/scripts/is-not-home.sh 0 "mmsg dispatch spawn_on_empty,kitty,2"',
+  '/home/jurien/dots/dotfiles/config/hypr/shared/scripts/is-not-home.sh 0 "mmsg dispatch spawn_on_empty,kitty,3"',
+  '/home/jurien/dots/dotfiles/config/hypr/shared/scripts/is-not-home.sh 3 "equibop --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto"',
+  '/home/jurien/dots/dotfiles/config/hypr/shared/scripts/is-not-home.sh 3 "ferdium --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto"',
+  "/home/jurien/dots/dotfiles/config/hypr/shared/scripts/is-not-home.sh 5 thunderbird",
+  "/home/jurien/dots/dotfiles/config/hypr/shared/scripts/is-home.sh 0 waynergy",
+]

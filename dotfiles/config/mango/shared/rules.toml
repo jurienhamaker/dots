@@ -1,0 +1,171 @@
+# Ported from hypr shared/rules.lua
+# Workspace -> tag+monitor: 1,2,3,5,8,9,10 on $main_mon; 4,6,7 on $side_mon (vars set per machine in config.toml).
+# "silent" workspace rules => is_tag_silent:1. Rules apply in order, later ones win.
+
+# Floating
+[[rule.window_rule]]
+is_floating = 1
+app_id = "^(nm-connection-editor)$"
+
+[[rule.window_rule]]
+is_floating = 1
+app_id = "^(telegramdesktop)$"
+title = "^(Media viewer)$"
+
+[[rule.window_rule]]
+is_floating = 1
+app_id = "^(code)$"
+title = "^(Open Folder)$"
+
+[[rule.window_rule]]
+is_floating = 1
+app_id = "^(firefox)$"
+title = "^(Firefox — Sharing Indicator)$"
+
+[[rule.window_rule]]
+is_floating = 1
+app_id = "^(zen)$"
+title = "^(Zen Browser — Sharing Indicator)$"
+
+
+# Window -> workspace
+[[rule.window_rule]]
+tags = "1"
+monitor = "$main_mon"
+app_id = "^(firefox)$"
+
+[[rule.window_rule]]
+tags = "1"
+monitor = "$main_mon"
+app_id = "^(zen)$"
+
+[[rule.window_rule]]
+tags = "4"
+monitor = "$side_mon"
+is_tag_silent = 1
+app_id = "^(ferdium)$"
+
+[[rule.window_rule]]
+tags = "4"
+monitor = "$side_mon"
+is_tag_silent = 1
+app_id = "(?i)^(rambox)$"
+
+[[rule.window_rule]]
+tags = "4"
+monitor = "$side_mon"
+is_tag_silent = 1
+app_id = "^(vesktop)$"
+
+[[rule.window_rule]]
+tags = "4"
+monitor = "$side_mon"
+is_tag_silent = 1
+app_id = "^(equibop)$"
+
+[[rule.window_rule]]
+tags = "5"
+monitor = "$main_mon"
+is_tag_silent = 1
+app_id = "(?i)^(gitkraken)$"
+
+[[rule.window_rule]]
+tags = "6"
+monitor = "$side_mon"
+is_tag_silent = 1
+app_id = "^(Slack)$"
+
+[[rule.window_rule]]
+tags = "6"
+monitor = "$side_mon"
+is_tag_silent = 1
+app_id = "^(Mailspring)$"
+
+[[rule.window_rule]]
+tags = "6"
+monitor = "$side_mon"
+is_tag_silent = 1
+app_id = "^(org.mozilla.Thunderbird)$"
+
+[[rule.window_rule]]
+tags = "7"
+monitor = "$side_mon"
+is_tag_silent = 1
+title = "^(Spotify)$"
+
+
+# Picture-in-Picture: float + pin (is_global = visible on all tags)
+[[rule.window_rule]]
+is_floating = 1
+is_global = 1
+app_id = "(firefox)"
+title = "(Picture-in-Picture)"
+
+[[rule.window_rule]]
+is_floating = 1
+is_global = 1
+app_id = "(zen)"
+title = "(Picture-in-Picture)"
+
+
+# Transparency
+[[rule.window_rule]]
+focused_opacity = 0.8
+unfocused_opacity = 0.8
+app_id = "^(kitty)$"
+
+[[rule.window_rule]]
+focused_opacity = 0.8
+unfocused_opacity = 0.8
+app_id = "^(com.mitchellh.ghostty)$"
+
+[[rule.window_rule]]
+focused_opacity = 0.95
+unfocused_opacity = 0.95
+app_id = "^(vesktop)$"
+
+[[rule.window_rule]]
+focused_opacity = 0.98
+unfocused_opacity = 0.98
+app_id = "^(equibop)$"
+
+[[rule.window_rule]]
+focused_opacity = 0.99
+unfocused_opacity = 0.99
+app_id = "^(ferdium)$"
+
+[[rule.window_rule]]
+focused_opacity = 0.95
+unfocused_opacity = 0.95
+app_id = "(?i)^(rambox)$"
+
+[[rule.window_rule]]
+focused_opacity = 0.99
+unfocused_opacity = 0.99
+app_id = "^(firefox)$"
+
+[[rule.window_rule]]
+focused_opacity = 0.99
+unfocused_opacity = 0.99
+app_id = "^(zen)$"
+
+[[rule.window_rule]]
+focused_opacity = 0.95
+unfocused_opacity = 0.95
+app_id = "(?i)^(gitkraken)$"
+
+[[rule.window_rule]]
+focused_opacity = 0.99
+unfocused_opacity = 0.99
+app_id = "^(Slack)$"
+
+[[rule.window_rule]]
+focused_opacity = 0.95
+unfocused_opacity = 0.95
+app_id = "^(Mailspring)$"
+
+[[rule.window_rule]]
+focused_opacity = 0.95
+unfocused_opacity = 0.95
+app_id = "^(org.mozilla.Thunderbird)$"
+

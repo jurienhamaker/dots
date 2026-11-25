@@ -1,0 +1,25 @@
+# Emulates Hyprland workspace_rule pinning (see hypr */config/monitors.lua): workspace N lives on one monitor.
+# Mango tags are per-monitor, so SUPER+N focuses the owning monitor and views tag N there.
+# $main_mon / $side_mon are defined per machine in its config.toml.
+
+[bind.default]
+"SUPER+1" = "viewcrossmon,1,$main_mon"
+"SUPER+2" = "viewcrossmon,2,$main_mon"
+"SUPER+3" = "viewcrossmon,3,$main_mon"
+"SUPER+4" = "viewcrossmon,4,$side_mon"
+"SUPER+5" = "viewcrossmon,5,$main_mon"
+"SUPER+6" = "viewcrossmon,6,$side_mon"
+"SUPER+7" = "viewcrossmon,7,$side_mon"
+"SUPER+8" = "viewcrossmon,8,$main_mon"
+"SUPER+9" = "viewcrossmon,9,$main_mon"
+"SUPER+0" = "viewcrossmon,10,$main_mon"
+"SUPER+SHIFT+1" = "tagcrossmon,1,$main_mon"
+"SUPER+SHIFT+2" = "tagcrossmon,2,$main_mon"
+"SUPER+SHIFT+3" = "tagcrossmon,3,$main_mon"
+"SUPER+SHIFT+4" = "tagcrossmon,4,$side_mon"
+"SUPER+SHIFT+5" = "tagcrossmon,5,$main_mon"
+"SUPER+SHIFT+6" = "tagcrossmon,6,$side_mon"
+"SUPER+SHIFT+7" = "tagcrossmon,7,$side_mon"
+"SUPER+SHIFT+8" = "tagcrossmon,8,$main_mon"
+"SUPER+SHIFT+9" = "tagcrossmon,9,$main_mon"
+"SUPER+SHIFT+0" = "tagcrossmon,10,$main_mon"

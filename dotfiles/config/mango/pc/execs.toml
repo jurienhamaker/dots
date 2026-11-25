@@ -1,0 +1,12 @@
+# Ported from hypr pc/config/execs.lua
+# Target tags/monitors come from the window_rules in shared/rules.toml.
+[global]
+exec_once = [
+  "sleep 3 && zen-browser",
+  "sleep 3 && equibop --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto",
+  "sleep 3 && ferdium --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto",
+  "sleep 5 && thunderbird",
+  "sleep 3 && /home/jurien/dots/dotfiles/config/hypr/pc/scripts/set-audio.sh Gaming true",
+  "coolercontrol",
+  "solaar --window=hide",
+]

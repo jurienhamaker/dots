@@ -1,0 +1,23 @@
+# Ported from hypr pc/config/monitors.lua (workspace rules not ported)
+# DP-6 rotated (1440x2560 logical) at origin; DP-7 offset +630 down since mango disallows negative coords
+
+[[rule.monitor_rule]]
+name = "^DP-6$"
+width = 2560
+height = 1440
+refresh = 155
+x = 0
+y = 0
+scale = 1
+rr = 1
+
+[[rule.monitor_rule]]
+name = "^DP-7$"
+width = 2560
+height = 1440
+refresh = 165
+x = 1440
+y = 630
+scale = 1
+rr = 0
+

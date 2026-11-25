@@ -1,0 +1,31 @@
+# Workspace/keybinds go first: mango runs only the first matching bind, so these shadow Ambxst's SUPER+N binds.
+# Ambxst's generated file stays .conf (mixed formats are fine).
+
+# Monitor roles used by shared/workspaces.toml and shared/rules.toml (must be defined before the sources).
+# main: tags 1,2,3,5,8,9,10; side: tags 4,6,7
+[var]
+main_mon = "DP-7"
+side_mon = "DP-6"
+
+[global]
+source = [
+  "~/dots/dotfiles/config/mango/shared/workspaces.toml",
+  "~/dots/dotfiles/config/mango/shared/keybinds.toml",
+  "~/.config/mango/keybinds.toml",
+
+  "~/.local/share/ambxst/mango.conf",
+
+  # Overrides of Ambxst's settings
+  "~/.config/mango/monitors.toml",
+  "~/dots/dotfiles/config/mango/shared/layouts.toml",
+  "~/.config/mango/layouts.toml",
+
+  "~/dots/dotfiles/config/mango/shared/general.toml",
+  "~/.config/mango/input.toml",
+  "~/dots/dotfiles/config/mango/shared/rules.toml",
+  "~/.config/mango/rules.toml",
+  "~/dots/dotfiles/config/mango/shared/execs.toml",
+  "~/.config/mango/execs.toml",
+  "~/dots/dotfiles/config/mango/shared/env.toml",
+  "~/.config/mango/env.toml",
+]

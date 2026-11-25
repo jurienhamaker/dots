@@ -1,0 +1,6 @@
+# Ported from hypr pc/config/input.lua
+
+# Wacom pen: enabled=false (left_handed/active_area/output have no mango equivalent)
+[[rule.device_rule]]
+name = "Wacom One by Wacom S Pen"
+send_events_mode = 1

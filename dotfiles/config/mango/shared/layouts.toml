@@ -1,0 +1,11 @@
+[global]
+# Mango tags are per monitor; Hyprland had 10 global workspaces
+tag_num = 10
+
+# dwindle settings
+dwindle_preserve_split = 1
+
+# dwindle everywhere (later rules win over Ambxst's tile rules)
+[[rule.tag_rule]]
+id = "*"
+layout_name = "dwindle"

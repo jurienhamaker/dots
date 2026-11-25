@@ -1,0 +1,33 @@
+# Ported from hypr pc/config/rules.lua
+# $main_mon / $side_mon are defined in config.toml.
+
+# Games
+[[rule.window_rule]]
+tags = "10"
+monitor = "$main_mon"
+is_fullscreen = 1
+app_id = "^(gamescope)$"
+
+[[rule.window_rule]]
+tags = "10"
+monitor = "$main_mon"
+is_fullscreen = 1
+title = "^(Steam Big Picture Mode)$"
+
+[[rule.window_rule]]
+is_fullscreen = 1
+title = "Guitar Hero World Tour"
+
+[[rule.window_rule]]
+is_fullscreen = 1
+app_id = "clonehero"
+
+
+# zen PiP also lives on tag 4
+[[rule.window_rule]]
+is_floating = 1
+is_global = 1
+tags = "4"
+monitor = "$side_mon"
+app_id = "(zen)"
+title = "(Picture-in-Picture)"

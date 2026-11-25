@@ -1,0 +1,26 @@
+# Ported from hypr laptop/config/monitors.lua (workspace pinning lives in shared/workspaces.toml via $main_mon/$side_mon)
+# Hypr used custom modelines (eDP-1 2880x1800@120, DP-1 2560x1440@60); mango has no modeline support, so the plain modes are used.
+# Hypr put DP-1 at x=2880 (physical px) which left a gap at scale 1.33; mango x is logical: ceil(2880 / 1.33) = 2166.
+
+[[rule.monitor_rule]]
+name = "^eDP-1$"
+width = 2880
+height = 1800
+refresh = 120
+x = 0
+y = 0
+scale = 1.33
+
+[[rule.monitor_rule]]
+name = "^DP-1$"
+width = 2560
+height = 1440
+refresh = 60
+x = 2166
+y = 0
+scale = 1
+
+# Ported from hypr shared/scripts/lid.sh: lid closed => drop the internal panel, open => bring it back
+[switchbind.default]
+"lid_on" = "disable_monitor,eDP-1"
+"lid_off" = "enable_monitor,eDP-1"

@@ -1,0 +1,28 @@
+# Ported from hypr shared/keybinds.lua
+# SUPER+Return and SUPER+F already come from Ambxst with the same action.
+
+[bind.default]
+# hyprctl kill picked a window; mango has no picker, so force-kill the focused one
+"SUPER+SHIFT+ALT+Q" = "killclient,force"
+
+"SUPER+minus" = "setmfact,-0.1"
+"SUPER+equal" = "setmfact,+0.1"
+"SUPER+semicolon" = "setmfact,-0.1"
+"SUPER+apostrophe" = "setmfact,+0.1"
+
+"SUPER+space" = "togglefloating"
+
+# Override Ambxst's SUPER+J/K focusdir: it can't reach off-screen windows in vertical_scroller
+"SUPER+J" = "spawn,/home/jurien/dots/dotfiles/config/mango/shared/focus-dir.sh down"
+"SUPER+DOWN" = "spawn,/home/jurien/dots/dotfiles/config/mango/shared/focus-dir.sh down"
+"SUPER+K" = "spawn,/home/jurien/dots/dotfiles/config/mango/shared/focus-dir.sh up"
+"SUPER+UP" = "spawn,/home/jurien/dots/dotfiles/config/mango/shared/focus-dir.sh up"
+
+# Scroll through existing workspaces (e+1 / e-1)
+[axisbind.default]
+"SUPER+DOWN" = "viewtoright_have_client"
+"SUPER+UP" = "viewtoleft_have_client"
+
+# Hold SUPER + left mouse drag to move the window under the cursor (floating or tiled)
+[mousebind.default]
+"SUPER+btn_left" = "moveresize,curmove"
