@@ -2,6 +2,8 @@
 # Target tags/monitors come from the window_rules in shared/rules.toml.
 [global]
 exec_once = [
+  # Windows open tag-silent on tag 4, so DP-6 would stay on tag 1: view tag 4 there, then refocus DP-7.
+  "sleep 1 && mmsg dispatch viewcrossmon,4,DP-6 && mmsg dispatch focusmon,name:DP-7",
   "sleep 3 && zen-browser",
   "sleep 3 && equibop --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto",
   "sleep 3 && ferdium --enable-features=WaylandWindowDecorations --ozone-platform-hint=auto",
