@@ -129,9 +129,6 @@ dotfiles:
   d_ghostty:
     src: config/ghostty
     dst: ~/.config/ghostty
-  d_claude:
-    src: claude
-    dst: ~/.claude
   d_wallpapers:
     src: Pictures/Wallpapers
     dst: ~/Pictures/Wallpapers

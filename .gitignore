@@ -22,3 +22,4 @@ tmp
 /dotfiles/omp/plugins/node_modules
 /dotfiles/omp/run/daemons/
 /dotfiles/omp/agent
+/dotfiles/omp/run/daemon
