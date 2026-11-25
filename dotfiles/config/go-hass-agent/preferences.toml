@@ -68,6 +68,10 @@ update_interval = '30s'
 [sensors.cpu.load_averages]
 disabled = false
 
+[sensors.cpu.power]
+disabled = false
+update_interval = '10s'
+
 [sensors.cpu.usage]
 disabled = false
 update_interval = '10s'
@@ -92,6 +96,11 @@ update_interval = '1m0s'
 disabled = false
 ignored_mounts = ['/tmp/crun', '/run', '/var/lib/containers', '/sys', '/proc']
 update_interval = '1m0s'
+
+[sensors.gpu]
+[sensors.gpu.nvidia]
+disabled = false
+update_interval = '10s'
 
 [sensors.location]
 disabled = true
