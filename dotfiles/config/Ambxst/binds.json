@@ -1392,19 +1392,8 @@
                     "args": {
                         "direction": "u"
                     },
-                    "id": "window.move",
-                    "layouts": [
-                        "master",
-                        "dwindle"
-                    ]
-                },
-                {
-                    "args": {
-                        "direction": "u"
-                    },
                     "id": "scrolling.move-window",
                     "layouts": [
-                        "scrolling"
                     ]
                 }
             ],
