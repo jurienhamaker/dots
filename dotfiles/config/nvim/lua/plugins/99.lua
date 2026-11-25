@@ -4,8 +4,6 @@ return {
 		config = function()
 			local _99 = require("99")
 
-			vim.fn.setenv("OPENCODE_PERMISSION", '{"edit": "allow"}')
-
 			_99.setup({
 				show_in_flight_requests = true,
 				md_files = { "AGENT.md" },
