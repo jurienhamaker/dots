@@ -1,0 +1,9 @@
+{
+  "modUpdatesHandedOver": true,
+  "bootLock": "never",
+  "followFocus": false,
+  "notifyFollowFocus": false,
+  "bluetoothWidget": false,
+  "ethernetButton": false,
+  "idleDim": "never"
+}

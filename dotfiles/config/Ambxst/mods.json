@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "mods": [
+    {
+      "id": "drpezzer.roadie",
+      "enabled": true,
+      "order": 0,
+      "source": "https://github.com/drpezzer/ambxst-mods/tree/main/packages/roadie",
+      "sourceType": "git-subdir",
+      "revision": "36689153801b149408509de94a56acf2dbbe9187",
+      "installedAt": "2026-11-24T13:43:17Z"
+    },
+    {
+      "id": "drpezzer.ambxst-skwd-wall",
+      "enabled": true,
+      "order": 1,
+      "source": "https://github.com/drpezzer/ambxst-mods/tree/main/packages/ambxst-skwd-wall",
+      "sourceType": "git-subdir",
+      "revision": "36689153801b149408509de94a56acf2dbbe9187",
+      "installedAt": "2026-11-24T13:48:46Z"
+    }
+  ],
+  "activeGeneration": "20261124T135226Z-10b7faac",
+  "previousGeneration": "20261124T134327Z-fa20e76d"
+}

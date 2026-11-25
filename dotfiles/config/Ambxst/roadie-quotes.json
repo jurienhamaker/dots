@@ -1,0 +1,16 @@
+{
+  "shutdown": [
+    {
+      "text": "The fate of destruction is also the joy of rebirth.",
+      "source": ""
+    }
+  ],
+  "reboot": [
+    {
+      "text": "Breaking the world is easy enough. But rebuilding it, that isn't so easy.",
+      "source": ""
+    }
+  ],
+  "hidden": [],
+  "replace": true
+}

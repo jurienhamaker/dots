@@ -1,0 +1,5 @@
+{
+  "terminal": "kitty",
+  "terminalAdvanced": false,
+  "terminalCommand": "$TERMINAL -e $COMMAND"
+}

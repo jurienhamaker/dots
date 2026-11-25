@@ -1,27 +1,30 @@
 {
-    "position": "top",
-    "launcherIcon": "",
-    "launcherIconTint": true,
-    "launcherIconFullTint": true,
-    "launcherIconSize": 18,
-    "pillStyle": "squished",
-    "screenList": [],
-    "enableFirefoxPlayer": true,
-    "barColor": [
-        [
-            "surface",
-            0
-        ]
-    ],
-    "frameEnabled": true,
-    "frameThickness": 2,
-    "pinnedOnStartup": true,
-    "hoverToReveal": true,
-    "hoverRegionHeight": 8,
-    "showPinButton": false,
-    "availableOnFullscreen": true,
-    "use12hFormat": false,
-    "containBar": false,
-    "keepBarShadow": false,
-    "keepBarBorder": false
+  "position": "top",
+  "launcherIcon": "",
+  "launcherIconTint": true,
+  "launcherIconFullTint": true,
+  "launcherIconSize": 18,
+  "pillStyle": "squished",
+  "screenList": [],
+  "enableFirefoxPlayer": true,
+  "barColor": [
+    [
+      "surface",
+      0
+    ]
+  ],
+  "frameEnabled": true,
+  "frameThickness": 2,
+  "pinnedOnStartup": true,
+  "hoverToReveal": true,
+  "hoverRegionHeight": 8,
+  "showPinButton": false,
+  "availableOnFullscreen": true,
+  "use12hFormat": false,
+  "containBar": false,
+  "keepBarShadow": false,
+  "keepBarBorder": false,
+  "systrayExclude": [
+    "blueman"
+  ]
 }
