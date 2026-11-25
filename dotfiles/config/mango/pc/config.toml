@@ -11,21 +11,21 @@ side_mon = "DP-6"
 source = [
   "~/dots/dotfiles/config/mango/shared/workspaces.toml",
   "~/dots/dotfiles/config/mango/shared/keybinds.toml",
-  "~/.config/mango/keybinds.toml",
+  "~/.config/mango/configs/keybinds.toml",
 
   "~/.local/share/ambxst/mango.conf",
 
   # Overrides of Ambxst's settings
-  "~/.config/mango/monitors.toml",
+  "~/.config/mango/configs/monitors.toml",
   "~/dots/dotfiles/config/mango/shared/layouts.toml",
-  "~/.config/mango/layouts.toml",
+  "~/.config/mango/configs/layouts.toml",
 
   "~/dots/dotfiles/config/mango/shared/general.toml",
-  "~/.config/mango/input.toml",
+  "~/.config/mango/configs/input.toml",
   "~/dots/dotfiles/config/mango/shared/rules.toml",
-  "~/.config/mango/rules.toml",
+  "~/.config/mango/configs/rules.toml",
   "~/dots/dotfiles/config/mango/shared/execs.toml",
-  "~/.config/mango/execs.toml",
+  "~/.config/mango/configs/execs.toml",
   "~/dots/dotfiles/config/mango/shared/env.toml",
-  "~/.config/mango/env.toml",
+  "~/.config/mango/configs/env.toml",
 ]

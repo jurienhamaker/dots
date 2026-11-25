@@ -15,13 +15,13 @@ source = [
   "~/.local/share/ambxst/mango.conf",
 
   # Overrides of Ambxst's settings
-  "~/.config/mango/monitors.toml",
+  "~/.config/mango/configs/monitors.toml",
   "~/dots/dotfiles/config/mango/shared/layouts.toml",
 
   "~/dots/dotfiles/config/mango/shared/general.toml",
-  "~/.config/mango/input.toml",
+  "~/.config/mango/configs/input.toml",
   "~/dots/dotfiles/config/mango/shared/rules.toml",
   "~/dots/dotfiles/config/mango/shared/execs.toml",
-  "~/.config/mango/execs.toml",
+  "~/.config/mango/configs/execs.toml",
   "~/dots/dotfiles/config/mango/shared/env.toml",
 ]
