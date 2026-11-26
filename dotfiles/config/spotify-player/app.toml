@@ -1,4 +1,4 @@
-theme = "dracula"
+theme = "tokyo night"
 client_id = "3b71142633c74d498dcb829c035555de"
 client_port = 8080
 login_redirect_uri = "http://127.0.0.1:8989/login"
@@ -57,3 +57,7 @@ bitrate = 320
 audio_cache = false
 normalization = false
 autoplay = false
+
+[[keymaps]]
+command = "ClosePopup"
+key_sequence = "q"

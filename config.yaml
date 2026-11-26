@@ -120,9 +120,9 @@ dotfiles:
   f_wallpapers.json:
     src: local/share/Ambxst/wallpapers.json
     dst: ~/.local/share/Ambxst/wallpapers.json
-  f_app.toml:
-    src: config/spotify-player/app.toml
-    dst: ~/.config/spotify-player/app.toml
+  d_spotify-player:
+    src: config/spotify-player
+    dst: ~/.config/spotify-player
   d_applications:
     src: local/share/applications
     dst: ~/.local/share/applications
@@ -176,6 +176,7 @@ profiles:
       - d_ghostty
       - d_wallpapers
       - d_mango_laptop
+      - d_spotify-player
   yugen:
     dotfiles:
       - d_nvim
@@ -202,7 +203,7 @@ profiles:
       - d_ambxst
       - d_go-hass-agent
       - f_wallpapers.json
-      - f_app.toml
+      - d_spotify-player
       - d_applications
       - d_ghostty
       - d_wallpapers
